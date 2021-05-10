@@ -325,6 +325,10 @@
 
 \begin_body
 
+\begin_layout Chapter
+Brève description théorique du WebRTC
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -333,556 +337,155 @@ status open
 
 
 \backslash
-makeatletter 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-newgeometry{top=2.5cm, bottom=2cm, left=2cm, right=2cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-AddToShipoutPicture*{
-\backslash
-BackgroundPic}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-AddToShipoutPicture*{
-\backslash
-EtiquetteThese}
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-begin{titlepage}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-includegraphics[width=0.15
-\backslash
-textwidth]{logo_espa}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-hfill 
-\backslash
-includegraphics[width=0.15
-\backslash
-textwidth]{una}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	%
-\backslash
-hspace*{1.5 cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-parbox{9cm}{
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-vspace*{-30 mm}
-\backslash
-large
-\backslash
-textbf{REPOBLIKAN'I MADAGASIKARA}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-small
-\backslash
-textbf{FITIAVANA - TANINDRAZANA - FANDROSOANA}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-vspace*{0.2 cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-normalsize
-\backslash
-textbf{MINISTÈRE DE L'ENSEIGNEMENT SUPÉRIEUR ET DE LA RECHERCHE SCIENTIFIQUE}
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-	 } 	 
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-centering
-\end_layout
-
-\begin_layout Plain Layout
-
-	 
-\backslash
-parbox{
-\backslash
-textwidth}{
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-vspace*{4 mm}
-\end_layout
-
-\begin_layout Plain Layout
-
- 	 	
-\backslash
-normalsize
-\backslash
-large
-\backslash
-textbf{
-\backslash
-@ecole}
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-	 }
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-centering
-\backslash
-parbox{
-\backslash
-textwidth}{
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-large
-\backslash
-textbf{
-\backslash
-@departement}
-\end_layout
-
-\begin_layout Plain Layout
-
- 		
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-			 	}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-centering
-\backslash
-parbox{
-\backslash
-textwidth}{
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-color{black}
-\backslash
-rule{
-\backslash
-textwidth}{1.5pt}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-vspace*{-0.42 cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-rule{
-\backslash
-textwidth}{0.5pt}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-			 	}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-vspace*{-0.7 cm} 	
-\backslash
-centering
-\backslash
-parbox{
-\backslash
-textwidth}{ 		
-\backslash
-begin{center} 		
-\backslash
-begin{normalsize} 		
-\backslash
-color{black}  		
-\backslash
-textbf{
-\backslash
-@typeRapport} 		
-\backslash
-end{normalsize} 		
-\backslash
-end{center}			 	}
-\backslash
-
-\backslash
- 	
-\backslash
-vspace*{-0.7 cm} 	
-\backslash
-centering
-\backslash
-parbox{
-\backslash
-textwidth}{ 		
-\backslash
-begin{center} 		
-\backslash
-color{black}
-\backslash
-rule{
-\backslash
-textwidth}{0.5pt}
-\backslash
-
-\backslash
- 		
-\backslash
-vspace*{-0.38 cm} 		
-\backslash
-rule{
-\backslash
-textwidth}{1.5pt}
-\backslash
-
-\backslash
-	 		
-\backslash
-end{center}			 	}
-\backslash
-
-\backslash
- 		
-\backslash
-centering
-\backslash
-parbox{
-\backslash
-textwidth}{ 		
-\backslash
-begin{center}		 		
-\backslash
-large
-\backslash
-textbf{
-\backslash
-@specialite} 
-\backslash
-
-\backslash
-			 		
-\backslash
-end{center}			 	}
-\backslash
-
-\backslash
- 	
-\backslash
-vfill 		
-\backslash
-parbox{
-\backslash
-textwidth}{		 		
-\backslash
-begin{center}        		{
-\backslash
-Huge 
-\backslash
-color[rgb]{0,0,0} 
-\backslash
-bfseries{
-\backslash
-@title}} 
-\backslash
-
-\backslash
-	 		
-\backslash
-end{center} 		} 	
-\backslash
-vfill 
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-parbox{
-\backslash
-textwidth}{ 	
-\backslash
-begin{center} 	
-\backslash
-large{Par :}  
-\backslash
-
-\backslash
- 	
-\backslash
-vspace{0.3 cm} 	
-\backslash
-large{
-\backslash
-@author} 
-\backslash
-
-\backslash
- 	
-\backslash
-vspace*{1 cm} 	
-\backslash
-large{Encadreurs :}
-\backslash
-
-\backslash
- 	
-\backslash
-vspace{0.3 cm} 	
-\backslash
-begin{tabular}{ll} 		
-\backslash
-normalsize 
-\backslash
-@encadreura 
-\backslash
-
-\backslash
- 		
-\backslash
-normalsize 
-\backslash
-@encadreurb 
-\backslash
-
-\backslash
- 		
-\backslash
-normalsize 
-\backslash
-@encadreurc 
-\backslash
-
-\backslash
- 	
-\backslash
-end{tabular} 	
-\backslash
-end{center} 	} 
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-parbox{
-\backslash
-textwidth}{ 	
-\backslash
-begin{center} 	$
-\backslash
-star$ 	
-\backslash
-centering{
-\backslash
-@anneeUniversitaire} $
-\backslash
-star$ 
-\backslash
-
-\backslash
- 	%
-\backslash
-centering
-\backslash
-textit{Promotion : 
-\backslash
-@nomPromo} 	
-\backslash
-end{center} 	} 
-\backslash
-end{titlepage}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-restoregeometry      
-\backslash
-makeatother
+minitoc
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Avec WebRTC
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Davis2005"
+literal "false"
+
+\end_inset
+
+, vous pouvez ajouter à votre application des capacités de communication
+ en temps réel qui fonctionnent sur une norme ouverte.
+ Il prend en charge la vidéo, la voix et les données génériques à envoyer
+ entre pairs, permettant aux développeurs de créer de puissantes solutions
+ de communication vocale et vidéo.
+ La technologie est disponible sur tous les navigateurs modernes ainsi que
+ sur les clients natifs de toutes les principales plates-formes.
+ Les technologies derrière WebRTC sont implémentées en tant que standard
+ Web ouvert et disponibles en tant qu'API JavaScript standard dans tous
+ les principaux navigateurs.
+ Pour les clients natifs, comme les applications Android et iOS, une bibliothèqu
+e est disponible qui fournit les mêmes fonctionnalités.
+ Le projet WebRTC est open-source et soutenu par Apple, Google, Microsoft
+ et Mozilla, entre autres.
+ Cette page est gérée par l'équipe Google WebRTC.
+\end_layout
+
+\begin_layout Section
+A Fancy Section
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+ Dolore blanditiis vero dolor dicta nam est ullam alias? Quo velit in maiores
+ incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
+ esse blanditiis unde ullam.
+ Et a deleniti nulla adipisci ex nobis labore voluptatem, est non quod blanditii
+s recusandae nesciunt pariatur quos vel.
+\end_layout
+
+\begin_layout Subsection
+Interesting
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Neque maxime veritatis cupiditate.
+ Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
+e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
+ tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
+ libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
+ dolore? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
+ esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
+ officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam
+ facilis! Et aliquam consequatur fugit nemo nesciunt repellendus temporibus
+ omnis hic asperiores iste debitis maiores sapiente quo reiciendis sed,
+ repellat fuga mollitia voluptatibus dolores porro natus maxime deserunt
+ dolor quos.
+ Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
+\end_layout
+
+\begin_layout Subsection
+Definitely Interesting
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+A, aliquid.
+ Suscipit cupiditate necessitatibus laborum commodi accusantium ea consequatur
+ repellat possimus eveniet cumque.
+ Quod enim distinctio ipsa consequatur dolores numquam provident dolorem
+ sapiente adipisci eligendi, molestiae repellat quibusdam facere consequuntur
+ placeat libero dolore.
+ Dolore rem corrupti voluptates totam, quas reiciendis eum modi debitis
+ quidem cum blanditiis ab consequuntur quam, in obcaecati suscipit aliquid
+ doloremque distinctio fuga? Facere excepturi animi et laborum? Pariatur
+ deleniti iure voluptates corporis impedit velit, sunt sint animi nostrum
+ nesciunt veniam saepe obcaecati architecto minus beatae harum dicta incidunt
+ quo repellat est atque.
+\end_layout
+
+\begin_layout Section
+Random section
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Quisquam, officiis, nulla reiciendis molestiae odit iure ratione voluptatum,
+ magni repellendus veniam facere id! Doloremque eveniet praesentium, qui
+ voluptas impedit aut nulla natus ab minus voluptatum nam perspiciatis iusto
+ tenetur, voluptatibus laborum nihil voluptatem non est voluptates?
+\end_layout
+
+\begin_layout Subsection
+A subsection
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Esse hic magni, sapiente a, amet aperiam optio odit veniam porro voluptas,
+ nostrum vero! Doloremque quam suscipit totam.
+ Sit ut quam commodi eius nisi eligendi rerum reiciendis nihil accusamus
+ tempore quos esse, consequatur dolore laudantium.
+ Id officia dolor cupiditate non? Sunt tempore quasi ea, expedita quod iusto
+ est ad laudantium doloremque libero esse voluptas praesentium explicabo
+ omnis qui.
+ Aliquid adipisci cum veniam libero, recusandae deserunt itaque quos officiis
+ nam quo ratione vero exercitationem error minus molestiae.
+ Modi, eaque corporis accusamus quae, corrupti reiciendis eum in earum dolor
+ voluptatum ad.
+ Quia, distinctio! Impedit aliquid in, dicta voluptatibus quaerat, commodi
+ vitae natus maiores perferendis repellendus id reprehenderit adipisci eveniet
+ quisquam debitis qui tenetur sit facilis.
+\end_layout
+
+\begin_layout Subsection
+Another subsection
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
+ dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
+ voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
+ consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
+ iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
+ voluptatibus dolores porro natus maxime deserunt dolor quos.
+ Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
+ A, aliquid.
 \end_layout
 
 \end_body
