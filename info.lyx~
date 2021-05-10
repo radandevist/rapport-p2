@@ -4,12 +4,260 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass report
+\begin_preamble
+%           Liste des packages         %
+
+% Faux texte, juste pour la démo
+\usepackage{blindtext}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Réglage des fontes et typo    
+\usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{graphicx}
+
+%\usepackage[square,sort&compress,sectionbib]{natbib}		% Doit être chargé avant babel
+\usepackage[numbers]{natbib}
+\usepackage{chapterbib}
+	%\renewcommand{\bibsection}{\section{Références}}		% Met les références biblio dans un \section (au lieu de \section*)
+		
+\usepackage[frenchb]{babel}
+\usepackage{lmodern}
+\usepackage{ae,aecompl}						% Utilisation des fontes vectorielles modernes
+\usepackage[upright]{fourier}
+
+
+
+% Apparence globale      
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2cm, headheight=15pt]{geometry} 
+\usepackage{fancyhdr}			% Entête et pieds de page
+	\pagestyle{fancy}			% Indique que le style de la page sera justement fancy
+	\lfoot[\thepage]{} %gauche du pied de page
+	\cfoot{} %milieu du pied de page
+	\rfoot[]{\thepage} %droite du pied de page
+	\fancyhead[RO, LE] {}	
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[section]{placeins}	% Place un FloatBarrier à chaque nouvelle section
+\makeatletter% même chose pour les \subsection que le package ne gère pas
+\renewcommand\subsection{\FloatBarrier\@startsection{subsection}{2}{\z@}
+{-3.25ex\@plus -1ex \@minus -.2ex}
+{1.5ex \@plus .2ex}{\normalfont\large\bfseries}}
+\makeatother
+\usepackage{epigraph}
+\usepackage[font={small}]{caption}
+\usepackage[francais]{minitoc}		% Mini table des matières, en français
+	\setcounter{minitocdepth}{2}	% Mini-toc détaillées (sections/sous-sections)
+\usepackage{pdflscape}				% Permet d'utiliser des pages au format paysage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Maths                         
+\usepackage{amsmath}			% Permet de taper des formules mathématiques
+\usepackage{amssymb}			% Permet d'utiliser des symboles mathématiques
+\usepackage{amsfonts}			% Permet d'utiliser des polices mathématiques
+\usepackage{nicefrac}
+\usepackage{upgreek}			% For roman (i.e. upright) lowercase Greek characters
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Profondeur titre
+
+\renewcommand\theparagraph{\alph{paragraph})}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Tableaux
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{etoolbox}
+	\appto\TPTnoteSettings{\footnotesize}
+\addto\captionsfrench{\def\tablename{{\textsc{Tableau}}}}	% Renome 'table' en 'tableau'
+
+            
+            
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graphiques                    
+\usepackage{graphicx}			% Permet l'inclusion d'images
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{pgfplots}
+	\usepgfplotslibrary{groupplots}
+\usepackage{tikz}
+	\usetikzlibrary{backgrounds,automata}
+	\pgfplotsset{width=7cm,compat=1.3}
+	\tikzset{every picture/.style={execute at begin picture={
+   		\shorthandoff{:;!?};}
+	}}
+	\pgfplotsset{every linear axis/.append style={
+		/pgf/number format/.cd,
+		use comma,
+		1000 sep={\,},
+	}}
+\usepackage{eso-pic}
+\usepackage{import}
+\usepackage{cclicenses}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Biblio                        
+\makeatletter
+\patchcmd{\BR@backref}{\newblock}{\newblock(page~}{}{}	% Pour les back-references, affiche 'page' au lieu de 'p.'
+\patchcmd{\BR@backref}{\par}{)\par}{}{}
+\makeatother
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Navigation dans le document   
+\usepackage[pdftex,pdfborder={0 0 0},
+			colorlinks=true,
+			linkcolor=black,
+			citecolor=black,
+			pagebackref=false,
+			]{hyperref} %Créera automatiquement les liens internes au PDF
+
+
+% Mise en forme du texte        
+\usepackage{xspace}
+\usepackage[load-configurations = abbreviations]{siunitx}
+	\DeclareSIUnit{\MPa}{\mega\pascal}
+	\DeclareSIUnit{\micron}{\micro\meter}
+	\DeclareSIUnit{\tr}{tr}
+	\DeclareSIPostPower\totheM{m}
+	\sisetup{
+	locale = FR,
+	  inter-unit-separator=$\cdot$,
+	  range-phrase=~\`{a}~,     	% Utilise le tiret court pour dire "de... à"
+	  range-units=single,  			% Cache l'unité sur la première borne
+	  }
+\usepackage{chemist}
+\usepackage[version=3]{mhchem}
+\usepackage{textcomp}
+\usepackage{numprint}
+\usepackage{array}
+% \usepackage[acronym,xindy,toc]{glossaries}
+% 	\newglossary[nlg]{notation}{not}{ntn}{Notation} 	% Création d'un type de glossaire 'notation'
+% 	\makeglossaries
+% 	\loadglsentries{Glossaire}	% Utilisation d'un fichier externe pour la définition des entrées (Glossaire.tex)
+% \usepackage{hyphenat}
+
+
+% Compilation
+
+\usepackage{silence}
+%
+%% Virer les erreur dues à minitoc
+\WarningFilter{minitoc(hints)}{W0023}
+\WarningFilter{minitoc(hints)}{W0024}
+\WarningFilter{minitoc(hints)}{W0028}
+\WarningFilter{minitoc(hints)}{W0030}
+
+ 
+
+%           Page de garde              %
+\makeatletter
+\def\@ecole{}
+\newcommand{\ecole}[1]{
+  \def\@ecole{#1}
+}
+
+\def\@specialite{}
+\newcommand{\specialite}[1]{
+  \def\@specialite{#1}
+}
+
+\def\@departement{}
+\newcommand{\departement}[1]{
+  \def\@departement{#1}
+}
+
+\def\@typeRapport{}
+\newcommand{\typeRapport}[1]{
+  \def\@typeRapport{#1}
+}
+
+\def\@anneeUniversitaire{}
+\newcommand{\anneeUniversitaire}[1]{
+  \def\@anneeUniversitaire{#1}
+}
+
+\def\@nomPromo{}
+\newcommand{\nomPromo}[1]{
+  \def\@nomPromo{#1}
+}
+
+\def\@encadreura{}
+\newcommand{\encadreura}[1]{
+  \def\@encadreura{#1}
+}
+
+\def\@encadreurb{}
+\newcommand{\encadreurb}[1]{
+  \def\@encadreurb{#1}
+}
+
+\def\@encadreurc{}
+\newcommand{\encadreurc}[1]{
+  \def\@encadreurc{#1}
+}
+
+\def\@jurya{}{}{}
+\newcommand{\jurya}[3]{
+  \def\@jurya{#1	& #2	& #3\\}
+}
+\def\@juryb{}{}{}
+\newcommand{\juryb}[3]{
+  \def\@juryb{#1,	& #2	& #3\\}
+}
+\def\@juryc{}{}{}
+\newcommand{\juryc}[3]{
+  \def\@juryc{#1,	& #2	& #3\\}
+}
+\def\@juryd{}{}{}
+\newcommand{\juryd}[3]{
+  \def\@juryd{#1,	& #2	& #3\\}
+}
+\def\@jurye{}{}{}
+\newcommand{\jurye}[3]{
+  \def\@jurye{#1,	& #2	& #3\\}
+}
+\def\@juryf{}{}{}
+\newcommand{\juryf}[3]{
+  \def\@juryf{#1,	& #2	& #3\\}
+}
+\def\@juryg{}{}{}
+\newcommand{\juryg}[3]{
+  \def\@juryg{#1,	& #2	& #3\\}
+}
+\def\@juryh{}{}{}
+\newcommand{\juryh}[3]{
+  \def\@juryh{#1,	& #2	& #3\\}
+}
+\def\@juryi{}{}{}
+\newcommand{\juryi}[3]{
+  \def\@juryi{#1,	& #2	& #3\\}
+}
+
+\makeatother
+
+\makeatletter
+
+\makeatother
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
-\language english
-\language_package default
-\inputencoding auto
+\language french
+\language_package babel
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -29,6 +277,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -44,6 +293,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -61,7 +311,7 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -81,21 +331,58 @@ status open
 
 \begin_layout Plain Layout
 
-% 					Infos de la page de garde 					%
+% 					Infos du rapport					%
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-author{SOLAIMANA  Ernest }
+author{ANDRIANARISOA Daniel}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-title{Instrument de Laboratoire Multifonction}
+title{Réalisation d'une application de communication en temps réel (WebRTC)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+typeRapport{PROJET DE FIN DE SEMESTRE}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+specialite{Parcours Télécommunication et Réseau}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+anneeUniversitaire{Année Universitaire : 2019 - 2020}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{
+\backslash
+today}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomPromo{-----}
 \end_layout
 
 \end_inset
@@ -116,7 +403,8 @@ status open
 
 
 \backslash
-encadreura{Mme FINOMANA  Lydia}
+encadreura{Dr.
+ ANDRIANAJAINA Todizara}
 \end_layout
 
 \begin_layout Plain Layout
@@ -124,7 +412,7 @@ encadreura{Mme FINOMANA  Lydia}
 
 \backslash
 encadreurb{M.
- JAOVITA José Richardson}
+ RAKOATOARIJAONA Raonirivo}
 \end_layout
 
 \begin_layout Plain Layout
@@ -134,9 +422,7 @@ encadreurb{M.
 encadreurc{Pr./Dr./Mme/Mr.
  NOM 
 \backslash
-scshape{Prénoms}} 
-\backslash
-date{27 mai 2016}
+scshape{Prénoms}}
 \end_layout
 
 \end_inset
@@ -196,6 +482,11 @@ status open
 
 \begin_layout Plain Layout
 
+% 					Informations de l'établissement			   %
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
 ecole{{
@@ -210,36 +501,6 @@ ecole{{
 
 \backslash
 departement{Mention STIC}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-typeRapport{PROJET DE FIN DE SEMESTRE}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-specialite{Parcours {
-\backslash
-'E}lectronique et Informatique Industrielles}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-anneeUniversitaire{Année Universitaire : 2018 - 2019}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-nomPromo{-----}
 \end_layout
 
 \end_inset
@@ -265,22 +526,24 @@ hypersetup{
 
 \begin_layout Plain Layout
 
-	pdfauthor={Ernest},
+	pdfauthor={ANDRIANARISOA Daniel},
 \end_layout
 
 \begin_layout Plain Layout
 
-	pdfsubject={Manuscrit de projet de fin de semestre},
+	pdfsubject={Communication en temps réel par webRTC},
 \end_layout
 
 \begin_layout Plain Layout
 
-	pdftitle={Titre du Sujet de Projet de Fin de Semestre},
+	pdftitle={Réalisation d'une application de communication en temps réel
+ WebRTC},
 \end_layout
 
 \begin_layout Plain Layout
 
-	pdfkeywords={Mots clés 1, Mots clés 2, Mots clés 3, Mots clés 4}
+	pdfkeywords={WebRTC, Typescript, Javascript} % et autres mots clés reliés
+ au projet
 \end_layout
 
 \begin_layout Plain Layout

@@ -331,21 +331,51 @@ status open
 
 \begin_layout Plain Layout
 
-% 					Infos de la page de garde 					%
+% 					Infos du rapport					%
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-author{SOLAIMANA  Ernest }
+author{ANDRIANARISOA Daniel}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-title{Instrument de Laboratoire Multifonction}
+title{Réalisation d'une application de communication en temps réel (WebRTC)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+typeRapport{PROJET DE FIN DE SEMESTRE}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+anneeUniversitaire{Année Universitaire : 2019 - 2020}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{
+\backslash
+today}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nomPromo{-----}
 \end_layout
 
 \end_inset
@@ -366,7 +396,8 @@ status open
 
 
 \backslash
-encadreura{Mme FINOMANA  Lydia}
+encadreura{Dr.
+ ANDRIANAJAINA Todizara}
 \end_layout
 
 \begin_layout Plain Layout
@@ -374,7 +405,7 @@ encadreura{Mme FINOMANA  Lydia}
 
 \backslash
 encadreurb{M.
- JAOVITA José Richardson}
+ RAKOATOARIJAONA Raonirivo}
 \end_layout
 
 \begin_layout Plain Layout
@@ -384,9 +415,7 @@ encadreurb{M.
 encadreurc{Pr./Dr./Mme/Mr.
  NOM 
 \backslash
-scshape{Prénoms}} 
-\backslash
-date{27 mai 2016}
+scshape{Prénoms}}
 \end_layout
 
 \end_inset
@@ -446,6 +475,11 @@ status open
 
 \begin_layout Plain Layout
 
+% 					Informations de l'établissement			   %
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
 ecole{{
@@ -466,30 +500,7 @@ departement{Mention STIC}
 
 
 \backslash
-typeRapport{PROJET DE FIN DE SEMESTRE}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-specialite{Parcours {
-\backslash
-'E}lectronique et Informatique Industrielles}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-anneeUniversitaire{Année Universitaire : 2018 - 2019}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-nomPromo{-----}
+specialite{Parcours Télécommunication et Réseau}
 \end_layout
 
 \end_inset
@@ -515,22 +526,24 @@ hypersetup{
 
 \begin_layout Plain Layout
 
-	pdfauthor={Ernest},
+	pdfauthor={ANDRIANARISOA Daniel},
 \end_layout
 
 \begin_layout Plain Layout
 
-	pdfsubject={Manuscrit de projet de fin de semestre},
+	pdfsubject={Communication en temps réel par webRTC},
 \end_layout
 
 \begin_layout Plain Layout
 
-	pdftitle={Titre du Sujet de Projet de Fin de Semestre},
+	pdftitle={Réalisation d'une application de communication en temps réel
+ WebRTC},
 \end_layout
 
 \begin_layout Plain Layout
 
-	pdfkeywords={Mots clés 1, Mots clés 2, Mots clés 3, Mots clés 4}
+	pdfkeywords={WebRTC, Typescript, Javascript} % et autres mots clés reliés
+ au projet
 \end_layout
 
 \begin_layout Plain Layout

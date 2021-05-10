@@ -969,25 +969,11 @@ begin{tabular}{ll}
 
 					
 \backslash
-normalsize
-\end_layout
-
-\begin_layout Plain Layout
-
-					
-\backslash
 @encadreura
 \backslash
 
 \backslash
 
-\end_layout
-
-\begin_layout Plain Layout
-
-					
-\backslash
-normalsize
 \end_layout
 
 \begin_layout Plain Layout
@@ -1005,13 +991,6 @@ normalsize
 
 					
 \backslash
-normalsize
-\end_layout
-
-\begin_layout Plain Layout
-
-					
-\backslash
 @encadreurc
 \backslash
 
@@ -1022,6 +1001,112 @@ normalsize
 \begin_layout Plain Layout
 
 				
+\backslash
+end{tabular}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+vspace{0.3 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+large{Membre de jury :}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+vspace{0.3 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+begin{tabular}{lcc}
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@jurya
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@juryb
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@juryc
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@juryd
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@jurye
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@juryf
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@juryg
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@juryh
+\end_layout
+
+\begin_layout Plain Layout
+
+						
+\backslash
+@juryi
+\end_layout
+
+\begin_layout Plain Layout
+
+					
 \backslash
 end{tabular}
 \end_layout

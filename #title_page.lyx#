@@ -904,7 +904,7 @@ begin{center}
 
 \begin_layout Plain Layout
 
-				
+			
 \backslash
 large{Par :}
 \backslash
@@ -915,14 +915,14 @@ large{Par :}
 
 \begin_layout Plain Layout
 
-				
+			
 \backslash
 vspace{0.3 cm}
 \end_layout
 
 \begin_layout Plain Layout
 
-				
+			
 \backslash
 large{
 \backslash
@@ -935,16 +935,74 @@ large{
 
 \begin_layout Plain Layout
 
-				
+			
 \backslash
 vspace*{1 cm}
 \end_layout
 
 \begin_layout Plain Layout
 
-				
+			
 \backslash
 large{Encadreurs :}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+vspace{0.3 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+begin{tabular}{ll}
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+@encadreura
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+@encadreurb
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+@encadreurc
+\backslash
+
+\backslash
+ 	
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+				
 \backslash
 
 \backslash
@@ -962,21 +1020,12 @@ vspace{0.3 cm}
 
 				
 \backslash
-begin{tabular}{ll}
+large{Membre de jury :}
 \end_layout
 
 \begin_layout Plain Layout
 
-					
-\backslash
-normalsize
-\end_layout
-
-\begin_layout Plain Layout
-
-					
-\backslash
-@encadreura
+			
 \backslash
 
 \backslash
@@ -985,38 +1034,79 @@ normalsize
 
 \begin_layout Plain Layout
 
-					
+				
 \backslash
-normalsize
+vspace{0.3 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+begin{tabular}{lcc}
 \end_layout
 
 \begin_layout Plain Layout
 
 					
 \backslash
-@encadreurb
-\backslash
-
-\backslash
-
+@jurya
 \end_layout
 
 \begin_layout Plain Layout
 
 					
 \backslash
-normalsize
+@juryb
 \end_layout
 
 \begin_layout Plain Layout
 
 					
 \backslash
-@encadreurc
-\backslash
+@juryc
+\end_layout
 
-\backslash
+\begin_layout Plain Layout
 
+					
+\backslash
+@juryd
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+@jurye
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+@juryf
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+@juryg
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+@juryh
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+@juryi
 \end_layout
 
 \begin_layout Plain Layout
@@ -1028,7 +1118,7 @@ end{tabular}
 
 \begin_layout Plain Layout
 
-			
+				
 \backslash
 end{center}
 \end_layout
