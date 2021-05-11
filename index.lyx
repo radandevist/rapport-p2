@@ -12,6 +12,11 @@
 \usepackage{blindtext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ajoute automatiquement
+% les front et back matters
+% dans la table des matières
+\usepackage{tocbibind}
+
 % Réglage des fontes et typo    
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}
@@ -379,7 +384,7 @@ status open
 
 
 \backslash
-dominitoc	% Génération des mini-toc
+dominitoc % Génération des mini-toc
 \end_layout
 
 \end_inset
@@ -403,10 +408,14 @@ status open
 
 \begin_layout Plain Layout
 
+% Sommaire: moins de détails (chapitres/sections)
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
-setcounter{tocdepth}{1}	% Pas besoin de trop détailler le sommaire ici (chapitre
-s/sections)
+setcounter{tocdepth}{1}
 \end_layout
 
 \end_inset
@@ -432,7 +441,7 @@ status open
 
 
 \backslash
-addstarredchapter{Table des matières}
+mtcaddchapter
 \end_layout
 
 \end_inset
@@ -456,7 +465,7 @@ status open
 
 
 \backslash
-addstarredchapter{Liste des figures}
+mtcaddchapter
 \end_layout
 
 \end_inset
@@ -480,7 +489,7 @@ status open
 
 
 \backslash
-addstarredchapter{Liste des tableaux}
+mtcaddchapter
 \end_layout
 
 \end_inset
@@ -514,7 +523,27 @@ pagenumbering{arabic}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "chapters/chapter_1.lyx"
+filename "mainmatter/chapter_1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "mainmatter/chapter_2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "mainmatter/chapter_3.lyx"
 
 \end_inset
 
@@ -541,7 +570,7 @@ pagenumbering{roman}
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 setcounter{page}{6}
 \end_layout
@@ -557,7 +586,7 @@ setcounter{page}{6}
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "backmatter/references"
-options "bibtotoc,plain-fr"
+options "plain-fr"
 
 \end_inset
 
