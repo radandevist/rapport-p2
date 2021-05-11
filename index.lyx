@@ -15,7 +15,8 @@
 % ajoute automatiquement
 % les front et back matters
 % dans la table des matières
-\usepackage[notbib]{tocbibind}
+%\usepackage[notbib]{tocbibind}
+\usepackage{tocbibind}
 
 % url
 %\usepackage{url}
