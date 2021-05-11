@@ -12,11 +12,6 @@
 \usepackage{blindtext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ajoute automatiquement
-% les front et back matters
-% dans la table des matières
-\usepackage{tocbibind}
-
 % Réglage des fontes et typo    
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}
@@ -281,7 +276,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
@@ -310,8 +305,8 @@
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 2
-\tocdepth 1
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -330,352 +325,72 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "info.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/cover.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/title_page.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{roman}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-dominitoc % Génération des mini-toc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/acknowledgement.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Sommaire: moins de détails (chapitres/sections)
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{tocdepth}{1}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing other 1.125
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList figure
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList table
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{arabic}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_3.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{roman}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-setcounter{page}{6}
-\end_layout
-
-\end_inset
-
-
+\begin_layout Section
+Datasheet lecteur optique d' d'empreintes digitales
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing double
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "backmatter/references"
-options "plain-fr"
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+ Dolore blanditiis vero dolor dicta nam est ullam alias ? Quo velit in maiores
+ incidunt accusantium, iste quis itaque, porro fugit consequa- tur delectus,
+ esse blanditiis unde ullam.
+ Et a deleniti nulla adipisci ex nobis labore voluptatem, est non quod blanditii
+s recusandae nesciunt pariatur quos vel.
+\end_layout
 
-\end_inset
-
-
+\begin_layout Subsection
+Description du produit
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-mtcaddchapter
+\paragraph_spacing double
+Neque maxime veritatis cupiditate.
+ Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
+e amet quia ut ! Voluptates maxime cum veritatis eius debitis quidem iste
+ tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
+ libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
+ dolore ? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
+ esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
+ officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam
+ facilis ! Et aliquam consequatur fugit nemo nesciunt repellendus temporibus
+ omnis hic asperiores iste de.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
+\begin_layout Subsection
+Principe de fontionnement
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-appendix
+\paragraph_spacing double
+Neque maxime veritatis cupiditate.
+ Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
+e amet quia ut ! Voluptates maxime cum veritatis eius debitis quidem iste
+ tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
+ libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
+ dolore ? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
+ esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
+ officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam
+ facilis ! Et aliquam consequatur fugit nemo nesciunt repellendus temporibus
+ omnis hic asperiores iste de.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-addstarredchapter{Annexes}
-\end_layout
-
-\end_inset
-
-
+\begin_layout Subsection
+Mode d'utilisation
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-thesection}{
-\backslash
-Alph{section}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "backmatter/appendix_1.lyx"
-
-\end_inset
-
-
+\paragraph_spacing double
+Neque maxime veritatis cupiditate.
+ Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
+e amet quia ut ! Voluptates maxime cum veritatis eius debitis quidem iste
+ tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
+ libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
+ dolore ? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
+ esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
+ officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam
+ facilis ! Et aliquam consequatur fugit nemo nesciunt repellendus temporibus
+ omnis hic asperiores iste de.
 \end_layout
 
 \end_body

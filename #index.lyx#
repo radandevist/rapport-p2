@@ -12,6 +12,11 @@
 \usepackage{blindtext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ajoute automatiquement
+% les front et back matters
+% dans la table des matières
+\usepackage{tocbibind}
+
 % Réglage des fontes et typo    
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}
@@ -379,7 +384,7 @@ status open
 
 
 \backslash
-dominitoc	% Génération des mini-toc
+dominitoc % Génération des mini-toc
 \end_layout
 
 \end_inset
@@ -403,26 +408,14 @@ status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-setcounter{tocdepth}{1}	% Pas besoin de trop détailler le sommaire ici (chapitre
-s/sections)
+% Sommaire: moins de détails (chapitres/sections)
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-addcontentsline{toc}{chapter}{Table des matières}
+setcounter{tocdepth}{1}
 \end_layout
 
 \end_inset
@@ -446,9 +439,9 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
-addstarredchapter{Table des matières}
+mtcaddchapter
 \end_layout
 
 \end_inset
@@ -470,9 +463,9 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
-addstarredchapter{Liste des figures}
+mtcaddchapter
 \end_layout
 
 \end_inset
@@ -494,11 +487,18 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
-addstarredchapter{Liste des tableaux}
+mtcaddchapter
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
@@ -523,7 +523,7 @@ pagenumbering{arabic}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "chapters/chapter_1.lyx"
+filename "mainmatter/chapter_1.lyx"
 
 \end_inset
 
@@ -533,7 +533,7 @@ filename "chapters/chapter_1.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "chapters/chapter_2.lyx"
+filename "mainmatter/chapter_2.lyx"
 
 \end_inset
 
@@ -543,8 +543,15 @@ filename "chapters/chapter_2.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "chapters/chapter_3.lyx"
+filename "mainmatter/chapter_3.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
 \end_inset
 
 
@@ -563,7 +570,7 @@ pagenumbering{roman}
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 setcounter{page}{6}
 \end_layout
@@ -592,10 +599,79 @@ status open
 
 \begin_layout Plain Layout
 
+%
+\backslash
+mtcaddchapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 
 \backslash
-addstarredchapter{Bibliographie}
+appendix
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addstarredchapter{Annexes}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thesection}{
+\backslash
+Alph{chapter}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "backmatter/appendix_1.lyx"
 
 \end_inset
 
