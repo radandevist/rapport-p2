@@ -15,7 +15,10 @@
 % ajoute automatiquement
 % les front et back matters
 % dans la table des matières
-\usepackage{tocbibind}
+\usepackage[notbib]{tocbibind}
+
+% url
+%\usepackage{url}
 
 % Réglage des fontes et typo    
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
@@ -581,11 +584,29 @@ setcounter{page}{6}
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+bibname}{Réferences}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing double
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "backmatter/references"
+bibfiles "backmatter/bibliography,backmatter/webography"
 options "plain-fr"
 
 \end_inset
@@ -635,6 +656,13 @@ appendix
 \begin_layout Standard
 \begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chapter*{Annexes}
+\end_layout
 
 \begin_layout Plain Layout
 

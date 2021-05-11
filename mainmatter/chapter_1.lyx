@@ -367,7 +367,15 @@ literal "false"
 \end_inset
 
 , vous pouvez ajouter à votre application des capacités de communication
- en temps réel qui fonctionnent sur une norme ouverte.
+ en temps réel
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WebRTC-website"
+literal "false"
+
+\end_inset
+
+ qui fonctionnent sur une norme ouverte.
  Il prend en charge la vidéo, la voix et les données génériques à envoyer
  entre pairs, permettant aux développeurs de créer de puissantes solutions
  de communication vocale et vidéo.

@@ -12,11 +12,6 @@
 \usepackage{blindtext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ajoute automatiquement
-% les front et back matters
-% dans la table des matières
-\usepackage{tocbibind}
-
 % Réglage des fontes et typo    
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}

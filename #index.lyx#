@@ -15,7 +15,10 @@
 % ajoute automatiquement
 % les front et back matters
 % dans la table des matières
-\usepackage{tocbibind}
+\usepackage[notbib]{tocbibind}
+
+% url
+%\usepackage{url}
 
 % Réglage des fontes et typo    
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
@@ -594,6 +597,10 @@ options "plain-fr"
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -640,6 +647,13 @@ status open
 
 
 \backslash
+chapter*{Annexes}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 addstarredchapter{Annexes}
 \end_layout
 
@@ -660,7 +674,7 @@ renewcommand{
 \backslash
 thesection}{
 \backslash
-Alph{chapter}}
+Alph{section}}
 \end_layout
 
 \end_inset
