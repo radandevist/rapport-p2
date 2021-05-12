@@ -358,8 +358,32 @@ Introduction
 
 \begin_layout Standard
 \paragraph_spacing double
-Avec WebRTC, vous pouvez ajouter à votre application des capacités de communicat
-ion en temps réel qui fonctionnent sur une norme ouverte
+Avec WebRTC δ
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "δ"
+description "pareil pour delta, une lettre tellement célèbre"
+literal "false"
+
+\end_inset
+
+, vous pouvez 
+\begin_inset Formula $\theta\beta$
+\end_inset
+
+ ajouter θ
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "θ"
+description "non pas encore moins, thêta aussi est une lettre célèbre de l'alphabet grec"
+literal "false"
+
+\end_inset
+
+ à votre application des capacités de communication en temps réel qui fonctionne
+nt sur une norme ouverte
 \begin_inset CommandInset citation
 LatexCommand cite
 key "WebRTC-website"
@@ -447,12 +471,12 @@ Interesting
 
 \begin_layout Standard
 \paragraph_spacing double
-Neque maxime veritatis alpha
+Neque maxime veritatis α
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "S"
-symbol "alpha"
-description "the beginning of the greek alphabet"
+symbol "α"
+description "alpha est la première lettre de l'alphabet grec"
 literal "false"
 
 \end_inset

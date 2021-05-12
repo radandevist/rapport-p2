@@ -358,16 +358,8 @@ Introduction
 
 \begin_layout Standard
 \paragraph_spacing double
-Avec WebRTC
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Davis2005"
-literal "false"
-
-\end_inset
-
-, vous pouvez ajouter à votre application des capacités de communication
- en temps réel
+Avec WebRTC, vous pouvez ajouter à votre application des capacités de communicat
+ion en temps réel qui fonctionnent sur une norme ouverte
 \begin_inset CommandInset citation
 LatexCommand cite
 key "WebRTC-website"
@@ -375,15 +367,39 @@ literal "false"
 
 \end_inset
 
- qui fonctionnent sur une norme ouverte.
+.
  Il prend en charge la vidéo, la voix et les données génériques à envoyer
  entre pairs, permettant aux développeurs de créer de puissantes solutions
- de communication vocale et vidéo.
+ de communication vocale et vidéo
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mike2019"
+literal "false"
+
+\end_inset
+
+.
  La technologie est disponible sur tous les navigateurs modernes ainsi que
- sur les clients natifs de toutes les principales plates-formes.
+ sur les clients natifs de toutes les principales plates-formes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MS-Windows-NT-kernel"
+literal "false"
+
+\end_inset
+
+.
  Les technologies derrière WebRTC sont implémentées en tant que standard
  Web ouvert et disponibles en tant qu'API JavaScript standard dans tous
- les principaux navigateurs.
+ les principaux navigateurs
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pierce2013"
+literal "false"
+
+\end_inset
+
+.
  Pour les clients natifs, comme les applications Android et iOS, une bibliothèqu
 e est disponible qui fournit les mêmes fonctionnalités.
  Le projet WebRTC est open-source et soutenu par Apple, Google, Microsoft
@@ -409,7 +425,7 @@ literal "false"
 
  consectetur adipisicing elit.
  Dolore blanditiis vero dolor dicta nam est ullam alias? Quo velit in maiores
-  incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
+ incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
  esse API
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -431,7 +447,17 @@ Interesting
 
 \begin_layout Standard
 \paragraph_spacing double
-Neque maxime veritatis cupiditate.
+Neque  maxime veritatis α
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "α"
+description "alpha est la première lettre de l'alphabet grec"
+literal "false"
+
+\end_inset
+
+ cupiditate.
  Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
 e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
  tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
