@@ -367,7 +367,15 @@ literal "false"
 \end_inset
 
 , vous pouvez ajouter à votre application des capacités de communication
- en temps réel qui fonctionnent sur une norme ouverte.
+ en temps réel
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WebRTC-website"
+literal "false"
+
+\end_inset
+
+ qui fonctionnent sur une norme ouverte.
  Il prend en charge la vidéo, la voix et les données génériques à envoyer
  entre pairs, permettant aux développeurs de créer de puissantes solutions
  de communication vocale et vidéo.
@@ -389,9 +397,27 @@ A Fancy Section
 
 \begin_layout Standard
 \paragraph_spacing double
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Lorem ipsum API
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "API"
+description "Application Programming Interface: Dans l'informatique, une interface de programmation d'application est une interface qui définit les interactions entre plusieurs applications logicielles ou des intermédiaires mixtes matériel-logiciel. Il définit les types d'appels ou de demandes qui peuvent être effectués, comment les effectuer, les formats de données à utiliser, les conventions à suivre, etc."
+literal "false"
+
+\end_inset
+
+ dolor sit amet consectetur adipisicing elit.
  Dolore blanditiis vero dolor dicta nam est ullam alias? Quo velit in maiores
  incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
+ API
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "API"
+description "Application Programming Interface"
+literal "false"
+
+\end_inset
+
  esse blanditiis unde ullam.
  Et a deleniti nulla adipisci ex nobis labore voluptatem, est non quod blanditii
 s recusandae nesciunt pariatur quos vel.
@@ -410,9 +436,18 @@ e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
  libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
  dolore? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
  esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
- officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam
- facilis! Et aliquam consequatur fugit nemo nesciunt repellendus temporibus
- omnis hic asperiores iste debitis maiores sapiente quo reiciendis sed,
+ officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat RUA
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+RUA
+\end_layout
+
+\end_inset
+
+ ipsam facilis! Et aliquam consequatur fugit nemo nesciunt repellendus temporibu
+s omnis hic asperiores iste debitis maiores sapiente quo reiciendis sed,
  repellat fuga mollitia voluptatibus dolores porro natus maxime deserunt
  dolor quos.
  Ipsa eligendi aut necessitatibus, laborum exercitationem quis.

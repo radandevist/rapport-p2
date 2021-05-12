@@ -15,7 +15,8 @@
 % ajoute automatiquement
 % les front et back matters
 % dans la table des matières
-\usepackage[notbib]{tocbibind}
+%\usepackage[notbib]{tocbibind}
+\usepackage{tocbibind}
 
 % url
 %\usepackage{url}
@@ -453,6 +454,24 @@ mtcaddchapter
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+listfigurename}{Liste des figures}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset FloatList figure
 
 \end_inset
@@ -494,6 +513,51 @@ status open
 \backslash
 mtcaddchapter
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+nomname}{Liste des acronymes et symboles}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
 
 \end_inset
 
@@ -584,12 +648,17 @@ setcounter{page}{6}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "backmatter/references"
-options "plain-fr"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+bibname}{Références}
+\end_layout
 
 \end_inset
 
@@ -597,6 +666,15 @@ options "plain-fr"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "backmatter/bibliography,backmatter/webography"
+options "plain-fr"
+
+\end_inset
+
 
 \end_layout
 

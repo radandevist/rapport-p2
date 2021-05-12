@@ -16,7 +16,12 @@
 % les front et back matters
 % dans la table des matières
 %\usepackage[notbib]{tocbibind}
+%\usepackage[other]{tocbibind}
 \usepackage{tocbibind}
+
+% include nomenclature in toc
+%\PassOptionsToPackage{intoc}{nomencl}
+\def\nompreamble{\addcontentsline{toc}{chapter}{\nomname}\markboth{\nomname}{\nomname}}
 
 % url
 %\usepackage{url}
@@ -454,6 +459,24 @@ mtcaddchapter
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+listfigurename}{Liste des figures}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset FloatList figure
 
 \end_inset
@@ -495,6 +518,42 @@ status open
 \backslash
 mtcaddchapter
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+nomname}{Liste des acronymes et symboles}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
 
 \end_inset
 
