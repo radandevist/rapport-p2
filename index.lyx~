@@ -21,7 +21,23 @@
 
 % include nomenclature in toc
 %\PassOptionsToPackage{intoc}{nomencl}
-\def\nompreamble{\addcontentsline{toc}{section}{\nomname}\markboth{\nomname}{\nomname}}
+\def\nompreamble{\addcontentsline{toc}{chapter}{\nomname}\markboth{\nomname}{\nomname}}
+
+%Creating Nomenclature with Sections
+%This assumes that you prefix all your sort as keys with appropriate letters (e.g. A for alphabetical i.e Roman; G for Greek etc). Personally I use an underscore too (a_ or G_)because this makes the key clearer to me. If you do this be consistent and use underscores throughout otherwise your sort order may not be as expected. (See documentation on nomencl for sort orders).
+%Use the following code in your LaTeX preamble (Documents>Settings>Latex Preamble). Comment out lines as appropriate if those sections are not required along with line containing corresponding terminating '}'. Similarly add a new line in the same format if required not forgetting to add the terminating bracket.
+\renewcommand{\nomgroup}[1]{%
+%\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
+%\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
+%\ifthenelse{\equal{#1}{C}}{\item[\textbf{Abbreviations}]}{%
+\ifthenelse{\equal{#1}{Acr_}}{\item[\textbf{Acronymes}]}{%
+\ifthenelse{\equal{#1}{Sym_}}{\item[\textbf{Symboles}]}
+{}
+}% matches Symbols
+}% matches Acr
+%}% matches Abbreviations
+%}% matches Greek Symbols
+%}% matches Roman Symbols
 
 % url
 %\usepackage{url}
@@ -450,7 +466,7 @@ status open
 
 
 \backslash
-mtcaddchapter
+mtcaddchapter % fix minitoc
 \end_layout
 
 \end_inset
@@ -492,7 +508,7 @@ status open
 
 
 \backslash
-mtcaddchapter
+mtcaddchapter % fix minitoc
 \end_layout
 
 \end_inset
@@ -516,7 +532,7 @@ status open
 
 
 \backslash
-mtcaddchapter
+mtcaddchapter % fix minitoc
 \end_layout
 
 \end_inset
@@ -550,26 +566,10 @@ nomname}{Liste des acronymes et symboles}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-chapter*{
-\backslash
-nomname}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-addstarredchapter{
-\backslash
-nomname}
-\end_layout
+\paragraph_spacing double
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
 
 \end_inset
 
@@ -577,10 +577,15 @@ nomname}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "auto"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mtcaddchapter % fix minitoc
+\end_layout
 
 \end_inset
 

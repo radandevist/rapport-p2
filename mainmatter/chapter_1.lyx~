@@ -397,28 +397,30 @@ A Fancy Section
 
 \begin_layout Standard
 \paragraph_spacing double
-Lorem ipsum API
+Lorem ipsum dolor sit amet URA
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-symbol "API"
-description "Application Programming Interface: Dans l'informatique, une interface de programmation d'application est une interface qui définit les interactions entre plusieurs applications logicielles ou des intermédiaires mixtes matériel-logiciel. Il définit les types d'appels ou de demandes qui peuvent être effectués, comment les effectuer, les formats de données à utiliser, les conventions à suivre, etc."
+prefix "A"
+symbol "URA"
+description "Useless Random Abbreviation: lorem ipsum dolor sit amet consectitur."
 literal "false"
 
 \end_inset
 
- dolor sit amet consectetur adipisicing elit.
+ consectetur adipisicing elit.
  Dolore blanditiis vero dolor dicta nam est ullam alias? Quo velit in maiores
  incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
- API
+ esse API
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
+prefix "A"
 symbol "API"
-description "Application Programming Interface"
+description "Application Programming interface: Une interface de programmation d'application, ou API, est un ensemble de code de programmation qui interroge des données, analyse les réponses et envoie des instructions entre une plate-forme logicielle et une autre. "
 literal "false"
 
 \end_inset
 
- esse blanditiis unde ullam.
+ blanditiis unde ullam.
  Et a deleniti nulla adipisci ex nobis labore voluptatem, est non quod blanditii
 s recusandae nesciunt pariatur quos vel.
 \end_layout
@@ -429,7 +431,7 @@ Interesting
 
 \begin_layout Standard
 \paragraph_spacing double
-Neque maxime veritatis cupiditate.
+Neque maxime veritatis α cupiditate.
  Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
 e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
  tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
@@ -437,15 +439,6 @@ e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
  dolore? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
  esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
  officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat RUA
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-RUA
-\end_layout
-
-\end_inset
-
  ipsam facilis! Et aliquam consequatur fugit nemo nesciunt repellendus temporibu
 s omnis hic asperiores iste debitis maiores sapiente quo reiciendis sed,
  repellat fuga mollitia voluptatibus dolores porro natus maxime deserunt

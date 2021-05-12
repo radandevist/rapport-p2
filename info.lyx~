@@ -359,13 +359,6 @@ typeRapport{PROJET DE FIN DE SEMESTRE}
 
 
 \backslash
-specialite{Parcours Télécommunication et Réseau}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
 anneeUniversitaire{Année Universitaire : 2019 - 2020}
 \end_layout
 
@@ -501,6 +494,13 @@ ecole{{
 
 \backslash
 departement{Mention STIC}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+specialite{Parcours Télécommunication et Réseau}
 \end_layout
 
 \end_inset
