@@ -698,7 +698,7 @@ bibname}{Références}
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "backmatter/bibliography,backmatter/webography"
+bibfiles "backmatter/references"
 options "plain-fr"
 
 \end_inset

@@ -358,24 +358,8 @@ Introduction
 
 \begin_layout Standard
 \paragraph_spacing double
-Avec WebRTC
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Davis2005"
-literal "false"
-
-\end_inset
-
-, vous pouvez ajouter à votre application des capacités de communication
- en temps réel
-\begin_inset CommandInset citation
-LatexCommand cite
-key "WebRTC-website"
-literal "false"
-
-\end_inset
-
- qui fonctionnent sur une norme ouverte.
+Avec WebRTC, vous pouvez ajouter à votre application des capacités de communicat
+ion en temps réel qui fonctionnent sur une norme ouverte.
  Il prend en charge la vidéo, la voix et les données génériques à envoyer
  entre pairs, permettant aux développeurs de créer de puissantes solutions
  de communication vocale et vidéo.
@@ -431,7 +415,17 @@ Interesting
 
 \begin_layout Standard
 \paragraph_spacing double
-Neque maxime veritatis α cupiditate.
+Neque maxime veritatis alpha
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "S"
+symbol "alpha"
+description "the beginning of the greek alphabet"
+literal "false"
+
+\end_inset
+
+ cupiditate.
  Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
 e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
  tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
