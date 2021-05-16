@@ -431,13 +431,13 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png.png
-	scale 35
+	scale 45
 
 \end_inset
 
@@ -448,6 +448,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+composant WebRTC
 \begin_inset CommandInset label
 LatexCommand label
 name "composant WebRTC"
@@ -489,7 +490,97 @@ Javascript joue un rôle important dans WebRTC, car la technologie s'exécute
  sur le navigateur.
  Javascript est le choix idéal en tant que langage de programmation pour
  assurer la médiation entre le WebRTC et l'application via un ensemble d'API
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "d'API"
+description "Application Programming Interface"
+literal "false"
+
+\end_inset
+
  exposées.
+\end_layout
+
+\begin_layout Section
+Normes WebRTC
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Les normes WebRTC sont actuellement développées conjointement par le W3C
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "W3C"
+description "World Wide Web Consortium"
+literal "false"
+
+\end_inset
+
+ et l'IETF
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "IETF"
+description "Internet Engineering Task Force"
+literal "false"
+
+\end_inset
+
+.
+ Le W3C
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "W3C"
+description "World Wide Web Consortium"
+literal "false"
+
+\end_inset
+
+ travaille sur la définition des API nécessaires aux applications web Javascript
+ pour interagir avec la fonction RTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "RTC"
+description "Real Time Communication"
+literal "false"
+
+\end_inset
+
+ du navigateur.
+ L'IETF
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "IETF"
+description "Internet Engineering Task Force"
+literal "false"
+
+\end_inset
+
+ développe les protocoles utilisés par la fonction RTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "RTC"
+description "Real Time Communication"
+literal "false"
+
+\end_inset
+
+ du navigateur pour communiquer avec un autre navigateur ou point de terminaison
+ de communications Internet.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Le travail du W3C est centré sur le groupe de travail WebRTC et le travail
+ de l'IETF est centré sur le groupe de travail RTCWeb (Real-Time Communications
+ Web).
+ Les deux groupes sont indépendants, mais se coordonnent étroitement.
 \end_layout
 
 \end_body

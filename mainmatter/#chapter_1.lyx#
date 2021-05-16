@@ -326,7 +326,7 @@
 \begin_body
 
 \begin_layout Chapter
-Brève description théorique du WebRTC
+Introduction au WebRTC
 \end_layout
 
 \begin_layout Standard
@@ -358,632 +358,228 @@ Introduction
 
 \begin_layout Standard
 \paragraph_spacing double
-Avec WebRTC, vous pouvez ajouter à votre application des capacités de communicat
-ion en temps réel qui fonctionnent sur une norme ouverte
-\begin_inset CommandInset citation
-LatexCommand cite
-key "WebRTC-website"
-literal "false"
-
-\end_inset
-
-.
- Il prend en charge la vidéo, la voix et les données génériques à envoyer
- entre pairs, permettant aux développeurs de créer de puissantes solutions
- de communication vocale et vidéo
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Mike2019"
-literal "false"
-
-\end_inset
-
-.
- La technologie est disponible sur tous les navigateurs modernes ainsi que
- sur les clients natifs de toutes les principales plates-formes
-\begin_inset CommandInset citation
-LatexCommand cite
-key "MS-Windows-NT-kernel"
-literal "false"
-
-\end_inset
-
-.
- Les technologies derrière WebRTC sont implémentées en tant que standard
- Web ouvert et disponibles en tant qu'API JavaScript standard dans tous
- les principaux navigateurs
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Pierce2013"
-literal "false"
-
-\end_inset
-
-.
- Pour les clients natifs, comme les applications Android et iOS, une bibliothèqu
-e est disponible qui fournit les mêmes fonctionnalités.
- Le projet WebRTC est open-source et soutenu par Apple, Google, Microsoft
- et Mozilla, entre autres.
- Cette page est gérée par l'équipe Google WebRTC.
-\end_layout
-
-\begin_layout Section
-A Fancy Section
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Lorem ipsum dolor sit amet URA
+La conception structurelle Web classique est basée sur un modèle client-serveur,
+ dans lequel les navigateurs envoient une demande de contenu HTTP
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
-symbol "URA"
-description "Useless Random Abbreviation: lorem ipsum dolor sit amet consectitur."
+symbol "HTTP"
+description "HyperText Transfert Protocol"
 literal "false"
 
 \end_inset
 
- consectetur adipisicing elit.
- Dolore blanditiis vero dolor dicta nam est ullam alias? Quo velit in maiores
- incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
- esse API
+ au serveur Web, qui répond en leur envoyant une réponse contenant les informati
+ons demandées.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Le décodage de la réponse par les navigateurs est possible car elles contiennent
+ les composants pour se conformer aux normes du W3C
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
-symbol "API"
-description "Application Programming interface: Une interface de programmation d'application, ou API, est un ensemble de code de programmation qui interroge des données, analyse les réponses et envoie des instructions entre une plate-forme logicielle et une autre. "
+symbol "W3C"
+description "World Wide Web Consortium"
 literal "false"
 
 \end_inset
 
- blanditiis unde ullam.
- Et a deleniti nulla adipisci ex nobis labore voluptatem, est non quod blanditii
-s recusandae nesciunt pariatur quos vel.
-\end_layout
-
-\begin_layout Subsection
-Interesting
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Neque  maxime veritatis α
+, ici en l’occurrence, de balises HTML
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-prefix "S"
-symbol "α"
-description "alpha est la première lettre de l'alphabet grec"
+prefix "A"
+symbol "HTML"
+description "HyperText Markup Language"
 literal "false"
 
 \end_inset
 
- cupiditate.
- Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
-e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
- tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
- libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
- dolore? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
- esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
- officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat RUA
- ipsam facilis! Et aliquam consequatur fugit nemo nesciunt repellendus temporibu
-s omnis hic asperiores iste debitis maiores sapiente quo reiciendis sed,
- repellat fuga mollitia voluptatibus dolores porro natus maxime deserunt
- dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
-\end_layout
+, styles CSS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "CSS"
+description "Cascading Style Sheet"
+literal "false"
 
-\begin_layout Subsection
-Definitely Interesting
+\end_inset
+
+ et code Javascript.
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing double
-A, aliquid.
- Suscipit cupiditate necessitatibus laborum commodi accusantium ea consequatur
- repellat possimus eveniet cumque.
- Quod enim distinctio ipsa consequatur dolores numquam provident dolorem
- sapiente adipisci eligendi, molestiae repellat quibusdam facere consequuntur
- placeat libero dolore.
- Dolore rem corrupti voluptates totam, quas reiciendis eum modi debitis
- quidem cum blanditiis ab consequuntur quam, in obcaecati suscipit aliquid
- doloremque distinctio fuga? Facere excepturi animi et laborum? Pariatur
- deleniti iure voluptates corporis impedit velit, sunt sint animi nostrum
- nesciunt veniam saepe obcaecati architecto minus beatae harum dicta incidunt
- quo repellat est atque.
+De même, en ce qui concerne le modèle de navigateurs, afin de supporter
+ WebRTC, chaque navigateur doit ajouter un autre composant pour pouvoir
+ la prendre en charge.
+ La plupart des principaux navigateurs ont ajouté le composant RTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "RTC"
+description "Real Time Communication"
+literal "false"
+
+\end_inset
+
+ depuis 2014.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+composant WebRTC
+\begin_inset CommandInset label
+LatexCommand label
+name "composant WebRTC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+À partir du diagramme 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "composant WebRTC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, nous pouvons clairement voir le composant WebRTC intégré dans le navigateur.
+ Il se charge d'appeler les API audio et vidéo natives du système d'exploitation.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Javascript joue un rôle important dans WebRTC, car la technologie s'exécute
+ sur le navigateur.
+ Javascript est le choix idéal en tant que langage de programmation pour
+ assurer la médiation entre le WebRTC et l'application via un ensemble d'API
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "d'API"
+description "Application Programming Interface"
+literal "false"
+
+\end_inset
+
+ exposées.
 \end_layout
 
 \begin_layout Section
-Random section
+Normes WebRTC
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing double
-Quisquam, officiis, nulla reiciendis molestiae odit iure ratione voluptatum,
- magni repellendus veniam facere id! Doloremque eveniet praesentium, qui
- voluptas impedit aut nulla natus ab minus voluptatum nam perspiciatis iusto
- tenetur, voluptatibus laborum nihil voluptatem non est voluptates?
-\end_layout
+Les normes WebRTC sont actuellement développées conjointement par le W3C
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "W3C"
+description "World Wide Web Consortium"
+literal "false"
 
-\begin_layout Subsection
-A subsection
-\end_layout
+\end_inset
 
-\begin_layout Standard
-\paragraph_spacing double
-Esse hic magni, sapiente a, amet aperiam optio odit veniam porro voluptas,
- nostrum vero! Doloremque quam suscipit totam.
- Sit ut quam commodi eius nisi eligendi rerum reiciendis nihil accusamus
- tempore quos esse, consequatur dolore laudantium.
- Id officia dolor cupiditate non? Sunt tempore quasi ea, expedita quod iusto
- est ad laudantium doloremque libero esse voluptas praesentium explicabo
- omnis qui.
- Aliquid adipisci cum veniam libero, recusandae deserunt itaque quos officiis
- nam quo ratione vero exercitationem error minus molestiae.
- Modi, eaque corporis accusamus quae, corrupti reiciendis eum in earum dolor
- voluptatum ad.
- Quia, distinctio! Impedit aliquid in, dicta voluptatibus quaerat, commodi
- vitae natus maiores perferendis repellendus id reprehenderit adipisci eveniet
- quisquam debitis qui tenetur sit facilis.
-\end_layout
+ et l'IETF
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "IETF"
+description "Internet Engineering Task Force"
+literal "false"
 
-\begin_layout Subsection
-Another subsection
-\end_layout
+\end_inset
 
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
+.
+ Le W3C
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "W3C"
+description "World Wide Web Consortium"
+literal "false"
 
-\begin_layout Section
-A Fancy Section
-\end_layout
+\end_inset
 
-\begin_layout Standard
-\paragraph_spacing double
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
- Dolore blanditiis vero dolor dicta nam est ullam alias? Quo velit in maiores
- incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
- esse blanditiis unde ullam.
- Et a deleniti nulla adipisci ex nobis labore voluptatem, est non quod blanditii
-s recusandae nesciunt pariatur quos vel.
-\end_layout
+ travaille sur la définition des API nécessaires aux applications web Javascript
+ pour interagir avec la fonction RTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "RTC"
+description "Real Time Communication"
+literal "false"
 
-\begin_layout Subsection
-Interesting
-\end_layout
+\end_inset
 
-\begin_layout Standard
-\paragraph_spacing double
-Neque maxime veritatis cupiditate.
- Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
-e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
- tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
- libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
- dolore? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
- esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
- officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam
- facilis! Et aliquam consequatur fugit nemo nesciunt repellendus temporibus
- omnis hic asperiores iste debitis maiores sapiente quo reiciendis sed,
- repellat fuga mollitia voluptatibus dolores porro natus maxime deserunt
- dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
-\end_layout
+ du navigateur.
+ L'IETF
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "IETF"
+description "Internet Engineering Task Force"
+literal "false"
 
-\begin_layout Subsection
-Definitely Interesting
+\end_inset
+
+ développe les protocoles utilisés par la fonction RTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "RTC"
+description "Real Time Communication"
+literal "false"
+
+\end_inset
+
+ du navigateur pour communiquer avec un autre navigateur ou point de terminaison
+ de communications Internet.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-A, aliquid.
- Suscipit cupiditate necessitatibus laborum commodi accusantium ea consequatur
- repellat possimus eveniet cumque.
- Quod enim distinctio ipsa consequatur dolores numquam provident dolorem
- sapiente adipisci eligendi, molestiae repellat quibusdam facere consequuntur
- placeat libero dolore.
- Dolore rem corrupti voluptates totam, quas reiciendis eum modi debitis
- quidem cum blanditiis ab consequuntur quam, in obcaecati suscipit aliquid
- doloremque distinctio fuga? Facere excepturi animi et laborum? Pariatur
- deleniti iure voluptates corporis impedit velit, sunt sint animi nostrum
- nesciunt veniam saepe obcaecati architecto minus beatae harum dicta incidunt
- quo repellat est atque.
-\end_layout
-
-\begin_layout Section
-Random section
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Quisquam, officiis, nulla reiciendis molestiae odit iure ratione voluptatum,
- magni repellendus veniam facere id! Doloremque eveniet praesentium, qui
- voluptas impedit aut nulla natus ab minus voluptatum nam perspiciatis iusto
- tenetur, voluptatibus laborum nihil voluptatem non est voluptates?
-\end_layout
-
-\begin_layout Subsection
-A subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Esse hic magni, sapiente a, amet aperiam optio odit veniam porro voluptas,
- nostrum vero! Doloremque quam suscipit totam.
- Sit ut quam commodi eius nisi eligendi rerum reiciendis nihil accusamus
- tempore quos esse, consequatur dolore laudantium.
- Id officia dolor cupiditate non? Sunt tempore quasi ea, expedita quod iusto
- est ad laudantium doloremque libero esse voluptas praesentium explicabo
- omnis qui.
- Aliquid adipisci cum veniam libero, recusandae deserunt itaque quos officiis
- nam quo ratione vero exercitationem error minus molestiae.
- Modi, eaque corporis accusamus quae, corrupti reiciendis eum in earum dolor
- voluptatum ad.
- Quia, distinctio! Impedit aliquid in, dicta voluptatibus quaerat, commodi
- vitae natus maiores perferendis repellendus id reprehenderit adipisci eveniet
- quisquam debitis qui tenetur sit facilis.
-\end_layout
-
-\begin_layout Subsection
-Another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Section
-Less Interesting
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas.
-\end_layout
-
-\begin_layout Subsection
-Another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-Yet another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-A boring subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Section
-Thank you
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas.
-\end_layout
-
-\begin_layout Subsection
-Another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-Yet another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-A boring subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
-\end_layout
-
-\begin_layout Section
-A Fancy Section
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
- Dolore blanditiis vero dolor dicta nam est ullam alias? Quo velit in maiores
- incidunt accusantium, iste quis itaque, porro fugit consequatur delectus,
- esse blanditiis unde ullam.
- Et a deleniti nulla adipisci ex nobis labore voluptatem, est non quod blanditii
-s recusandae nesciunt pariatur quos vel.
-\end_layout
-
-\begin_layout Subsection
-Interesting
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Neque maxime veritatis cupiditate.
- Aut eum debitis, voluptatibus accusamus eaque dolorum nesciunt vitae, doloremqu
-e amet quia ut! Voluptates maxime cum veritatis eius debitis quidem iste
- tempora nostrum enim obcaecati accusantium eos deleniti, natus vero distinctio
- libero ducimus quaerat dolor magnam incidunt consectetur sunt rem amet
- dolore? Doloremque libero doloribus corrupti fugit pariatur ipsum debitis
- esse error dolor eaque quibusdam eligendi optio, aspernatur tempora ut
- officiis ducimus voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam
- facilis! Et aliquam consequatur fugit nemo nesciunt repellendus temporibus
- omnis hic asperiores iste debitis maiores sapiente quo reiciendis sed,
- repellat fuga mollitia voluptatibus dolores porro natus maxime deserunt
- dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
-\end_layout
-
-\begin_layout Subsection
-Definitely Interesting
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-A, aliquid.
- Suscipit cupiditate necessitatibus laborum commodi accusantium ea consequatur
- repellat possimus eveniet cumque.
- Quod enim distinctio ipsa consequatur dolores numquam provident dolorem
- sapiente adipisci eligendi, molestiae repellat quibusdam facere consequuntur
- placeat libero dolore.
- Dolore rem corrupti voluptates totam, quas reiciendis eum modi debitis
- quidem cum blanditiis ab consequuntur quam, in obcaecati suscipit aliquid
- doloremque distinctio fuga? Facere excepturi animi et laborum? Pariatur
- deleniti iure voluptates corporis impedit velit, sunt sint animi nostrum
- nesciunt veniam saepe obcaecati architecto minus beatae harum dicta incidunt
- quo repellat est atque.
-\end_layout
-
-\begin_layout Section
-Random section
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Quisquam, officiis, nulla reiciendis molestiae odit iure ratione voluptatum,
- magni repellendus veniam facere id! Doloremque eveniet praesentium, qui
- voluptas impedit aut nulla natus ab minus voluptatum nam perspiciatis iusto
- tenetur, voluptatibus laborum nihil voluptatem non est voluptates?
-\end_layout
-
-\begin_layout Subsection
-A subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Esse hic magni, sapiente a, amet aperiam optio odit veniam porro voluptas,
- nostrum vero! Doloremque quam suscipit totam.
- Sit ut quam commodi eius nisi eligendi rerum reiciendis nihil accusamus
- tempore quos esse, consequatur dolore laudantium.
- Id officia dolor cupiditate non? Sunt tempore quasi ea, expedita quod iusto
- est ad laudantium doloremque libero esse voluptas praesentium explicabo
- omnis qui.
- Aliquid adipisci cum veniam libero, recusandae deserunt itaque quos officiis
- nam quo ratione vero exercitationem error minus molestiae.
- Modi, eaque corporis accusamus quae, corrupti reiciendis eum in earum dolor
- voluptatum ad.
- Quia, distinctio! Impedit aliquid in, dicta voluptatibus quaerat, commodi
- vitae natus maiores perferendis repellendus id reprehenderit adipisci eveniet
- quisquam debitis qui tenetur sit facilis.
-\end_layout
-
-\begin_layout Subsection
-Another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Section
-Less Interesting
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas.
-\end_layout
-
-\begin_layout Subsection
-Another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-Yet another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-A boring subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Section
-Thank you
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas.
-\end_layout
-
-\begin_layout Subsection
-Another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-Yet another subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
- A, aliquid.
-\end_layout
-
-\begin_layout Subsection
-A boring subsection
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Doloremque libero doloribus corrupti fugit pariatur ipsum debitis esse error
- dolor eaque quibusdam eligendi optio, aspernatur tempora ut officiis ducimus
- voluptatum ullam, sequi iusto culpa voluptas fugiat ipsam facilis! Et aliquam
- consequatur fugit nemo nesciunt repellendus temporibus omnis hic asperiores
- iste debitis maiores sapiente quo reiciendis sed, repellat fuga mollitia
- voluptatibus dolores porro natus maxime deserunt dolor quos.
- Ipsa eligendi aut necessitatibus, laborum exercitationem quis.
+Le travail du W3C est centré sur le groupe de travail WebRTC et le travail
+ de l'IETF est centré sur le groupe de travail RTCWeb (Real-Time Communications
+ Web).
+ Les deux groupes sont indépendants, mais se coordonnent étroitement.
 \end_layout
 
 \end_body

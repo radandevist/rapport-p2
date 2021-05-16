@@ -396,15 +396,15 @@ status open
 
 
 \backslash
-encadreura{Dr.
- ANDRIANAJAINA Todizara}
+encadreura{Mme.
+ RAOELIVOLOLONA Tefy}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-encadreurb{M.
+encadreurb{Mr.
  RAKOATOARIJAONA Raonirivo}
 \end_layout
 
@@ -542,8 +542,8 @@ hypersetup{
 
 \begin_layout Plain Layout
 
-	pdfkeywords={WebRTC, Typescript, Javascript, temps réel} % et autres mots
- clés reliés au projet
+	pdfkeywords={WebRTC, Typescript, Javascript, temps réel, communication,
+ visioconférence en direct} % et autres mots clés reliés au projet
 \end_layout
 
 \begin_layout Plain Layout
