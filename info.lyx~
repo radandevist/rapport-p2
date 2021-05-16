@@ -486,7 +486,7 @@ ecole{{
 \backslash
 'E}COLE SUP{
 \backslash
-'E}RIEURE POLYTECHNIQUE DANTSIRANANA}
+'E}RIEURE POLYTECHNIQUE D'ANTSIRANANA}
 \end_layout
 
 \begin_layout Plain Layout
@@ -542,8 +542,8 @@ hypersetup{
 
 \begin_layout Plain Layout
 
-	pdfkeywords={WebRTC, Typescript, Javascript} % et autres mots clés reliés
- au projet
+	pdfkeywords={WebRTC, Typescript, Javascript, temps réel} % et autres mots
+ clés reliés au projet
 \end_layout
 
 \begin_layout Plain Layout
