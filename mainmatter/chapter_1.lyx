@@ -352,25 +352,145 @@ minitoc
 
 \end_layout
 
+\begin_layout Section
+Introduction
+\end_layout
+
 \begin_layout Standard
+\paragraph_spacing double
 La conception structurelle Web classique est basée sur un modèle client-serveur,
- dans lequel les navigateurs envoient une demande de contenu HTTP au serveur
- Web, qui répond en leur envoyant une réponse contenant les informations
- demandées.
+ dans lequel les navigateurs envoient une demande de contenu HTTP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "HTTP"
+description "HyperText Transfert Protocol"
+literal "false"
+
+\end_inset
+
+ au serveur Web, qui répond en leur envoyant une réponse contenant les informati
+ons demandées.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 Le décodage de la réponse par les navigateurs est possible car elles contiennent
- les composants pour se conformer aux normes du W3C, ici en l’occurrence,
- de balises HTML, styles CSS et code Javascript.
+ les composants pour se conformer aux normes du W3C
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "W3C"
+description "World Wide Web Consortium"
+literal "false"
+
+\end_inset
+
+, ici en l’occurrence, de balises HTML
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "HTML"
+description "HyperText Markup Language"
+literal "false"
+
+\end_inset
+
+, styles CSS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "CSS"
+description "Cascading Style Sheet"
+literal "false"
+
+\end_inset
+
+ et code Javascript.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 De même, en ce qui concerne le modèle de navigateurs, afin de supporter
  WebRTC, chaque navigateur doit ajouter un autre composant pour pouvoir
  la prendre en charge.
- La plupart des principaux navigateurs ont ajouté le composant RTC depuis
- 2014.
+ La plupart des principaux navigateurs ont ajouté le composant RTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "RTC"
+description "Real Time Communication"
+literal "false"
+
+\end_inset
+
+ depuis 2014.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+composant WebRTC
+\begin_inset CommandInset label
+LatexCommand label
+name "composant WebRTC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+À partir du diagramme 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "composant WebRTC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, nous pouvons clairement voir le composant WebRTC intégré dans le navigateur.
+ Il se charge d'appeler les API audio et vidéo natives du système d'exploitation.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Javascript joue un rôle important dans WebRTC, car la technologie s'exécute
+ sur le navigateur.
+ Javascript est le choix idéal en tant que langage de programmation pour
+ assurer la médiation entre le WebRTC et l'application via un ensemble d'API
+ exposées.
 \end_layout
 
 \end_body
