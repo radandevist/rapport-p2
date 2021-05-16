@@ -441,7 +441,7 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -461,7 +461,7 @@ status open
 composant WebRTC
 \begin_inset CommandInset label
 LatexCommand label
-name "composant WebRTC"
+name "fig:composant WebRTC"
 
 \end_inset
 
@@ -483,7 +483,7 @@ name "composant WebRTC"
 À partir du diagramme 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "composant WebRTC"
+reference "fig:composant WebRTC"
 plural "false"
 caps "false"
 noprefix "false"
@@ -651,7 +651,52 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Architecture de WebRTC
+Architecture WebRTC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/webrtc-architecture.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+architecture WebRTC
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:architecture WebRTC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
