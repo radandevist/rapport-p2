@@ -369,7 +369,7 @@ literal "false"
 
 \end_inset
 
- au serveur Web, qui répond en leur envoyant une réponse contenant les informati
+ au serveur web, qui répond en leur envoyant une réponse contenant les informati
 ons demandées.
 \end_layout
 
@@ -412,8 +412,18 @@ literal "false"
 \begin_layout Standard
 \paragraph_spacing double
 De même, en ce qui concerne le modèle de navigateurs, afin de supporter
- WebRTC, chaque navigateur doit ajouter un autre composant pour pouvoir
- la prendre en charge.
+ WebRTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "WebRTC"
+description "Web Real-Time Communications"
+literal "false"
+
+\end_inset
+
+, chaque navigateur doit ajouter un autre composant pour pouvoir la prendre
+ en charge.
  La plupart des principaux navigateurs ont ajouté le composant RTC
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -480,16 +490,45 @@ noprefix "false"
 
 \end_inset
 
-, nous pouvons clairement voir le composant WebRTC intégré dans le navigateur.
+, nous pouvons clairement voir le composant WebRTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "WebRTC"
+description "Web Real-Time Communications"
+literal "false"
+
+\end_inset
+
+ intégré dans le navigateur.
  Il se charge d'appeler les API audio et vidéo natives du système d'exploitation.
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing double
-Javascript joue un rôle important dans WebRTC, car la technologie s'exécute
- sur le navigateur.
+Javascript joue un rôle important dans WebRTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "WebRTC"
+description "Web Real-Time Communications"
+literal "false"
+
+\end_inset
+
+, car la technologie s'exécute sur le navigateur.
  Javascript est le choix idéal en tant que langage de programmation pour
- assurer la médiation entre le WebRTC et l'application via un ensemble d'API
+ assurer la médiation entre le WebRTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "WebRTC"
+description "Web Real-Time Communications"
+literal "false"
+
+\end_inset
+
+ et l'application via un ensemble d'API
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -577,10 +616,42 @@ literal "false"
 
 \begin_layout Standard
 \paragraph_spacing double
-Le travail du W3C est centré sur le groupe de travail WebRTC et le travail
- de l'IETF est centré sur le groupe de travail RTCWeb (Real-Time Communications
- Web).
+Le travail du W3C
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "W3C"
+description "World Wide Web Consortium"
+literal "false"
+
+\end_inset
+
+ est centré sur le groupe de travail WebRTC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "WebRTC"
+description "Web Real-Time Communications"
+literal "false"
+
+\end_inset
+
+ et le travail de l'IETF
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "IETF"
+description "Internet Engineering Task Force"
+literal "false"
+
+\end_inset
+
+ est centré sur le groupe de travail RTCWeb (Real-Time Communications Web).
  Les deux groupes sont indépendants, mais se coordonnent étroitement.
+\end_layout
+
+\begin_layout Section
+Architecture de WebRTC
 \end_layout
 
 \end_body

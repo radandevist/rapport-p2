@@ -441,13 +441,13 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png.png
-	scale 45
+	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png
+	scale 50
 
 \end_inset
 
@@ -648,6 +648,10 @@ literal "false"
 
  est centré sur le groupe de travail RTCWeb (Real-Time Communications Web).
  Les deux groupes sont indépendants, mais se coordonnent étroitement.
+\end_layout
+
+\begin_layout Section
+Architecture de WebRTC
 \end_layout
 
 \end_body
