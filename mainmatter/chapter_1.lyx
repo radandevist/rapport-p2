@@ -447,7 +447,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -658,13 +658,13 @@ Architecture WebRTC
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/webrtc-architecture.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -697,6 +697,396 @@ name "fig:architecture WebRTC"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Le navigateur cache la grande partie de l'implémentation WebRTC, tout le
+ travail de capture des médias, de la description de session et des transmission
+s réseau, tout est abstrait de la surface et n'expose que de simples API.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+L'application ne peut appeler que l'API web qui est normalisée par le W3C
+ pour les développeurs web à consommer.
+\end_layout
+
+\begin_layout Subsection
+Le triangle WebRTC
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Le scénario le plus répandu est probablement celui où les deux navigateurs
+ exécutent la même application Web WebRTC, téléchargée à partir de la même
+ page Web.
+ Cela produit le «triangle» WebRTC illustré à la figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:triangle WebRTC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Cet arrangement est appelé triangle en raison de la forme de la signalisation
+ (côtés du triangle) et des flux médiatiques ou de données (base du triangle)
+ entre les trois éléments.
+ Une connexion peer établit le transport pour les médias vocaux et vidéo
+ et les flux de canaux de données directement entre les navigateurs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/triangle-webrtc.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+triangle WebRTC
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:triangle WebRTC"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Composants Importtants du WebRTC
+\end_layout
+
+\begin_layout Subsection
+Flux de médias
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Les appareils d'aujourd'hui sont dotés de plusieurs capacités matérielles
+ multimédias.
+ Dans les appareils mobiles, vous obtenez une caméra avant, une caméra arrière
+ et un microphone audio.
+ Sur les ordinateurs de bureau et les tablettes, vous obtenez le même ensemble
+ de sources multimédias.
+ Chacune de ces sources multimédia peut générer un flux multimédia.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et l'API
+ fournira ce flux à l'API Javascript en tant que variable que les développeurs
+ d'applications pourront afficher sur une page comme n'importe quel flux
+ vidéo normal.
+ comme n'importe quel flux vidéo normal.
+\end_layout
+
+\begin_layout Subsection
+Peer to peer
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+L'un des avantages distinctifs du WebRTC est le fait qu'il s'agit d'une
+ communication Peer to Peer.
+ Cela signifie évidemment que la vidéo passera directement de l’ordinateur
+ d’un utilisateur à un autre.
+\end_layout
+
+\begin_layout Subsection
+Description de la session
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+En général, pour qu'une communication ait lieu entre deux périphériques
+ quelconques, il existe un mécanisme de prise de contact qui doit être effectué
+ en premier, pour établir la session entre les deux périphériques, puis
+ le flux des messages ou des paquets peut démarrer.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+C’est la même chose avec WebRTC.
+ Il existe un protocole de déscription de session: SDP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SDP"
+description "Session Description Protocol"
+literal "false"
+
+\end_inset
+
+.
+ Il s'agit d'un ensemble de messages qui doivent être échangés entre les
+ deux navigateurs avant qu'ils ne commencent à envoyer des flux multimédias.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Pour échanger les données de description de session, nous avons besoin d'une
+ machine intermédiaire.
+ C'est là que le concept de signalisation entre en jeu.
+\end_layout
+
+\begin_layout Subsection
+Signalisation
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Supposons que le navigateur A essaie de communiquer avec le navigateur B.
+ Le navigateur A enverra ses données de description de session au serveur
+ de signalisation S, et le même processus pour le navigateur B également.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Une fois ce processus terminé, chaque navigateur sait maintenant tout ce
+ qui est nécessaire pour établir une connexion et envoyer le flux multimédia
+ à l'autre navigateur.
+ La figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:triangle WebRTC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ aidera à expliquer ce concept.
+\end_layout
+
+\begin_layout Subsubsection
+Rôle de la signalisation
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La signalisation a un rôle important dans les communications en temps réel:
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+Négociation des capacités et des paramètres des médias ntre les appareils
+ dans le même appel
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+Identification et authentification des participants à une session
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+Contrôler la session multimédia, indiquer la progression, modifier et terminer
+ la session
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+Résolution de l'éblouissement, lorsque les deux côtés d'une session essaient
+ d'établir ou de modifier une session en même temps
+\end_layout
+
+\begin_layout Subsubsection*
+Pourquoi la signalisation n'a pas été standardisé?
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La signalisation n'est pas normalisée dans WebRTC pour permettre l'interopérabil
+ité entre différents navigateurs.
+ La signalisation est une question entre les navigateurs web et le serveur
+ web, et non entre deux navigateurs dans le même appel ou session.
+ Dans ce cas, le serveur sélectionne le protocole de signalisation et s'assure
+ que les utilisateurs des applications Web ou du support du site utilisent
+ le même protocole.
+\end_layout
+
+\begin_layout Subsubsection
+Signalisation et négotiation des médias
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La fonction la plus importante de la signalisation est l'échange d'informations
+ contenues dans l'objet de protocole de description de session (SDP) entre
+ les navigateurs.
+ SDP contient toutes les informations nécessaires au fonctionnement du RTC,
+ y compris les types de codecs multimédias (audio, vidéo et données) utilisés
+ et des informations sur la bande passante de la connexion.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Un autre rôle de la signalisation est l'ICE
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "l'ICE"
+description "Interactive Connectivity Establishment"
+literal "false"
+
+\end_inset
+
+.
+ Il s'agit de l'adresse candidate représentant l'adresse IP et les ports
+ UDP où des paquets multimédias potentiels pourraient être reçus par le
+ navigateur.
+ Mais il ne peut pas être démarré tant que l'adresse candidate n'a pas été
+ échangée sur le canal de signalisation.
+\end_layout
+
+\begin_layout Subsubsection*
+Identification et authentification
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Le canal de signalisation peut également fournir l'identité des participants
+ à un appel.
+ Par exemple, dans une application Web, l'application se chargera d'abord
+ d'authentifier les utilisateurs, et lorsqu'un utilisateur doit appeler
+ un autre utilisateur, l'application Web présentera le nom d'utilisateur
+ pour le canal de signalisation comme un identifiant authentifié.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+WebRTC a d'autres moyens d'authentifier les utilisateurs sans s'appuyer
+ sur des applications externes.
+ En utilisant le canal multimédia, qui ne repose pas sur des applications
+ externes de confiance, une identité et une authentification de l'appelant
+ peuvent être fournies dans le chemin multimédia sans dépendre du tout du
+ canal de signalisation.
+\end_layout
+
+\begin_layout Subsubsection*
+Contrôle de la session de médias
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La signalisation est nécessaire pour lancer l'appel; cependant, il n'est
+ pas nécessaire d'indiquer l'état ou de mettre fin à une session.
+ Il y a une machine d'état ICE dans le navigateur qui peut fournir ces informati
+ons.
+\end_layout
+
+\begin_layout Subsubsection
+Résolution de l'éclat
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La résolution de l'éblouissement intervient lorsque les deux côtés de la
+ communication essaient de changer de session en même temps.
+ C'est une condition de concurrence qui pourrait entraîner un état non déterminé
+ pour la session.
+ Le protocole de signalisation SIP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SIP"
+description "Session Initiation Protocol"
+literal "false"
+
+\end_inset
+
+ intègre une résolution d'éblouissement.
+\end_layout
+
+\begin_layout Section
+Les API WebRTC
+\end_layout
+
+\begin_layout Standard
+WebRTC a trois fonctionnalités principales: 
+\end_layout
+
+\begin_layout Enumerate
+Acquérir l'audio et la vidéo
+\end_layout
+
+\begin_layout Enumerate
+Communication audio et vidéo
+\end_layout
+
+\begin_layout Enumerate
+Communication de données arbitraires
+\end_layout
+
+\begin_layout Standard
+Et il existe trois API JavaScript majeures exposées pour appeler ces foncionnali
+tés:
+\end_layout
+
+\begin_layout Enumerate
+Flux multimédia (alias getUserMedia)
+\end_layout
+
+\begin_layout Enumerate
+Connexion Peer RTC (RTCPeerConnection)
+\end_layout
+
+\begin_layout Enumerate
+Canal de données RTC (RTCDataChannel)
+\end_layout
+
+\begin_layout Subsection
+Flux multimédia
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
+ sous le nom de média local.
+ Par conséquent, la première étape consiste à obtenir un flux multimédia
+ local.
+ Cela peut être fait de plusieurs manières.
+ Voici un moyen simple de le faire, juste une méthode JavaScript que nous
+ pouvons appeler: getUserMedia().
+ Cette méthode les médias des périphériques de la machine.
+ Pour les problèmes de confidentialité, le navigateur doit obtenir l'autorisatio
+n de l'utilisateur pour accéder à la caméra et au microphone de l'utilisateur.
+ Le navigateur demandera à l'utilisateur d'autoriser l'accès.
+ Une fois l'accès accordé, l'application recevra un flux de la caméra et
+ du microphone.
 \end_layout
 
 \end_body

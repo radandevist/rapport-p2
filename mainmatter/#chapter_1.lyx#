@@ -1068,5 +1068,25 @@ Connexion Peer RTC (RTCPeerConnection)
 Canal de données RTC (RTCDataChannel)
 \end_layout
 
+\begin_layout Subsection
+Flux multimédia
+\end_layout
+
+\begin_layout Standard
+Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
+ sous le nom de média local.
+ Par conséquent, la première étape consiste à obtenir un flux multimédia
+ local.
+ Cela peut être fait de plusieurs manières.
+ Voici un moyen simple de le faire, juste une méthode JavaScript que nous
+ pouvons appeler: getUserMedia().
+ Cette méthode retournera une méthode de rappel avec un seul flux multimédia.
+ Pour les problèmes de confidentialité, le navigateur doit obtenir l'autorisatio
+n de l'utilisateur pour accéder à la caméra et au microphone de l'utilisateur.
+ Le navigateur demandera à l'utilisateur d'autoriser l'accès.
+ Une fois l'accès accordé, l'application recevra un flux de la caméra et
+ du microphone.
+\end_layout
+
 \end_body
 \end_document
