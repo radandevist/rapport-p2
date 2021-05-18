@@ -703,7 +703,7 @@ bibname}{Références}
 \paragraph_spacing double
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-btprint "btPrintCited"
+btprint "btPrintAll"
 bibfiles "backmatter/references"
 options "plain-fr"
 

@@ -523,7 +523,13 @@ mtcaddchapter % fix minitoc
 \end_layout
 
 \begin_layout Standard
-\begin_inset FloatList table
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%insert list of tables here
+\end_layout
 
 \end_inset
 
@@ -536,7 +542,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 mtcaddchapter % fix minitoc
 \end_layout

@@ -1036,35 +1036,51 @@ Les API WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
+\noindent
 WebRTC a trois fonctionnalités principales: 
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Acquérir l'audio et la vidéo
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Communication audio et vidéo
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Communication de données arbitraires
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
+\noindent
 Et il existe trois API JavaScript majeures exposées pour appeler ces foncionnali
 tés:
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Flux multimédia (alias getUserMedia)
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Connexion Peer RTC (RTCPeerConnection)
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Canal de données RTC (RTCDataChannel)
 \end_layout
 
@@ -1080,7 +1096,7 @@ Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
  local.
  Cela peut être fait de plusieurs manières.
  Voici un moyen simple de le faire, juste une méthode JavaScript que nous
- pouvons appeler: getUserMedia().
+ pouvons appeler: getUserMedia() .
  Cette méthode les médias des périphériques de la machine.
  Pour les problèmes de confidentialité, le navigateur doit obtenir l'autorisatio
 n de l'utilisateur pour accéder à la caméra et au microphone de l'utilisateur.
