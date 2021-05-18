@@ -1036,35 +1036,51 @@ Les API WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
+\noindent
 WebRTC a trois fonctionnalités principales: 
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Acquérir l'audio et la vidéo
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Communication audio et vidéo
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Communication de données arbitraires
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
+\noindent
 Et il existe trois API JavaScript majeures exposées pour appeler ces foncionnali
 tés:
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Flux multimédia (alias getUserMedia)
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Connexion Peer RTC (RTCPeerConnection)
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing double
+\noindent
 Canal de données RTC (RTCDataChannel)
 \end_layout
 
@@ -1080,13 +1096,108 @@ Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
  local.
  Cela peut être fait de plusieurs manières.
  Voici un moyen simple de le faire, juste une méthode JavaScript que nous
- pouvons appeler: getUserMedia().
- Cette méthode les médias des périphériques de la machine.
- Pour les problèmes de confidentialité, le navigateur doit obtenir l'autorisatio
-n de l'utilisateur pour accéder à la caméra et au microphone de l'utilisateur.
+ pouvons appeler 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing double
+
+getUserMedia()
+\end_layout
+
+\end_inset
+
+.
+ Cette méthode récupère les médias des périphériques de la machine.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Pour les problèmes de confidentialité, le navigateur doit obtenir l'autorisation
+ de l'utilisateur pour accéder à la caméra et au microphone de l'utilisateur.
  Le navigateur demandera à l'utilisateur d'autoriser l'accès.
  Une fois l'accès accordé, l'application recevra un flux de la caméra et
  du microphone.
+\end_layout
+
+\begin_layout Subsection
+Connexion peer RTC
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Il est important de noter que cette connexion est une connexion «pair».
+ Cela signifie que cela peut être fait avec n'importe quel ordinateur ou
+ appareil sur Internet.
+ Et la connexion est directement établie entre les deux machines sans serveur
+ impliqué.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Les paquets vidéo/audio circuleront d'un navigateur à un autre.
+ Pour établir une connexion homologue, il suffit d'appeler cette méthode
+ 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+RTCPeerConnection()
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Un fait très important qui mérite d'être mentionné est le nombre de connexions
+ qui seront créées pour chaque utilisateur ajouté à une conférence téléphonique.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Disons, par exemple, un appel démarré avec deux utilisateurs, tels que l'utilisa
+teur A et l'utilisateur B.
+ Cela signifie qu'une connexion homologue sera créée entre les navigateurs
+ des deux utilisateurs, une connexion de A à B.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
+ les connexions pour chaque utilisateur de l'appel.
+ Comme nous l’avons expliqué précédemment, il s’agira d’une connexion homologue,
+ ce qui signifie que chaque utilisateur doit être connecté à la machine
+ de chaque utilisateur lors de l’appel.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Pour comprendre combien de connexions homologues seront créées par machine:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Connexions\:par\:machine & =nombre\:d'utilisateurs\:en\:appel-1\\
+Connexions\:par\:machine & =3-1
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Chaque machine aura 2 connexions homologues établies si l'appel a 3 utilisateurs.
 \end_layout
 
 \end_body
