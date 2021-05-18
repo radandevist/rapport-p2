@@ -1,0 +1,33 @@
+@comment{x-kbibtex-encoding=utf-8}
+
+@book{Mike2019,
+	author = {Mike and Davis},
+	editor = {McGraw \& Hill},
+	groups = {bibliography},
+	publisher = {Phill Spencer's pdroduction},
+	title = {The new intent of nature delussion.},
+	year = {2019}
+}
+
+@article{Pierce2013,
+	author = {Alexander Pierce},
+	groups = {bibliography},
+	journal = {American Newspaper},
+	title = {Beyound the enemy lines},
+	year = {2013}
+}
+
+@misc{WebRTC-website,
+	groups = {webography},
+	howpublished = {\url{https://webrtc.org/}},
+	note = {Accessed: 2021-05-01},
+	title = {Real time communication for the web}
+}
+
+@misc{MS-Windows-NT-kernel,
+	groups = {webography},
+	howpublished = {\url{http://web.archive.org/web/20080207010024}},
+	note = {Accessed: 2010-09-30},
+	title = {{MS Windows NT} Kernel Description}
+}
+

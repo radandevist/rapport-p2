@@ -16,14 +16,14 @@
 
 @article{haytham-2018,
 	author = {Haytham, A.},
-	journal = {Special Interest Group on Computer-Human Interaction},
+	journal = {SIGCHI Conference},
 	title = {{Real-time Communication Using WebRTC}},
 	year = {2018}
 }
 
 @article{pathare-2016,
 	author = {Pathare, K.G. and Chouragade, P.M.},
-	journal = {International Journal of Scientific \& Engineering Research},
+	journal = {International Journal of Sientific \& Engineering Research},
 	title = {{WebRTC Implementation and Architecture Analysis}},
 	volume = {7},
 	year = {2016}

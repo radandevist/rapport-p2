@@ -358,7 +358,7 @@ Introduction
 
 \begin_layout Standard
 \paragraph_spacing double
-La conception structurelle Web classique est basée sur un modèle client-serveur,
+La conception structurelle web classique est basée sur un modèle client-serveur,
  dans lequel les navigateurs envoient une demande de contenu HTTP
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -720,8 +720,8 @@ Le triangle WebRTC
 \begin_layout Standard
 \paragraph_spacing double
 Le scénario le plus répandu est probablement celui où les deux navigateurs
- exécutent la même application Web WebRTC, téléchargée à partir de la même
- page Web.
+ exécutent la même application web WebRTC, téléchargée à partir de la même
+ page web.
  Cela produit le «triangle» WebRTC illustré à la figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -807,10 +807,9 @@ Les appareils d'aujourd'hui sont dotés de plusieurs capacités matérielles
 \begin_layout Standard
 \paragraph_spacing double
 Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et l'API
- fournira ce flux à l'API Javascript en tant que variable que les développeurs
- d'applications pourront afficher sur une page comme n'importe quel flux
- vidéo normal.
- comme n'importe quel flux vidéo normal.
+ fournira ce flux en tant que variable au langage Javascript et que les
+ développeurs d'applications pourront afficher sur une page comme n'importe
+ quel flux vidéo normal.
 \end_layout
 
 \begin_layout Subsection
@@ -820,7 +819,7 @@ Peer to peer
 \begin_layout Standard
 \paragraph_spacing double
 L'un des avantages distinctifs du WebRTC est le fait qu'il s'agit d'une
- communication Peer to Peer.
+ communication peer to peer.
  Cela signifie évidemment que la vidéo passera directement de l’ordinateur
  d’un utilisateur à un autre.
 \end_layout
@@ -875,8 +874,8 @@ Supposons que le navigateur A essaie de communiquer avec le navigateur B.
 
 \begin_layout Standard
 \paragraph_spacing double
-Une fois ce processus terminé, chaque navigateur sait maintenant tout ce
- qui est nécessaire pour établir une connexion et envoyer le flux multimédia
+Une fois ce processus terminé, chaque navigateur a maintenant à sa disposition
+ tout le nécessaire pour établir une connexion et envoyer le flux multimédia
  à l'autre navigateur.
  La figure 
 \begin_inset CommandInset ref
@@ -931,11 +930,11 @@ Pourquoi la signalisation n'a pas été standardisé?
 \paragraph_spacing double
 La signalisation n'est pas normalisée dans WebRTC pour permettre l'interopérabil
 ité entre différents navigateurs.
- La signalisation est une question entre les navigateurs web et le serveur
- web, et non entre deux navigateurs dans le même appel ou session.
- Dans ce cas, le serveur sélectionne le protocole de signalisation et s'assure
- que les utilisateurs des applications Web ou du support du site utilisent
- le même protocole.
+ Son flux se situe entre les navigateurs web et le serveur web, et non entre
+ deux navigateurs dans le même appel ou session.
+ Dans ce cas, le serveur ou plutôt le developpeur sélectionne le protocole
+ de signalisation et s'assure que les utilisateurs des applications web
+ ou du support du site utilisent le même protocole.
 \end_layout
 
 \begin_layout Subsubsection
@@ -965,9 +964,27 @@ literal "false"
 \end_inset
 
 .
- Il s'agit de l'adresse candidate représentant l'adresse IP et les ports
- UDP où des paquets multimédias potentiels pourraient être reçus par le
- navigateur.
+ Il s'agit de l'adresse candidate représentant l'adresse IP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "IP"
+description "Internet Protocol"
+literal "false"
+
+\end_inset
+
+ et les ports UDP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "UDP"
+description "User Datagram Protocol"
+literal "false"
+
+\end_inset
+
+ où des paquets multimédias potentiels pourraient être reçus par le navigateur.
  Mais il ne peut pas être démarré tant que l'adresse candidate n'a pas été
  échangée sur le canal de signalisation.
 \end_layout
@@ -980,9 +997,9 @@ Identification et authentification
 \paragraph_spacing double
 Le canal de signalisation peut également fournir l'identité des participants
  à un appel.
- Par exemple, dans une application Web, l'application se chargera d'abord
+ Par exemple, dans une application web, l'application se chargera d'abord
  d'authentifier les utilisateurs, et lorsqu'un utilisateur doit appeler
- un autre utilisateur, l'application Web présentera le nom d'utilisateur
+ un autre utilisateur, l'application web présentera le nom d'utilisateur
  pour le canal de signalisation comme un identifiant authentifié.
 \end_layout
 
@@ -1062,7 +1079,7 @@ Communication de données arbitraires
 \begin_layout Standard
 \paragraph_spacing double
 \noindent
-Et il existe trois API JavaScript majeures exposées pour appeler ces foncionnali
+Et il existe trois API Javascript majeures exposées pour appeler ces foncionnali
 tés:
 \end_layout
 
@@ -1095,7 +1112,7 @@ Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
  Par conséquent, la première étape consiste à obtenir un flux multimédia
  local.
  Cela peut être fait de plusieurs manières.
- Voici un moyen simple de le faire, juste une méthode JavaScript que nous
+ Voici un moyen simple de le faire, juste une méthode Javascript que nous
  pouvons appeler 
 \series bold
 
@@ -1107,7 +1124,6 @@ status open
 \begin_layout Plain Layout
 \paragraph_spacing double
 
-\series bold
 getUserMedia()
 \end_layout
 
@@ -1154,7 +1170,6 @@ status open
 
 \begin_layout Plain Layout
 
-\series bold
 RTCPeerConnection()
 \end_layout
 
@@ -1216,31 +1231,31 @@ Canal de données RTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 Les canaux de données prennent en charge les connexions à haut volume et
  à faible latence; un canal de données est un canal non multimédia qui prend
  uniquement en charge le transfert de données.
 \end_layout
 
 \begin_layout Standard
-Il contourne les serveurs et fournit aux développeurs Web des canaux configurabl
+\paragraph_spacing double
+Il contourne les serveurs et fournit aux développeurs web des canaux configurabl
 es pour transférer des données.
- Les canaux de données dans WebRTC sont construits sur des Web Sockets.
+ Les canaux de données dans WebRTC sont construits sur des WebSockets.
  De cette façon, il obtient une fonctionnalité en temps réel.
  Des méthodes simples telles que l'envoi sur le gestionnaire de messages
  peuvent être définies pour obtenir les données.
- Le canal de données utilise également la même connexion homologue que le
- média, ce qui est une bonne chose, car cela signifie qu'un seul processus
- de négociation offre/réponse est nécessaire.
+ Le canal de données utilise également la même connexion peer que le média,
+ ce qui est une bonne chose, car cela signifie qu'un seul processus de négociati
+on offre/réponse est nécessaire.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 Les canaux de données prennent également en charge les deux modes de livraison:
-\end_layout
-
-\begin_layout Standard
-livraison garantie (fiable) et rapide (non fiable).
+ livraison garantie (fiable) et rapide (non fiable).
  Le premier peut être utilisé pour des événements critiques et le second
- peut être utilisé pour les mises à jour de l'osition du jeu.
+ peut être utilisé pour les mises à jour de la position d'un jeu en ligne.
 \end_layout
 
 \end_body

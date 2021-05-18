@@ -807,10 +807,9 @@ Les appareils d'aujourd'hui sont dotés de plusieurs capacités matérielles
 \begin_layout Standard
 \paragraph_spacing double
 Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et l'API
- fournira ce flux à l'API Javascript en tant que variable que les développeurs
- d'applications pourront afficher sur une page comme n'importe quel flux
- vidéo normal.
- comme n'importe quel flux vidéo normal.
+ fournira ce flux en tant que variable au langage Javascript et que les
+ développeurs d'applications pourront afficher sur une page comme n'importe
+ quel flux vidéo normal.
 \end_layout
 
 \begin_layout Subsection
@@ -820,7 +819,7 @@ Peer to peer
 \begin_layout Standard
 \paragraph_spacing double
 L'un des avantages distinctifs du WebRTC est le fait qu'il s'agit d'une
- communication Peer to Peer.
+ communication peer to peer.
  Cela signifie évidemment que la vidéo passera directement de l’ordinateur
  d’un utilisateur à un autre.
 \end_layout
@@ -875,8 +874,8 @@ Supposons que le navigateur A essaie de communiquer avec le navigateur B.
 
 \begin_layout Standard
 \paragraph_spacing double
-Une fois ce processus terminé, chaque navigateur sait maintenant tout ce
- qui est nécessaire pour établir une connexion et envoyer le flux multimédia
+Une fois ce processus terminé, chaque navigateur a maintenant à sa disposition
+ tout le nécessaire pour établir une connexion et envoyer le flux multimédia
  à l'autre navigateur.
  La figure 
 \begin_inset CommandInset ref
@@ -931,11 +930,11 @@ Pourquoi la signalisation n'a pas été standardisé?
 \paragraph_spacing double
 La signalisation n'est pas normalisée dans WebRTC pour permettre l'interopérabil
 ité entre différents navigateurs.
- La signalisation est une question entre les navigateurs web et le serveur
- web, et non entre deux navigateurs dans le même appel ou session.
- Dans ce cas, le serveur sélectionne le protocole de signalisation et s'assure
- que les utilisateurs des applications Web ou du support du site utilisent
- le même protocole.
+ Son flux se situe entre les navigateurs web et le serveur web, et non entre
+ deux navigateurs dans le même appel ou session.
+ Dans ce cas, le serveur ou plutôt le developpeur sélectionne le protocole
+ de signalisation et s'assure que les utilisateurs des applications Web
+ ou du support du site utilisent le même protocole.
 \end_layout
 
 \begin_layout Subsubsection
@@ -965,9 +964,18 @@ literal "false"
 \end_inset
 
 .
- Il s'agit de l'adresse candidate représentant l'adresse IP et les ports
- UDP où des paquets multimédias potentiels pourraient être reçus par le
- navigateur.
+ Il s'agit de l'adresse candidate représentant l'adresse IP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "IP"
+description "Internet Protocol"
+literal "false"
+
+\end_inset
+
+ et les ports UDP où des paquets multimédias potentiels pourraient être
+ reçus par le navigateur.
  Mais il ne peut pas être démarré tant que l'adresse candidate n'a pas été
  échangée sur le canal de signalisation.
 \end_layout
@@ -1107,7 +1115,6 @@ status open
 \begin_layout Plain Layout
 \paragraph_spacing double
 
-\series bold
 getUserMedia()
 \end_layout
 
@@ -1154,7 +1161,6 @@ status open
 
 \begin_layout Plain Layout
 
-\series bold
 RTCPeerConnection()
 \end_layout
 
@@ -1216,12 +1222,14 @@ Canal de données RTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 Les canaux de données prennent en charge les connexions à haut volume et
  à faible latence; un canal de données est un canal non multimédia qui prend
  uniquement en charge le transfert de données.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 Il contourne les serveurs et fournit aux développeurs Web des canaux configurabl
 es pour transférer des données.
  Les canaux de données dans WebRTC sont construits sur des Web Sockets.
@@ -1230,17 +1238,19 @@ es pour transférer des données.
  peuvent être définies pour obtenir les données.
  Le canal de données utilise également la même connexion homologue que le
  média, ce qui est une bonne chose, car cela signifie qu'un seul processus
- de négociation offre / réponse est nécessaire (Alan, 2014).
+ de négociation offre/réponse est nécessaire.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 Les canaux de données prennent également en charge les deux modes de livraison:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing double
 livraison garantie (fiable) et rapide (non fiable).
  Le premier peut être utilisé pour des événements critiques et le second
- peut être utilisé pour les mises à jour de l'osition du jeu (Alan, 2014).
+ peut être utilisé pour les mises à jour de l'osition du jeu.
 \end_layout
 
 \end_body

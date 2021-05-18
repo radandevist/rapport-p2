@@ -16,7 +16,7 @@
 
 @article{haytham-2018,
 	author = {Haytham, A.},
-	journal = {Special Interest Group on Computer-Human Interaction},
+	journal = {Special Interest Group on Computer-Human Interactions},
 	title = {{Real-time Communication Using WebRTC}},
 	year = {2018}
 }

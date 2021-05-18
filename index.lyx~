@@ -58,7 +58,7 @@
 \definecolor{crimson}{rgb}{0.86, 0.8, 0.24}
 
 \lstdefinestyle{JSES6Base}{
-  backgroundcolor=\color{gray!10!},
+  backgroundcolor=\color{gray!5!},
   basicstyle=\ttfamily,
   breakatwhitespace=false,
   %breaklines=false,
@@ -70,7 +70,7 @@
   emphstyle=\color{crimson},
   extendedchars=true,  % requires inputenc
   fontadjust=true,
-  frame=single,
+  %frame=single,
   identifierstyle=\color{black},
   keepspaces=true,
   keywordstyle=\color{mediumblue},
@@ -409,7 +409,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
-\biblio_style plain
+\biblio_style plain-fr
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
