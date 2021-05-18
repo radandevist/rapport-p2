@@ -12,6 +12,46 @@
 \usepackage{blindtext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%=============================ADDITIONAL
+
+% ajoute automatiquement
+% les front et back matters
+% dans la table des matières
+%\usepackage[notbib]{tocbibind}
+%\usepackage[other]{tocbibind}
+\usepackage{tocbibind}
+
+% include nomenclature in toc
+%\PassOptionsToPackage{intoc}{nomencl}
+\def\nompreamble{\addcontentsline{toc}{chapter}{\nomname}\markboth{\nomname}{\nomname}}
+
+%Creating Nomenclature with Sections
+%This assumes that you prefix all your sort as keys with appropriate letters (e.g. A for alphabetical i.e Roman; G for Greek etc). Personally I use an underscore too (a_ or G_)because this makes the key clearer to me. If you do this be consistent and use underscores throughout otherwise your sort order may not be as expected. (See documentation on nomencl for sort orders).
+%Use the following code in your LaTeX preamble (Documents>Settings>Latex Preamble). Comment out lines as appropriate if those sections are not required along with line containing corresponding terminating '}'. Similarly add a new line in the same format if required not forgetting to add the terminating bracket.
+\renewcommand{\nomgroup}[1]{%
+%\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
+%\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
+%\ifthenelse{\equal{#1}{C}}{\item[\textbf{Abbreviations}]}{%
+\ifthenelse{\equal{#1}{A}}{\item[\textbf{\Large Acronymes}]}{%
+\ifthenelse{\equal{#1}{S}}{\item[\textbf{\Large Symboles}]}
+{}
+}% matches Symbols
+}% matches Acr
+%}% matches Abbreviations
+%}% matches Greek Symbols
+%}% matches Roman Symbols
+
+% url
+%\usepackage{url}
+
+\usepackage{textgreek}
+
+\usepackage{listings}
+
+\definecolor{darkviolet}{rgb}{0.58, 0.0, 0.83}
+
+%=============================ADDITIONAL
+
 % Réglage des fontes et typo    
 \usepackage[utf8]{inputenc}		% LaTeX, comprend les accents !
 \usepackage[T1]{fontenc}
@@ -261,7 +301,7 @@
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
-\font_typewriter "default" "default"
+\font_typewriter "beramono" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -276,7 +316,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
@@ -305,8 +345,8 @@
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 2
+\tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -325,124 +365,45 @@
 
 \begin_body
 
-\begin_layout Section
-Exemple test de code Javascript dans \SpecialChar LaTeX
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "info.lyx"
 
-\end_layout
+\end_inset
 
-\begin_layout Section
-Premier snippet
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset listings
-lstparams "style=ES6"
-inline false
+\begin_inset CommandInset include
+LatexCommand input
+filename "frontmatter/cover.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "frontmatter/title_page.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-(function(){
-\end_layout
 
-\begin_layout Plain Layout
-
-  var user = getCookie("username");
-\end_layout
-
-\begin_layout Plain Layout
-
-  document.getElementById("#date-field").innerHTML = new Date();
-\end_layout
-
-\begin_layout Plain Layout
-
-  document.getElementById("#greetings").innerHTML = "<p>Hello, " + user.name
- + ".</p>";
-\end_layout
-
-\begin_layout Plain Layout
-
-})()
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-function getCookie(cname) {
-\end_layout
-
-\begin_layout Plain Layout
-
-  var name = cname + "=";
-\end_layout
-
-\begin_layout Plain Layout
-
-  var decodedCookie = decodeURIComponent(document.cookie);
-\end_layout
-
-\begin_layout Plain Layout
-
-  var ca = decodedCookie.split(';');
-\end_layout
-
-\begin_layout Plain Layout
-
-  for(var i = 0; i < ca.length; ++i) {
-\end_layout
-
-\begin_layout Plain Layout
-
-    var c = ca[i];
-\end_layout
-
-\begin_layout Plain Layout
-
-    while (c.charAt(0) == ' ') {
-\end_layout
-
-\begin_layout Plain Layout
-
-      c = c.substring(1);
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-    if (c.indexOf(name) == 0) {
-\end_layout
-
-\begin_layout Plain Layout
-
-      return c.substring(name.length, c.length);
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-  return "";
-\end_layout
-
-\begin_layout Plain Layout
-
-}
+\backslash
+pagenumbering{roman}
 \end_layout
 
 \end_inset
@@ -450,168 +411,400 @@ function getCookie(cname) {
 
 \end_layout
 
-\begin_layout Section
-Second snippet
-\end_layout
-
 \begin_layout Standard
-\begin_inset listings
-lstparams "style=ES6"
-inline false
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-/* eslint-env es6 */
+
+\backslash
+dominitoc % Génération des mini-toc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "frontmatter/acknowledgement.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Sommaire: moins de détails (chapitres/sections)
 \end_layout
 
 \begin_layout Plain Layout
 
-/* eslint-disable no-unused-vars */
+
+\backslash
+setcounter{tocdepth}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.125
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mtcaddchapter % fix minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+listfigurename}{Liste des figures}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mtcaddchapter % fix minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%insert list of tables here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+mtcaddchapter % fix minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+nomname}{Liste des acronymes et symboles}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mtcaddchapter % fix minitoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "mainmatter/chapter_1.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "mainmatter/chapter_2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "mainmatter/chapter_3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
 \end_layout
 
 \begin_layout Plain Layout
 
-import Axios from 'axios'
+%
+\backslash
+setcounter{page}{6}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+bibname}{Références}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "backmatter/references"
+options "plain-fr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+mtcaddchapter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chapter*{Annexes}
 \end_layout
 
 \begin_layout Plain Layout
 
-import { BASE_URL } from './utils/api'
+
+\backslash
+addstarredchapter{Annexes}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 
-import { getAPIToken } from './utils/helpers'
+
+\backslash
+renewcommand{
+\backslash
+thesection}{
+\backslash
+Alph{section}}
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
-\end_layout
-
-\begin_layout Plain Layout
-
-export default class User {
-\end_layout
-
-\begin_layout Plain Layout
-
-  constructor () {
-\end_layout
-
-\begin_layout Plain Layout
-
-    this.id = null
-\end_layout
-
-\begin_layout Plain Layout
-
-    this.username = null
-\end_layout
-
-\begin_layout Plain Layout
-
-    this.email = ''
-\end_layout
-
-\begin_layout Plain Layout
-
-    this.isActive = false
-\end_layout
-
-\begin_layout Plain Layout
-
-    this.lastLogin = ''  // ISO 8601 formatted timestamp.
-\end_layout
-
-\begin_layout Plain Layout
-
-    this.lastPWChange = ''  // ISO 8601 formatted timestamp.
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
-\begin_layout Plain Layout
-
-const getUserProfile = async (id) => {
-\end_layout
-
-\begin_layout Plain Layout
-
-  let user = new User()
-\end_layout
-
-\begin_layout Plain Layout
-
-  await Axios.get(
-\end_layout
-
-\begin_layout Plain Layout
-
-    `${BASE_URL}/users/${id}`,
-\end_layout
-
-\begin_layout Plain Layout
-
-    {
-\end_layout
-
-\begin_layout Plain Layout
-
-      headers: {
-\end_layout
-
-\begin_layout Plain Layout
-
-        'Authorization': `Token ${getAPIToken()}`,
-\end_layout
-
-\begin_layout Plain Layout
-
-      }
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-  ).then{response => {
-\end_layout
-
-\begin_layout Plain Layout
-
-    // ...
-\end_layout
-
-\begin_layout Plain Layout
-
-  }).catch(error => {
-\end_layout
-
-\begin_layout Plain Layout
-
-    // ...
-\end_layout
-
-\begin_layout Plain Layout
-
-  }) }
-\end_layout
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "backmatter/appendix_1.lyx"
 
 \end_inset
 
