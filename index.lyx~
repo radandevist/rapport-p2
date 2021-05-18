@@ -32,8 +32,8 @@
 %\ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman Symbols}]}{%
 %\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
 %\ifthenelse{\equal{#1}{C}}{\item[\textbf{Abbreviations}]}{%
-\ifthenelse{\equal{#1}{A}}{\item[\textbf{Acronymes}]}{%
-\ifthenelse{\equal{#1}{S}}{\item[\textbf{Symboles}]}
+\ifthenelse{\equal{#1}{A}}{\item[\textbf{\Large Acronymes}]}{%
+\ifthenelse{\equal{#1}{S}}{\item[\textbf{\Large Symboles}]}
 {}
 }% matches Symbols
 }% matches Acr
@@ -523,7 +523,14 @@ mtcaddchapter % fix minitoc
 \end_layout
 
 \begin_layout Standard
-\begin_inset FloatList table
+x
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%insert list of tables here
+\end_layout
 
 \end_inset
 
@@ -536,7 +543,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 mtcaddchapter % fix minitoc
 \end_layout
