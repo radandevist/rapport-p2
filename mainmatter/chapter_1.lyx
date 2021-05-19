@@ -532,7 +532,7 @@ literal "false"
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
-symbol "d'API"
+symbol "API"
 description "Application Programming Interface"
 literal "false"
 

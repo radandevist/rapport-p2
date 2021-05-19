@@ -957,7 +957,7 @@ Un autre rôle de la signalisation est l'ICE
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
-symbol "l'ICE"
+symbol "ICE"
 description "Interactive Connectivity Establishment"
 literal "false"
 
