@@ -326,7 +326,7 @@
 \begin_body
 
 \begin_layout Chapter
-Configuration des Interface du WebRTC
+Configuration des Interfaces de WebRTC
 \end_layout
 
 \begin_layout Standard
@@ -354,122 +354,6 @@ minitoc
 
 \begin_layout Section
 Introduction
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-lstparams "style=JavaScript"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-(function(){
-\end_layout
-
-\begin_layout Plain Layout
-
-  var user = getCookie("username");
-\end_layout
-
-\begin_layout Plain Layout
-
-  document.getElementById("#date-field").innerHTML = new Date();
-\end_layout
-
-\begin_layout Plain Layout
-
-  document.getElementById("#greetings").innerHTML = "<p>Hello, " + user.name
- + ".</p>";
-\end_layout
-
-\begin_layout Plain Layout
-
-})()
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-function getCookie(cname) {
-\end_layout
-
-\begin_layout Plain Layout
-
-  var name = cname + "=";
-\end_layout
-
-\begin_layout Plain Layout
-
-  var decodedCookie = decodeURIComponent(document.cookie);
-\end_layout
-
-\begin_layout Plain Layout
-
-  var ca = decodedCookie.split(';');
-\end_layout
-
-\begin_layout Plain Layout
-
-  for(var i = 0; i < ca.length; ++i) {
-\end_layout
-
-\begin_layout Plain Layout
-
-    var c = ca[i];
-\end_layout
-
-\begin_layout Plain Layout
-
-    while (c.charAt(0) == ' ') {
-\end_layout
-
-\begin_layout Plain Layout
-
-      c = c.substring(1);
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-    if (c.indexOf(name) == 0) {
-\end_layout
-
-\begin_layout Plain Layout
-
-      return c.substring(name.length, c.length);
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-  return "";
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body
