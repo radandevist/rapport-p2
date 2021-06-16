@@ -1,33 +1,47 @@
 @comment{x-kbibtex-encoding=utf-8}
 
-@book{Mike2019,
-	author = {Mike and Davis},
-	editor = {McGraw \& Hill},
-	groups = {bibliography},
-	publisher = {Phill Spencer's pdroduction},
-	title = {The new intent of nature delussion.},
-	year = {2019}
+@article{pathare-2016,
+	author = {Pathare K.G. and Chouragade P.M.},
+	date = {2016},
+	journaltitle = {International Journal of Scientific \& Engineering Research},
+	language = {english},
+	title = {WebRTC Implementation and Architecture Analysis},
+	volume = {7}
 }
 
-@article{Pierce2013,
-	author = {Alexander Pierce},
-	groups = {bibliography},
-	journal = {American Newspaper},
-	title = {Beyound the enemy lines},
-	year = {2013}
+@online{onsip-2021,
+	accession = {16 juin 2021},
+	annotation = {accedé le 16 juin 2021},
+	author = {{OnSIP}},
+	date = {2021},
+	language = {english},
+	title = {{RTCPeerConnection - WebRTC Explained}},
+	url = {https://www.onsip.com/voip-resources/voip-fundamentals/rtcpeerconnection}
 }
 
-@misc{WebRTC-website,
-	groups = {webography},
-	howpublished = {\url{https://webrtc.org/}},
-	note = {Accessed: 2021-05-01},
-	title = {Real time communication for the web}
+@book{johnston-2013,
+	author = {A.B. Johnston and D.C. Burnett},
+	date = {2013},
+	edition = {2},
+	language = {english},
+	publisher = {Smashwords Edition},
+	title = {WebRTC: APIs and RTCWEB Protocols of the HTML5 Real-Time Web}
 }
 
-@misc{MS-Windows-NT-kernel,
-	groups = {webography},
-	howpublished = {\url{http://web.archive.org/web/20080207010024}},
-	note = {Accessed: 2010-09-30},
-	title = {{MS Windows NT} Kernel Description}
+@book{barz-2016,
+	author = {Barz H.W. and Bassett G.A.},
+	date = {2016},
+	edition = {1},
+	language = {english},
+	publisher = {Wiley},
+	title = {Multimedia Networks: Protocols, Design and Applications}
+}
+
+@article{haytham-2018,
+	author = {A. Haytham},
+	date = {2018},
+	journaltitle = {Special Interest Group on Computer-Human Interaction},
+	language = {english},
+	title = {Real-time Communication Using WebRTC}
 }
 

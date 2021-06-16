@@ -330,6 +330,7 @@ Introduction au WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \begin_inset ERT
 status open
 
@@ -532,7 +533,7 @@ literal "false"
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
-symbol "d'API"
+symbol "API"
 description "Application Programming Interface"
 literal "false"
 
@@ -1206,6 +1207,7 @@ Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
 
 \begin_layout Standard
 \paragraph_spacing double
+\noindent
 Pour comprendre combien de connexions peer seront créées par machine:
 \end_layout
 

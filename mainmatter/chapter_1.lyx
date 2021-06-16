@@ -330,6 +330,7 @@ Introduction au WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \begin_inset ERT
 status open
 
@@ -1206,6 +1207,7 @@ Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
 
 \begin_layout Standard
 \paragraph_spacing double
+\noindent
 Pour comprendre combien de connexions peer seront créées par machine:
 \end_layout
 
@@ -1223,6 +1225,7 @@ Connexions\:par\:machine & =3-1
 
 \begin_layout Standard
 \paragraph_spacing double
+\noindent
 Chaque machine aura 2 connexions peer établies si l'appel a 3 utilisateurs.
 \end_layout
 

@@ -135,8 +135,8 @@
 \usepackage{graphicx}
 
 %\usepackage[square,sort&compress,sectionbib]{natbib}		% Doit être chargé avant babel
-\usepackage[numbers]{natbib}
-\usepackage{chapterbib}
+%\usepackage[numbers]{natbib}
+%\usepackage{chapterbib}
 	%\renewcommand{\bibsection}{\section{Références}}		% Met les références biblio dans un \section (au lieu de \section*)
 		
 \usepackage[frenchb]{babel}
@@ -386,11 +386,11 @@
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
-\use_dash_ligatures true
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command biber
 \index_command default
 \paperfontsize 12
 \spacing single
@@ -407,9 +407,11 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
-\biblio_style plain-fr
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plain
+\biblatex_bibstyle apa6
+\biblatex_citestyle apa6
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -791,7 +793,7 @@ bibname}{Références}
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "backmatter/references"
-options "plain-fr"
+options "bibtotoc"
 
 \end_inset
 

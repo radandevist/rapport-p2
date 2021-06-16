@@ -1,27 +1,47 @@
-@book{johnston-2013,
-	author = {Johnston, A.B. and Burnett, D.C.},
-	edition = {2},
-	publisher = {Smashwords Edition},
-	title = {{WebRTC: APIs and RTCWEB Protocols of the HTML5 Real-Time Web}},
-	year = {2013},
-}
-@book{barz-2016,
-	author = {Barz, H.W. and Bassett, G.A.},
-	edition = {1},
-	publisher = {Wiley},
-	title = {{Multimedia Networks: Protocols, Design and Applications}},
-	year = {2016},
-}
-@article{haytham-2018,
-	author = {Haytham, A.},
-	journal = {SIGCHI Conference},
-	title = {{Real-time Communication Using WebRTC}},
-	year = {2018},
-}
+@comment{x-kbibtex-encoding=utf-8}
+
 @article{pathare-2016,
-	author = {Pathare, K.G. and Chouragade, P.M.},
-	journal = {International Journal of Scientific & Engineering Research},
-	title = {{WebRTC Implementation and Architecture Analysis}},
-	volume = {7},
-	year = {2016},
+	author = {K.G Pathare. and P.M. Chouragade},
+	date = {2016},
+	journaltitle = {International Journal of Scientific \& Engineering Research},
+	language = {english},
+	title = {WebRTC Implementation and Architecture Analysis},
+	volume = {7}
 }
+
+@online{onsip-2021,
+	accession = {16 juin 2021},
+	annotation = {accedé le 16 juin 2021},
+	author = {{OnSIP}},
+	date = {2021},
+	language = {english},
+	title = {{RTCPeerConnection - WebRTC Explained}},
+	url = {https://www.onsip.com/voip-resources/voip-fundamentals/rtcpeerconnection}
+}
+
+@book{johnston-2013,
+	author = {A.B. Johnston and D.C. Burnett},
+	date = {2013},
+	edition = {2},
+	language = {english},
+	publisher = {Smashwords Edition},
+	title = {WebRTC: APIs and RTCWEB Protocols of the HTML5 Real-Time Web}
+}
+
+@book{barz-2016,
+	author = {Barz H.W. and Bassett G.A.},
+	date = {2016},
+	edition = {1},
+	language = {english},
+	publisher = {Wiley},
+	title = {Multimedia Networks: Protocols, Design and Applications}
+}
+
+@article{haytham-2018,
+	author = {A. Haytham},
+	date = {2018},
+	journaltitle = {Special Interest Group on Computer-Human Interaction},
+	language = {english},
+	title = {Real-time Communication Using WebRTC}
+}
+

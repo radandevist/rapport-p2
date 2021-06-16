@@ -330,7 +330,6 @@ Configuration des Interfaces WebRTC
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \begin_inset ERT
 status open
 
@@ -365,15 +364,7 @@ WebRTC offre des opportunités sans précédent aux développeurs qui souhaitent
  chacune leur propre rôle dans la capture, la transmission et la diffusion
  de données en temps réel (depuis la webcam et le microphone d'un ordinateur)
  vers un autre navigateur, sans qu'un utilisateur ait à télécharger des
- plug-ins ou des modules complémentaires
-\begin_inset CommandInset citation
-LatexCommand cite
-key "onsip-2021"
-literal "false"
-
-\end_inset
-
-.
+ plug-ins ou des modules complémentaires.
 \end_layout
 
 \begin_layout Section

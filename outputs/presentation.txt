@@ -1,0 +1,18 @@
+Bonjour Madame/Monsieur
+
+Conformément au planning vous ayant été envoyé précédemment, ci-jointe la première itération du rapport du projet WebRTC.
+
+Bref état du rapport:
+    * Rapport formaté sous Latex et suivant le canevas de l'ESP
+    * Chapitre 1 rédigé
+    * Références inclues
+    * Remerciements rédigées
+    * Les chapitre 2 et 3 sont vacants, leurs titres sont là juste pour occuper la place pour le moment
+    * Annexe: à fin d'exemple, du code sans relation avec le projet actuel y a été placé
+
+En attendant vos retours sur ce premier document, la prise en main de la deuxième phase du planning I.e. programmation et rédaction du chapitre 2 débuteront à compté de demain 20 Mai 2021.
+
+Cordialement, merci.
+
+ANDRIANARISOA Daniel
+étudiant TR5
