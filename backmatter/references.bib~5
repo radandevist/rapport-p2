@@ -1,7 +1,7 @@
 @comment{x-kbibtex-encoding=utf-8}
 
 @article{pathare-2016,
-	author = {Pathare K.G. and Chouragade P.M.},
+	author = {K.G. Pathare and P.M. Chouragade},
 	date = {2016},
 	journaltitle = {International Journal of Scientific \& Engineering Research},
 	language = {english},
@@ -29,7 +29,7 @@
 }
 
 @book{barz-2016,
-	author = {Barz H.W. and Bassett G.A.},
+	author = {H.W. Barz and G.A. Bassett},
 	date = {2016},
 	edition = {1},
 	language = {english},

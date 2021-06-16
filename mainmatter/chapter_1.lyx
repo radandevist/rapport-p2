@@ -925,6 +925,13 @@ Résolution de l'éblouissement, lorsque les deux côtés d'une session essaient
 
 \begin_layout Subsubsection*
 Pourquoi la signalisation n'a pas été standardisé?
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pourquoi-la-signalisation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -940,6 +947,13 @@ ité entre différents navigateurs.
 
 \begin_layout Subsubsection
 Signalisation et négotiation des médias
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Signalisation-et-négotiation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

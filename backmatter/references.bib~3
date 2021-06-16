@@ -1,7 +1,7 @@
 @comment{x-kbibtex-encoding=utf-8}
 
 @article{pathare-2016,
-	author = {K.G. Pathare. and P.M. Chouragade},
+	author = {K.G. Pathare and P.M. Chouragade},
 	date = {2016},
 	journaltitle = {International Journal of Scientific \& Engineering Research},
 	language = {english},
@@ -29,7 +29,7 @@
 }
 
 @book{barz-2016,
-	author = {Barz H.W. and Bassett G.A.},
+	author = {H.W. Barz and G.A. Bassett},
 	date = {2016},
 	edition = {1},
 	language = {english},
@@ -43,5 +43,14 @@
 	journaltitle = {Special Interest Group on Computer-Human Interaction},
 	language = {english},
 	title = {Real-time Communication Using WebRTC}
+}
+
+@online{wikipedia-contributors-2020,
+	annotation = {accedé le 16 juin 2021},
+	author = {{{Wikipedia contributors}}},
+	date = {2020-08-23},
+	language = {english},
+	title = {Interactive Connectivity Establishment},
+	url = {https://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment}
 }
 

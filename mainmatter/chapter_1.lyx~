@@ -940,6 +940,13 @@ ité entre différents navigateurs.
 
 \begin_layout Subsubsection
 Signalisation et négotiation des médias
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Signalisation-et-négotiation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1225,6 +1232,7 @@ Connexions\:par\:machine & =3-1
 
 \begin_layout Standard
 \paragraph_spacing double
+\noindent
 Chaque machine aura 2 connexions peer établies si l'appel a 3 utilisateurs.
 \end_layout
 
