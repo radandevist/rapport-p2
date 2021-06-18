@@ -10,20 +10,21 @@
 }
 
 @online{onsip-2021,
-	accession = {16 juin 2021},
-	annotation = {accedé le 16 juin 2021},
 	author = {{OnSIP}},
 	date = {2021},
 	language = {english},
-	title = {{RTCPeerConnection - WebRTC Explained}},
-	url = {https://www.onsip.com/voip-resources/voip-fundamentals/rtcpeerconnection}
+	title = {RTCPeerConnection - WebRTC Explained},
+	url = {https://www.onsip.com/voip-resources/voip-fundamentals/rtcpeerconnection},
+	urldate = {2021-06-16}
 }
 
 @book{johnston-2013,
 	author = {A.B. Johnston and D.C. Burnett},
 	date = {2013},
 	edition = {2},
+	isbn = {978-0-9859788-5-3},
 	language = {english},
+	pages = {10–11–12},
 	publisher = {Smashwords Edition},
 	title = {WebRTC: APIs and RTCWEB Protocols of the HTML5 Real-Time Web}
 }
@@ -46,11 +47,65 @@
 }
 
 @online{wikipedia-contributors-2020,
-	annotation = {accedé le 16 juin 2021},
-	author = {{{Wikipedia contributors}"}},
+	author = {{{Wikipedia contributors}}},
 	date = {2020-08-23},
 	language = {english},
 	title = {Interactive Connectivity Establishment},
-	url = {https://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment}
+	url = {https://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment},
+	urldate = {2021-06-16}
+}
+
+@online{webrtc-org-2014,
+	author = {{WebRTC Org.}},
+	date = {2014},
+	language = {english},
+	title = {Getting started with peer connections},
+	url = {https://webrtc.org/getting-started/peer-connections},
+	urldate = {2021-06-16}
+}
+
+@online{mozilla-org-2021,
+	author = {{{Mozilla Org.}}},
+	date = {2021-05-31},
+	language = {english},
+	title = {RTCSessionDescription - Web APIs},
+	url = {https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription},
+	urldate = {2021-06-16}
+}
+
+@online{rosa-2014,
+	author = {A. Rosa},
+	date = {2014-01-01},
+	language = {english},
+	title = {An Introduction to the getUserMedia API},
+	url = {https://www.sitepoint.com/introduction-getusermedia-api/},
+	urldate = {2021-06-18}
+}
+
+@online{mozilla-org-2021B,
+	author = {{Mozilla Org.}},
+	date = {2021-06-15},
+	language = {english},
+	title = {Navigator - Web APIs},
+	url = {https://developer.mozilla.org/en-US/docs/Web/API/Navigator},
+	urldate = {2021-06-16}
+}
+
+@online{rajan-2021,
+	author = {S. Rajan},
+	date = {2021-01-16},
+	language = {english},
+	title = {getUserMedia API - An introduction},
+	url = {https://www.thegeeksclan.com/getusermedia-api-an-introduction/},
+	urldate = {2021-06-18}
+}
+
+@online{mozilla-org-2021C,
+	author = {{Mozilla Org.}},
+	date = {2021-06-14},
+	language = {american},
+	title = {MediaTrackConstraints - Web APIs},
+	url = {https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints},
+	urldate = {2021-0618}
 }
 

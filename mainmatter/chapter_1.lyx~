@@ -330,7 +330,6 @@ Introduction au WebRTC
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing onehalf
 \begin_inset ERT
 status open
 
@@ -358,7 +357,6 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 La conception structurelle web classique est basée sur un modèle client-serveur,
  dans lequel les navigateurs envoient une demande de contenu HTTP
 \begin_inset CommandInset nomenclature
@@ -372,12 +370,8 @@ literal "false"
 
  au serveur web, qui répond en leur envoyant une réponse contenant les informati
 ons demandées.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Le décodage de la réponse par les navigateurs est possible car elles contiennent
- les composants pour se conformer aux normes du W3C
+ Le décodage de la réponse par les navigateurs est possible car elles contiennen
+t les composants pour se conformer aux normes du W3C
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -407,11 +401,18 @@ literal "false"
 
 \end_inset
 
- et code Javascript.
+ et code Javascript
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018,pathare-2016"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 De même, en ce qui concerne le modèle de navigateurs, afin de supporter
  WebRTC
 \begin_inset CommandInset nomenclature
@@ -425,24 +426,33 @@ literal "false"
 
 , chaque navigateur doit ajouter un autre composant pour pouvoir la prendre
  en charge.
- La plupart des principaux navigateurs ont ajouté le composant RTC
+ La plupart des principaux navigateurs ont ajouté le composant WebRTC
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
-symbol "RTC"
-description "Real Time Communication"
+symbol "WebRTC"
+description "Web Real-Time Communications"
 literal "false"
 
 \end_inset
 
- depuis 2014.
+ depuis 2014
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -480,7 +490,6 @@ name "fig:composant WebRTC"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 À partir du diagramme 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -506,7 +515,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Javascript joue un rôle important dans WebRTC
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -539,7 +547,15 @@ literal "false"
 
 \end_inset
 
- exposées.
+ exposées
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -547,7 +563,6 @@ Normes WebRTC
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Les normes WebRTC sont actuellement développées conjointement par le W3C
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -612,12 +627,17 @@ literal "false"
 \end_inset
 
  du navigateur pour communiquer avec un autre navigateur ou point de terminaison
- de communications Internet.
-\end_layout
+ de communications Internet
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p.11"
+key "johnston-2013"
+literal "false"
 
-\begin_layout Standard
-\paragraph_spacing double
-Le travail du W3C
+\end_inset
+
+.
+ Le travail du W3C
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -648,7 +668,16 @@ literal "false"
 \end_inset
 
  est centré sur le groupe de travail RTCWeb (Real-Time Communications Web).
- Les deux groupes sont indépendants, mais se coordonnent étroitement.
+ Les deux groupes sont indépendants, mais se coordonnent étroitement
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p.11"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -657,6 +686,7 @@ Architecture WebRTC
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
 status collapsed
@@ -701,17 +731,19 @@ name "fig:architecture WebRTC"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Le navigateur cache la grande partie de l'implémentation WebRTC, tout le
  travail de capture des médias, de la description de session et des transmission
 s réseau, tout est abstrait de la surface et n'expose que de simples API.
- 
-\end_layout
+ L'application ne peut appeler que l'API web qui est normalisée par le W3C,
+ à consommer par les développeurs web
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
 
-\begin_layout Standard
-\paragraph_spacing double
-L'application ne peut appeler que l'API web qui est normalisée par le W3C
- pour les développeurs web à consommer.
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -719,7 +751,6 @@ Le triangle WebRTC
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Le scénario le plus répandu est probablement celui où les deux navigateurs
  exécutent la même application web WebRTC, téléchargée à partir de la même
  page web.
@@ -738,7 +769,16 @@ noprefix "false"
  (côtés du triangle) et des flux médiatiques ou de données (base du triangle)
  entre les trois éléments.
  Une connexion peer établit le transport pour les médias vocaux et vidéo
- et les flux de canaux de données directement entre les navigateurs.
+ et les flux de canaux de données directement entre les navigateurs
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p.4-5"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -787,7 +827,7 @@ name "fig:triangle WebRTC"
 \end_layout
 
 \begin_layout Section
-Composants Importtants du WebRTC
+Composants Importants du WebRTC
 \end_layout
 
 \begin_layout Subsection
@@ -795,22 +835,36 @@ Flux de médias
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Les appareils d'aujourd'hui sont dotés de plusieurs capacités matérielles
  multimédias.
  Dans les appareils mobiles, vous obtenez une caméra avant, une caméra arrière
  et un microphone audio.
  Sur les ordinateurs de bureau et les tablettes, vous obtenez le même ensemble
  de sources multimédias.
- Chacune de ces sources multimédia peut générer un flux multimédia.
+ Chacune de ces sources multimédia peut générer un flux multimédia
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et l'API
- fournira ce flux en tant que variable au langage Javascript et que les
- développeurs d'applications pourront afficher sur une page comme n'importe
- quel flux vidéo normal.
+Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et fournira
+ ce flux en tant que variable au langage Javascript pourque puissent les
+ développeurs d'applications l'afficher sur une page comme n'importe quel
+ flux vidéo normal
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -818,11 +872,18 @@ Peer to peer
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 L'un des avantages distinctifs du WebRTC est le fait qu'il s'agit d'une
  communication peer to peer.
  Cela signifie évidemment que la vidéo passera directement de l’ordinateur
- d’un utilisateur à un autre.
+ d’un utilisateur à un autre
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -830,15 +891,21 @@ Description de la session
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 En général, pour qu'une communication ait lieu entre deux périphériques
  quelconques, il existe un mécanisme de prise de contact qui doit être effectué
  en premier, pour établir la session entre les deux périphériques, puis
- le flux des messages ou des paquets peut démarrer.
+ le flux des messages ou des paquets peut démarrer
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 C’est la même chose avec WebRTC.
  Il existe un protocole de déscription de session: SDP
 \begin_inset CommandInset nomenclature
@@ -852,14 +919,29 @@ literal "false"
 
 .
  Il s'agit d'un ensemble de messages qui doivent être échangés entre les
- deux navigateurs avant qu'ils ne commencent à envoyer des flux multimédias.
+ deux navigateurs avant qu'ils ne commencent à envoyer des flux multimédias
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Pour échanger les données de description de session, nous avons besoin d'une
  machine intermédiaire.
- C'est là que le concept de signalisation entre en jeu.
+ C'est là que le concept de signalisation entre en jeu
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -867,17 +949,31 @@ Signalisation
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Supposons que le navigateur A essaie de communiquer avec le navigateur B.
  Le navigateur A enverra ses données de description de session au serveur
- de signalisation S, et le même processus pour le navigateur B également.
+ de signalisation S, et le même processus pour le navigateur B également
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Une fois ce processus terminé, chaque navigateur a maintenant à sa disposition
  tout le nécessaire pour établir une connexion et envoyer le flux multimédia
- à l'autre navigateur.
+ à l'autre navigateur
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
  La figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -896,46 +992,56 @@ Rôle de la signalisation
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
+\noindent
 La signalisation a un rôle important dans les communications en temps réel:
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 Négociation des capacités et des paramètres des médias ntre les appareils
  dans le même appel
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 Identification et authentification des participants à une session
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 Contrôler la session multimédia, indiquer la progression, modifier et terminer
  la session
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 Résolution de l'éblouissement, lorsque les deux côtés d'une session essaient
  d'établir ou de modifier une session en même temps
 \end_layout
 
 \begin_layout Subsubsection*
 Pourquoi la signalisation n'a pas été standardisé?
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Pourquoi-la-signalisation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 La signalisation n'est pas normalisée dans WebRTC pour permettre l'interopérabil
 ité entre différents navigateurs.
  Son flux se situe entre les navigateurs web et le serveur web, et non entre
  deux navigateurs dans le même appel ou session.
  Dans ce cas, le serveur ou plutôt le developpeur sélectionne le protocole
  de signalisation et s'assure que les utilisateurs des applications web
- ou du support du site utilisent le même protocole.
+ ou du support du site utilisent le même protocole
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -950,18 +1056,25 @@ name "subsec:Signalisation-et-négotiation"
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 La fonction la plus importante de la signalisation est l'échange d'informations
  contenues dans l'objet de protocole de description de session (SDP) entre
  les navigateurs.
- SDP contient toutes les informations nécessaires au fonctionnement du RTC,
- y compris les types de codecs multimédias (audio, vidéo et données) utilisés
- et des informations sur la bande passante de la connexion.
+ SDP contient toutes les informations nécessaires au fonctionnement de la
+ communication, y compris les types de codecs multimédias (audio, vidéo
+ et données) utilisés et des informations sur la bande passante de la connexion
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-Un autre rôle de la signalisation est l'ICE
+Un autre rôle de la signalisation est l'établissement de connectivité interactiv
+e (ICE
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -971,7 +1084,7 @@ literal "false"
 
 \end_inset
 
-.
+).
  Il s'agit de l'adresse candidate représentant l'adresse IP
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -994,7 +1107,15 @@ literal "false"
 
  où des paquets multimédias potentiels pourraient être reçus par le navigateur.
  Mais il ne peut pas être démarré tant que l'adresse candidate n'a pas été
- échangée sur le canal de signalisation.
+ échangée sur le canal de signalisation
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1002,23 +1123,37 @@ Identification et authentification
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Le canal de signalisation peut également fournir l'identité des participants
  à un appel.
  Par exemple, dans une application web, l'application se chargera d'abord
  d'authentifier les utilisateurs, et lorsqu'un utilisateur doit appeler
  un autre utilisateur, l'application web présentera le nom d'utilisateur
- pour le canal de signalisation comme un identifiant authentifié.
+ pour le canal de signalisation comme un identifiant authentifié
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 WebRTC a d'autres moyens d'authentifier les utilisateurs sans s'appuyer
  sur des applications externes.
  En utilisant le canal multimédia, qui ne repose pas sur des applications
  externes de confiance, une identité et une authentification de l'appelant
  peuvent être fournies dans le chemin multimédia sans dépendre du tout du
- canal de signalisation.
+ canal de signalisation
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1026,11 +1161,18 @@ Contrôle de la session de médias
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 La signalisation est nécessaire pour lancer l'appel; cependant, il n'est
  pas nécessaire d'indiquer l'état ou de mettre fin à une session.
  Il y a une machine d'état ICE dans le navigateur qui peut fournir ces informati
-ons.
+ons
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1038,7 +1180,6 @@ Résolution de l'éclat
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 La résolution de l'éblouissement intervient lorsque les deux côtés de la
  communication essaient de changer de session en même temps.
  C'est une condition de concurrence qui pourrait entraîner un état non déterminé
@@ -1053,7 +1194,15 @@ literal "false"
 
 \end_inset
 
- intègre une résolution d'éblouissement.
+ intègre une résolution d'éblouissement
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -1061,52 +1210,76 @@ Les API WebRTC
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 \noindent
 WebRTC a trois fonctionnalités principales: 
 \end_layout
 
 \begin_layout Enumerate
-\paragraph_spacing double
-\noindent
 Acquérir l'audio et la vidéo
 \end_layout
 
 \begin_layout Enumerate
-\paragraph_spacing double
-\noindent
 Communication audio et vidéo
 \end_layout
 
 \begin_layout Enumerate
-\paragraph_spacing double
-\noindent
 Communication de données arbitraires
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-\noindent
 Et il existe trois API Javascript majeures exposées pour appeler ces foncionnali
 tés:
 \end_layout
 
 \begin_layout Enumerate
-\paragraph_spacing double
-\noindent
-Flux multimédia (alias getUserMedia)
+Flux multimédia (
+\begin_inset listings
+lstparams "style=es6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+getUserMedia
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Enumerate
-\paragraph_spacing double
-\noindent
-Connexion Peer RTC (RTCPeerConnection)
+Connexion Peer RTC (
+\begin_inset listings
+lstparams "style=es6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+RTCPeerConnection
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Enumerate
-\paragraph_spacing double
-\noindent
-Canal de données RTC (RTCDataChannel)
+Canal de données RTC (
+\begin_inset listings
+lstparams "style=es6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+RTCDataChannel
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Subsection
@@ -1114,7 +1287,6 @@ Flux multimédia
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
  sous le nom de média local.
  Par conséquent, la première étape consiste à obtenir un flux multimédia
@@ -1139,17 +1311,32 @@ getUserMedia()
 
 
 \series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
 .
  Cette méthode récupère les médias des périphériques de la machine.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Pour les problèmes de confidentialité, le navigateur doit obtenir l'autorisation
  de l'utilisateur pour accéder à la caméra et au microphone de l'utilisateur.
  Le navigateur demandera à l'utilisateur d'autoriser l'accès.
  Une fois l'accès accordé, l'application recevra un flux de la caméra et
- du microphone.
+ du microphone
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1157,45 +1344,35 @@ Connexion peer RTC
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Il est important de noter que cette connexion est une connexion peer.
  Cela signifie que cela peut être fait avec n'importe quel ordinateur ou
  appareil sur Internet.
  Et la connexion est directement établie entre les deux machines sans serveur
- impliqué.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
-Les paquets vidéo/audio circuleront d'un navigateur à un autre.
- Pour établir une connexion peer, il suffit d'appeler cette méthode: 
-\series bold
-
-\begin_inset listings
-lstparams "style=JavaScript"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-RTCPeerConnection()
-\end_layout
+ impliqué
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
 
 \end_inset
 
+: les paquets vidéo et audio circuleront d'un navigateur à un autre.
+\end_layout
 
-\series default
+\begin_layout Standard
+Un fait très important qui mérite d'être mentionné est le nombre de connexions
+ qui seront créées pour chaque utilisateur ajouté à une conférence téléphonique
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-Un fait très important qui mérite d'être mentionné est le nombre de connexions
- qui seront créées pour chaque utilisateur ajouté à une conférence téléphonique.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing double
 Disons, par exemple, un appel démarré avec deux utilisateurs, tels que l'utilisa
 teur A et l'utilisateur B.
  Cela signifie qu'une connexion peer sera créée entre les navigateurs des
@@ -1203,7 +1380,6 @@ teur A et l'utilisateur B.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
  les connexions pour chaque utilisateur de l'appel.
  Comme nous l’avons expliqué précédemment, il s’agira d’une connexion peer,
@@ -1213,8 +1389,6 @@ Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-\noindent
 Pour comprendre combien de connexions peer seront créées par machine:
 \end_layout
 
@@ -1231,8 +1405,6 @@ Connexions\:par\:machine & =3-1
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
-\noindent
 Chaque machine aura 2 connexions peer établies si l'appel a 3 utilisateurs.
 \end_layout
 
@@ -1241,14 +1413,20 @@ Canal de données RTC
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Les canaux de données prennent en charge les connexions à haut volume et
  à faible latence; un canal de données est un canal non multimédia qui prend
- uniquement en charge le transfert de données.
+ uniquement en charge le transfert de données
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Il contourne les serveurs et fournit aux développeurs web des canaux configurabl
 es pour transférer des données.
  Les canaux de données dans WebRTC sont construits sur des WebSockets.
@@ -1257,15 +1435,30 @@ es pour transférer des données.
  peuvent être définies pour obtenir les données.
  Le canal de données utilise également la même connexion peer que le média,
  ce qui est une bonne chose, car cela signifie qu'un seul processus de négociati
-on offre/réponse est nécessaire.
+on offre/réponse est nécessaire
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 Les canaux de données prennent également en charge les deux modes de livraison:
  livraison garantie (fiable) et rapide (non fiable).
  Le premier peut être utilisé pour des événements critiques et le second
- peut être utilisé pour les mises à jour de la position d'un jeu en ligne.
+ peut être utilisé pour les mises à jour de la position d'un jeu en ligne
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body

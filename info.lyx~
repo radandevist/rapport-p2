@@ -543,7 +543,8 @@ hypersetup{
 \begin_layout Plain Layout
 
 	pdfkeywords={WebRTC, Typescript, Javascript, temps réel, communication,
- visioconférence en direct} % et autres mots clés reliés au projet
+ visioconférence en direct, chat audio, chat vidéo} % et autres mots clés
+ reliés au projet
 \end_layout
 
 \begin_layout Plain Layout

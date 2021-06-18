@@ -393,7 +393,7 @@
 \bibtex_command biber
 \index_command default
 \paperfontsize 12
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -407,11 +407,11 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine biblatex
+\cite_engine biblatex-natbib
 \cite_engine_type authoryear
 \biblio_style plain
-\biblatex_bibstyle apa
-\biblatex_citestyle apa
+\biblatex_bibstyle numeric-comp
+\biblatex_citestyle numeric-comp
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -444,6 +444,7 @@
 \begin_body
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset include
 LatexCommand input
 filename "info.lyx"
@@ -454,6 +455,7 @@ filename "info.lyx"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset include
 LatexCommand input
 filename "frontmatter/cover.lyx"
@@ -464,6 +466,7 @@ filename "frontmatter/cover.lyx"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset include
 LatexCommand input
 filename "frontmatter/title_page.lyx"
@@ -537,7 +540,6 @@ setcounter{tocdepth}{1}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing other 1.125
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -660,7 +662,6 @@ nomname}{Liste des acronymes et symboles}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 set_width "auto"
@@ -788,7 +789,6 @@ bibname}{Références}
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing double
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
