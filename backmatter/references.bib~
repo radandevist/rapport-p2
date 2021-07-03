@@ -24,7 +24,6 @@
 	edition = {2},
 	isbn = {978-0-9859788-5-3},
 	language = {english},
-	pages = {10–11},
 	publisher = {Smashwords Edition},
 	title = {WebRTC: APIs and RTCWEB Protocols of the HTML5 Real-Time Web}
 }
