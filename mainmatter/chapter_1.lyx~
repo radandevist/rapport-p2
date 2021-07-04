@@ -452,12 +452,12 @@ literal "false"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png
+	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/rtc-component.png
 	scale 40
 
 \end_inset
@@ -694,7 +694,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/webrtc-architecture.png
+	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/webrtc-architecture.png
 	scale 40
 
 \end_inset
@@ -790,7 +790,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/triangle-webrtc.png
+	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/triangle-webrtc.svg
 	scale 40
 
 \end_inset
@@ -1232,54 +1232,15 @@ tés:
 \end_layout
 
 \begin_layout Enumerate
-Flux multimédia (
-\begin_inset listings
-lstparams "style=es6"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-getUserMedia
-\end_layout
-
-\end_inset
-
-)
+Flux multimédia (getUserMedia)
 \end_layout
 
 \begin_layout Enumerate
-Connexion Peer RTC (
-\begin_inset listings
-lstparams "style=es6"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-RTCPeerConnection
-\end_layout
-
-\end_inset
-
-)
+Connexion Peer RTC (RTCPeerConnection)
 \end_layout
 
 \begin_layout Enumerate
-Canal de données RTC (
-\begin_inset listings
-lstparams "style=es6"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-RTCDataChannel
-\end_layout
-
-\end_inset
-
-)
+Canal de données RTC (RTCDataChannel)
 \end_layout
 
 \begin_layout Subsection

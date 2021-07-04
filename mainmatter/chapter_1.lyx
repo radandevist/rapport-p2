@@ -452,12 +452,12 @@ literal "false"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/rtc-component.png
+	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/rtc-component.png
 	scale 40
 
 \end_inset
@@ -694,7 +694,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/webrtc-architecture.png
+	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/webrtc-architecture.png
 	scale 40
 
 \end_inset
@@ -790,7 +790,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/Book/lyx/esp-layout/images/triangle-webrtc.png
+	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/triangle-webrtc.png
 	scale 40
 
 \end_inset
