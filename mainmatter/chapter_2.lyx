@@ -379,6 +379,13 @@ literal "false"
 
 \begin_layout Section
 Signalisation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Signalisation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -498,6 +505,13 @@ literal "false"
 
 \begin_layout Subsection
 RTCConfiguration
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:RTCConfiguration"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -891,6 +905,287 @@ signalingChannel.addEventListener('message', async message => {
 
 \end_layout
 
+\begin_layout Subsection
+Candidats ICE
+\end_layout
+
+\begin_layout Standard
+Aavant que deux peers puissent communiquer en utilisant WebRTC, ils doivent
+ echanger des informations de connectivité.
+ Étant donné que les conditions du réseau peuvent varier en fonction d'un
+ grand nombre de facteurs, un service externe est généralement utilisé pour
+ découvrir les candidats possibles pour se connecter à un peer.
+ Ce service s'appelle ICE et utilise un serveur STUN
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "STUN"
+description "Session Traversal Utilities for NAT"
+literal "false"
+
+\end_inset
+
+ ou TURN
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TURN"
+description "Traversal Using Relay NAT"
+literal "false"
+
+\end_inset
+
+.
+ STUN signifie «Session Traversal Utitlities for NAT», et est généralement
+ utilisé indirectement dans la plupart des applications WebRTC
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+TURN (Traversal Using Relay NAT) est la solution la plus avancée qui intègre
+ les protocoles STUN et la plupart des services commerciaux basés sur WebRTC
+ untilsent un serveur TURN pour établir des liens entre peers.
+ L'API WebRTC prend en charge à la fois STUN et TURN directement et il est
+ regroupé sous le terme complet «Internet Connectivity Establishment»
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
+ Lors de la création d'une connexion WebRTC, nous fournissons généralement
+ un ou plusieurs serveurs ICE dans la configuration de RTCPeerConnection
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "subsec:RTCConfiguration"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Ruisselement de l'ICE
+\end_layout
+
+\begin_layout Standard
+Une fois qu'un objet RTCPeerConnection est créé, le framework sous-jacent
+ utilise les serveurs ICE pour rassembler les candidats à L'établissement
+ de la connectivité (candidats ICE).
+ L'évènement 
+\begin_inset listings
+lstparams "style=ES6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+icegatheringstatechange
+\end_layout
+
+\end_inset
+
+ de l'API RTCPeerConnection signale à quel état se trouve la collecte ICE
+ («new», «gathering» ou alors 
+\begin_inset Quotes fld
+\end_inset
+
+complete»)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Bien qu'il soit possible pour un peer d'attendre la fin de la collecte ICE,
+ il est généralement beaucoup plus éfficace d'utiliser une technique de
+ «ruissellement» et de transmettre chaque candidats ICE au peer distant
+ au fur et à mesure qu'il en est découvert.
+ Celà résulte par une considérable réduction du temps d'installation de
+ la connectivité des peers et permet d'entamer une conversation vidéo avec
+ moins de retard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Pour rassembler des candidats ICE, il suffit d'ajouter un écouteur pour
+ l'évènement 
+\begin_inset listings
+lstparams "style=ES6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+icecandidate
+\end_layout
+
+\end_inset
+
+.
+ L'évenement RTCPeerConnectionICEevent émis sur cet écouteur contiendra
+ la propriété candate qui représente un nouveau candidat qui devrait être
+ envoyé au peer distant
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "subsec:Signalisation-et-négotiation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "style=ES6"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Écouter les candidats ICE locaux sur l'objet RTCPeerConnection local
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+peerConnection.addEventListener('icecandidate', event => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (event.candidate) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    signalingChannel.send({'new-ice-candidate': event.candidate});
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+// Écouter les candidats ICE distants et les ajouter
+\end_layout
+
+\begin_layout Plain Layout
+
+// à la connexion RTCPeerConnection locale
+\end_layout
+
+\begin_layout Plain Layout
+
+signalingChannel.addEventListener('message', async message => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (message.iceCandidate) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    try {
+\end_layout
+
+\begin_layout Plain Layout
+
+      await peerConnection.addIceCandidate(message.iceCandidate);
+\end_layout
+
+\begin_layout Plain Layout
+
+    } catch (e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      console.error('Error adding received ice candidate', e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Une fois que les candidats ICE sont reçus, nous devons nous attendre à ce
+ que l'état de notre connexion peer passe éventuellement à un état connecté.
+ Pour détecter cela, nous ajoutons un écouteur à notre RTCPeerConnection
+ où nous écoutons les événements 
+\begin_inset listings
+lstparams "style=ES6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+connectionstatechange
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 getUserMedia
 \end_layout
@@ -902,7 +1197,6 @@ L'API getUserMedia permet d'accéder aux flux multimédias (vidéo, audio ou
  sans envoyer les données ni les stocker dans un fichier.
  Pour avoir un chat fonctionnel, nous devons envoyer ces données en utilisant
  l'API RTCPeerConnection.
- 
 \end_layout
 
 \begin_layout Standard

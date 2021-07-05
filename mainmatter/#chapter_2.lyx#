@@ -1068,8 +1068,7 @@ status open
 
 \begin_layout Plain Layout
 
-// Écouter les candidats ICE locaux sur l'objet RTCPeerConnection local
- 
+// Listen for local ICE candidates on the local RTCPeerConnection 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1100,12 +1099,7 @@ peerConnection.addEventListener('icecandidate', event => {
 
 \begin_layout Plain Layout
 
-// Écouter les candidats ICE distants et les ajouter
-\end_layout
-
-\begin_layout Plain Layout
-
-// à la connexion RTCPeerConnection locale
+// Listen for remote ICE candidates and add them to the local RTCPeerConnection
 \end_layout
 
 \begin_layout Plain Layout
@@ -1156,26 +1150,6 @@ signalingChannel.addEventListener('message', async message => {
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Une fois que les candidats ICE sont reçus, nous devons nous attendre à ce
- que l'état de notre connexion peer passe éventuellement à un état connecté.
- Pour détecter cela, nous ajoutons un écouteur à notre RTCPeerConnection
- où nous écoutons les événements 
-\begin_inset listings
-lstparams "style=ES6"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-connectionstatechange
-\end_layout
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Section
