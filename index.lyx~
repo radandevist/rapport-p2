@@ -370,6 +370,9 @@
 \makeatother
 \end_preamble
 \use_default_options true
+\begin_modules
+soul
+\end_modules
 \maintain_unincluded_children false
 \language french
 \language_package babel
@@ -444,6 +447,7 @@
 \begin_body
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset include
 LatexCommand input
 filename "info.lyx"
@@ -454,6 +458,7 @@ filename "info.lyx"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset include
 LatexCommand input
 filename "frontmatter/cover.lyx"
@@ -464,6 +469,7 @@ filename "frontmatter/cover.lyx"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset include
 LatexCommand input
 filename "frontmatter/title_page.lyx"
