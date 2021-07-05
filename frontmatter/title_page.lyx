@@ -374,7 +374,7 @@ begin{titlepage}
 \backslash
 includegraphics[width=0.15
 \backslash
-textwidth]{images/canevas/logo_espa}
+textwidth]{images/canevas/logo_una}
 \end_layout
 
 \begin_layout Plain Layout
@@ -385,7 +385,7 @@ hfill
 \backslash
 includegraphics[width=0.15
 \backslash
-textwidth]{images/canevas/logo_una}
+textwidth]{images/canevas/logo_espa}
 \backslash
 
 \backslash
