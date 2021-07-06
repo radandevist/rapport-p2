@@ -1466,8 +1466,8 @@ status open
 
 \begin_layout Standard
 Capturer les médias à partir des périphéques médias, dans le navigateur,
- en utilisant les configurations de contraintes et paramètres par défaut
- consiste à écrire les lignes de code suivantes.
+ en utilisant ces configurations de contraintes et de paramètres consiste
+ à écrire les lignes de code suivantes.
 \end_layout
 
 \begin_layout Standard
@@ -1484,6 +1484,151 @@ const constraints: MediaStreamConstraint = { audio: true, video: true };
 \begin_layout Plain Layout
 
 navigator.mediaDevices.getUserMedia(constraints);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tranmission et négociation des flux
+\end_layout
+
+\begin_layout Subsubsection
+Ajout des pistes locaux
+\end_layout
+
+\begin_layout Standard
+Une fois qu'un objet RTCPeerConnection est connecté à un peer distant, il
+ est possible de diffuser de l'audio et de la vidéo entre eux.
+ C'est le point où nous connectons le flux que nous recevons de 
+\begin_inset listings
+lstparams "style=ES6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+getUserMedia()
+\end_layout
+
+\end_inset
+
+ à RTCPeerConnection.
+ Un flux multimédia se compose d'au moins une piste multimédia, et celles-ci
+ sont ajoutées individuellement à la RTCPeerConnection lorsque nous voulons
+ transmettre le média à l'homologue distant
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "style=ES6"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+const localStream = await navigator.mediaDevices.getUserMedia({video: true,
+ audio: true});
+\end_layout
+
+\begin_layout Plain Layout
+
+const peerConnection = new RTCPeerConnection(iceConfig);
+\end_layout
+
+\begin_layout Plain Layout
+
+localStream.getTracks().forEach(track => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  peerConnection.addTrack(track, localStream);
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tracks can be added to a RTCPeerConnection before it has connected to a
+ remote peer, so it makes sense to perform this setup as early as possible
+ instead of waiting for the connection to be completed
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Ajout des pistes distantes
+\end_layout
+
+\begin_layout Standard
+Pour recevoir les pistes distantes qui ont été ajoutées par l'autre pair,
+ nous enregistrons un écouteur sur le RTCPeerConnection local écoutant l'événeme
+nt de piste.
+ Puisque la lecture est effectuée sur un objet MediaStream, nous créons
+ d'abord une instance vide que nous remplissons ensuite avec les pistes
+ du pair distant au fur et à mesure que nous les recevons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "style=ES6"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+const remoteStream = new MediaStream();
+\end_layout
+
+\begin_layout Plain Layout
+
+const remoteVideo = document.querySelector('#remoteVideo');
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+remoteVideo.srcObject = remoteStream;
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+peerConnection.addEventListener('track', async (event) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  remoteStream.addTrack(event.track, remoteStream);
+\end_layout
+
+\begin_layout Plain Layout
+
+});
 \end_layout
 
 \end_inset
