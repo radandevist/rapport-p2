@@ -1331,26 +1331,15 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Disons, par exemple, un appel démarré avec deux utilisateurs, tels que l'utilisa
-teur A et l'utilisateur B.
+ Disons, par exemple, un appel démarré avec deux utilisateurs, tels que
+ l'utilisateur A et l'utilisateur B.
  Cela signifie qu'une connexion peer sera créée entre les navigateurs des
  deux utilisateurs, une connexion de A à B.
-\end_layout
-
-\begin_layout Standard
-Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
+ Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
  les connexions pour chaque utilisateur de l'appel.
  Comme nous l’avons expliqué précédemment, il s’agira d’une connexion peer,
  ce qui signifie que chaque utilisateur doit être connecté à la machine
  de chaque utilisateur lors de l’appel.
- 
-\end_layout
-
-\begin_layout Standard
-Pour comprendre combien de connexions peer seront créées par machine:
 \end_layout
 
 \begin_layout Standard
@@ -1366,6 +1355,7 @@ Connexions\:par\:machine & =3-1
 \end_layout
 
 \begin_layout Standard
+\noindent
 Chaque machine aura 2 connexions peer établies si l'appel a 3 utilisateurs.
 \end_layout
 
