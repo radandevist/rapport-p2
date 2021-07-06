@@ -1492,11 +1492,7 @@ navigator.mediaDevices.getUserMedia(constraints);
 \end_layout
 
 \begin_layout Subsection
-Tranmission et négociation des flux
-\end_layout
-
-\begin_layout Subsubsection
-Ajout des pistes locaux
+Échange des flux miltimédia
 \end_layout
 
 \begin_layout Standard
@@ -1516,7 +1512,14 @@ getUserMedia()
 \end_inset
 
  à RTCPeerConnection.
- Un flux multimédia se compose d'au moins une piste multimédia, et celles-ci
+\end_layout
+
+\begin_layout Subsubsection
+Ajout des pistes locales
+\end_layout
+
+\begin_layout Standard
+Un flux multimédia se compose d'au moins une piste multimédia, et celles-ci
  sont ajoutées individuellement à la RTCPeerConnection lorsque nous voulons
  transmettre le média à l'homologue distant
 \begin_inset CommandInset citation
