@@ -63,6 +63,7 @@
   breakatwhitespace=false,
   %breaklines=false,
   breaklines=true,
+  breaklines=true,
   captionpos=b,
   columns=fullflexible,
   commentstyle=\color{mediumgray}\upshape,
