@@ -1567,9 +1567,9 @@ localStream.getTracks().forEach(track => {
 \end_layout
 
 \begin_layout Standard
-Tracks can be added to a RTCPeerConnection before it has connected to a
- remote peer, so it makes sense to perform this setup as early as possible
- instead of waiting for the connection to be completed
+Les pistes peuvent être ajoutées à un RTCPeerConnection avant qu'il ne soit
+ connecté à un pair distant, il est donc logique d'effectuer cette configuration
+ le plus tôt possible au lieu d'attendre que la connexion soit terminée
 \begin_inset CommandInset citation
 LatexCommand cite
 key "webrtc-org-2014"
@@ -1586,11 +1586,32 @@ Ajout des pistes distantes
 
 \begin_layout Standard
 Pour recevoir les pistes distantes qui ont été ajoutées par l'autre pair,
- nous enregistrons un écouteur sur le RTCPeerConnection local écoutant l'événeme
-nt de piste.
+ nous enregistrons un écouteur sur l'objet RTCPeerConnection local écoutant
+ l'événement 
+\begin_inset listings
+lstparams "style=ES6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+track
+\end_layout
+
+\end_inset
+
+.
  Puisque la lecture est effectuée sur un objet MediaStream, nous créons
  d'abord une instance vide que nous remplissons ensuite avec les pistes
- du pair distant au fur et à mesure que nous les recevons.
+ du pair distant au fur et à mesure que nous les recevons
+\begin_inset CommandInset citation
+LatexCommand cite
+key "webrtc-org-2014"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
