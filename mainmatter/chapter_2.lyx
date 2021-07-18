@@ -631,6 +631,13 @@ const peerConnection = new RTCPeerConnection(configuration);
 
 \begin_layout Subsection
 RTCSessionDescription
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:RTCSessionDescription"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

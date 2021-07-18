@@ -772,7 +772,7 @@ noprefix "false"
  et les flux de canaux de données directement entre les navigateurs
 \begin_inset CommandInset citation
 LatexCommand cite
-after "p.4-5"
+after "p. 4-5"
 key "johnston-2013"
 literal "false"
 

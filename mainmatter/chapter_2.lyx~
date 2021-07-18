@@ -1492,7 +1492,7 @@ navigator.mediaDevices.getUserMedia(constraints);
 \end_layout
 
 \begin_layout Subsection
-Tranmission et réception des flux
+Échange des flux miltimédia
 \end_layout
 
 \begin_layout Standard

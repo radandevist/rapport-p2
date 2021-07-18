@@ -1340,6 +1340,7 @@ literal "false"
  Comme nous l’avons expliqué précédemment, il s’agira d’une connexion peer,
  ce qui signifie que chaque utilisateur doit être connecté à la machine
  de chaque utilisateur lors de l’appel.
+ Chaque machine aura 2 connexions peer établies si l'appel a 3 utilisateurs.
 \end_layout
 
 \begin_layout Standard
@@ -1352,11 +1353,6 @@ Connexions\:par\:machine & =3-1
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\noindent
-Chaque machine aura 2 connexions peer établies si l'appel a 3 utilisateurs.
 \end_layout
 
 \begin_layout Subsection

@@ -330,6 +330,7 @@ Relevé des protocoles mis en jeux dans WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing onehalf
 \begin_inset ERT
 status open
 
@@ -354,6 +355,197 @@ minitoc
 
 \begin_layout Section
 Introduction
+\end_layout
+
+\begin_layout Standard
+Il existe un certain nombre de protocoles liés à WebRTC.
+ Les plus importantes sont répertoriées dans la figure suivante.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/P2/book/lyx/esp-layout/images/webrtc-protocols.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pile de protocoles WebRTC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sur l’aile gauche de la figure précédente, s’illustrent les protocules uitlisés
+ pour la signalisation tandisque dans l’aile droite, sont montrés ceux utilisés
+ par RTCWeb elle même.
+\end_layout
+
+\begin_layout Standard
+Un développeur Web en général n'interagira jamais directement avec les protocole
+s, car les paramètres et configurations par défaut des protocoles répondront
+ généralement à leurs besoins.
+ Cependant, dans certains cas, en particulier lorsqu'un client WebRTC communique
+ avec un client non WebRTC, une configuration et une connaissance des protocoles
+ utilisés par WebRTC sont nécessaires.
+ De plus, s'il est nécessaire d'ajuster l'objet RTCSessionDescription dans
+ l'API WEBRTC, comme cela peut se produire s'il y a des problèmes d'interopérabi
+lité SDP entre les agents utilisateurs, l'auteur de l'application devra
+ avoir une meilleure compréhension du fonctionnement de la négociation.
+ Dans tous les cas, une compréhension de base des protocoles utilisés par
+ WebRTC est utile pour le développeur.
+ Un développeur de téléphonie qui souhaite utiliser WebRTC, en revanche,
+ devra avoir une compréhension détaillée des protocoles utilisés
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 125"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Protocoles de signalisation
+\end_layout
+
+\begin_layout Section
+Protocoles RTCWeb
+\end_layout
+
+\begin_layout Subsection
+RTP et SRTP
+\end_layout
+
+\begin_layout Standard
+Le protocole le plus important utilisé par WebRTC est le Real-time Transport
+ Protocol, ou RTP.
+ WebRTC utilise uniquement le profil sécurisé de RTP ou Secure RTP, SRTP.
+ SRTP est le protocole utilisé pour transporter et acheminer les paquets
+ multimédias audio et vidéo entre les clients WebRTC.
+ Les paquets multimédias contiennent les échantillons audio numérisés ou
+ les images vidéo numérisées générées par un microphone ou une caméra ou
+ une application, et sont rendus à l'aide d'un haut-parleur ou d'un écran.
+ Une configuration réussie d'une connexion par les peers, ainsi qu'un échange
+ offre/réponse complet, entraînera l'établissement d'une connexion SRTP
+ entre les navigateurs ou un navigateur et un serveur, et un échange d'informati
+ons sur les médias.
+ SRTP fournit des informations essentielles pour transporter et restituer
+ avec succès les informations du média : le codec (codeur/décodeur utilisé
+ pour échantillonner et compresser l'audio ou la vidéo, la source du média
+ (la source de synchronisation ou SSRC), un horodatage (pour une lecture
+ correctement chronométrée ), le numéro de séquence (pour détecter les paquets
+ perdus) et d'autres informations nécessaires à la lecture.
+ Pour les données non audio ou vidéo, SRTP n'est pas utilisé.
+ Au lieu de cela, un appel à l'API RTCDataChannel entraînera l'ouverture
+ d'un canal de données entre les navigateurs permettant l'échange de données
+ arbitrairement formatées
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 216"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+SDP
+\end_layout
+
+\begin_layout Standard
+Les descriptions de session WebRTC sont décrites à l'aide de la Session
+ Description Protocol (SDP).
+ Une description de session SDP (codé comme un objet RTCSessionDescription)
+ est utilisé pour décrire les caractéristiques de support de la connexion
+ peer.
+ Il existe une longue et compliquée liste d'informations qui doivent être
+ échangées entre les deux extrémités de la session SRTP pour qu'elles puissent
+ communiquer.
+ Les appels d'API à RTCPeerConnection entraîneront une description de session
+ SDP, un ensemble de données formatées d'une manière particulière, générées
+ par le navigateur et accessibles à l'aide de JavaScript par l'application
+ Web.
+ Une application qui souhaite avoir un contrôle étroit sur le média peut
+ apporter des modifications à la description de la session avant de la partager
+ avec l'autre navigateur.
+ Lorsque des modifications sont apportées à une connexion peer, cela entraînera
+ des modifications de la description de session que les deux peers échangeront.
+ C'est ce qu'on appelle un échange offre/réponse
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "subsec:RTCSessionDescription"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Tout développeur souhaitant avoir un contrôle fin sur les sessions multimédias
+ doit comprendre SDP
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 127"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+SRTP et SDP sont des protocoles normalisés par l'IETF et largement utilisé
+ par les appareils et services de communication sur Internet, tels que les
+ téléphones, les clients et les passerelles Voix sur IP (VoIP), ainsi que
+ les appareils de vidéoconférence et de collaboration.
+ En conséquence, la communication entre l'un de ces appareils ou clients
+ et un client WebRTC est possible.
+ Cependant, peu d'appareils ou de clients VoIP ou vidéo prennent aujourd'hui
+ en charge l'ensemble complet des capacités et des protocoles de WebRTC.
+ Ces appareils devront être mis à niveau pour prendre en charge ces nouveaux
+ protocoles, ou une fonction de passerelle utilisée entre le client WebRTC
+ et le client VoIP ou vidéo pour effectuer la conversion
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 127"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
