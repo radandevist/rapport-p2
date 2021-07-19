@@ -552,5 +552,63 @@ literal "false"
 STUN
 \end_layout
 
+\begin_layout Standard
+STUN est un outil utilisé par d'autres protocoles, tels que Interactive
+ Connectivity Establishment (ICE), le Session Initiation Protocol (SIP)
+ et WebRTC permettant de détecter et de traverser les traducteurs d'adresses
+ réseau situés sur le chemin entre deux points de terminaison de communication
+ dans les applications de voix, vidéo, messagerie et autres communications
+ interactives en temps réel.
+ IIl est implémenté en tant que protocole client-serveur léger, ne nécessitant
+ que des composants de requête et de réponse simples avec un serveur tiers
+ situé sur le réseau commun et facilement accessible, généralement Internet.
+ Le côté client est mis en œuvre dans l'application de communication de
+ l'utilisateur, telle qu'un téléphone VoIP ou un client de messagerie instantané
+e.
+\end_layout
+
+\begin_layout Standard
+Le protocole de base fonctionne essentiellement comme suit : Le client,
+ opérant généralement à l'intérieur d'un réseau privé , envoie une demande
+ de liaison à un serveur STUN sur l'Internet public.
+ Le serveur STUN répond avec une réponse de succès qui contient l' adresse
+ IP et le numéro port de du client, comme observé du point de vue du serveur.
+ Le résultat est masqué par un mappage «ou exclusif»(XOR) pour éviter la
+ traduction du contenu du paquet par des passerelles de couche d'application
+ (ALG) qui effectuent une inspection approfondie des paquets dans le but
+ d'exécuter d'autres méthodes de traversée NAT.
+\end_layout
+
+\begin_layout Standard
+Les messages STUN sont envoyés dans des paquets UDP.
+ Comme UDP ne fournit pas un transport fiable , la fiabilité est obtenue
+ par des retransmissions contrôlées par l'application des demandes STUN.
+ Les serveurs STUN n'implémentent aucun mécanisme de fiabilité pour leurs
+ réponses.
+ Lorsque la fiabilité est obligatoire, le protocole TCP peut être utilisé,
+ mais induit une surcharge réseau supplémentaire.
+ Dans les applications sensibles à la sécurité, STUN peut être transporté
+ et crypté par TLS.
+ Le numéro de port d'écoute standard pour un serveur STUN est 3478 pour
+ UDP et TCP et 5349 pour TLS.
+\end_layout
+
+\begin_layout Standard
+Lorsqu'un client a évalué son adresse externe, il peut l'utiliser comme
+ candidat pour communiquer avec des pairs en partageant l'adresse NAT externe
+ plutôt que l'adresse privée, qui n'est pas accessible depuis les pairs
+ sur le réseau public.
+ Si les deux pairs en communication sont situés dans des réseaux privés
+ différents, chacun derrière un NAT, les pairs doivent se coordonner pour
+ déterminer le meilleur chemin de communication entre eux.
+ Certains comportements NAT peuvent restreindre la connectivité des homologues
+ même lorsque la liaison publique est connue.
+ Le protocole d' établissement de connectivité interactive (ICE) fournit
+ un mécanisme structuré pour déterminer le chemin de communication optimal
+ entre deux homologues.
+ Les extensions SIP (Session Initiation Protocol ) sont définies pour permettre
+ l'utilisation d'ICE lors de l'établissement d'un appel entre deux hôtes.
+\end_layout
+
 \end_body
 \end_document
