@@ -987,7 +987,7 @@ noprefix "false"
  aidera à expliquer ce concept.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Rôle de la signalisation
 \end_layout
 
@@ -1044,7 +1044,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Signalisation et négotiation des médias
 \begin_inset CommandInset label
 LatexCommand label
@@ -1175,7 +1175,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Résolution de l'éclat
 \end_layout
 
