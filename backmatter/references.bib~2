@@ -32,6 +32,7 @@
 	author = {H.W. Barz and G.A. Bassett},
 	date = {2016},
 	edition = {1},
+	isbn = {9781119090137},
 	language = {english},
 	publisher = {Wiley},
 	title = {Multimedia Networks: Protocols, Design and Applications}
@@ -60,7 +61,7 @@
 	language = {english},
 	title = {Getting started with peer connections},
 	url = {https://webrtc.org/getting-started/peer-connections},
-	urldate = {2021-06-16}
+	urldate = {2021-06-16/2021-07-06}
 }
 
 @online{mozilla-org-2021,
