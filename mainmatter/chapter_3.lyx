@@ -580,7 +580,7 @@ literal "false"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -597,7 +597,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Le protocole STUN
+Requête à un serveur STUN
 \end_layout
 
 \end_inset

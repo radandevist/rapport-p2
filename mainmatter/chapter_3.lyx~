@@ -564,7 +564,15 @@ STUN est un outil utilisé par d'autres protocoles, tels que Interactive
  situé sur le réseau commun et facilement accessible, généralement Internet.
  Le côté client est mis en œuvre dans l'application de communication de
  l'utilisateur, telle qu'un téléphone VoIP ou un client de messagerie instantané
-e.
+e
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -589,7 +597,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Le protocole STUN
+Demande de l'addresse IP publique et du port au serveur STUN
 \end_layout
 
 \end_inset
@@ -615,7 +623,15 @@ Le protocole de base fonctionne essentiellement comme suit : Le client,
  Le résultat est masqué par un mappage «ou exclusif»(XOR) pour éviter la
  traduction du contenu du paquet par des passerelles de couche d'application
  (ALG) qui effectuent une inspection approfondie des paquets dans le but
- d'exécuter d'autres méthodes de traversée NAT.
+ d'exécuter d'autres méthodes de traversée NAT
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -629,7 +645,15 @@ Les messages STUN sont envoyés dans des paquets UDP.
  Dans les applications sensibles à la sécurité, STUN peut être transporté
  et crypté par TLS.
  Le numéro de port d'écoute standard pour un serveur STUN est 3478 pour
- UDP et TCP et 5349 pour TLS.
+ UDP et TCP et 5349 pour TLS
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -646,7 +670,15 @@ Lorsqu'un client a évalué son adresse externe, il peut l'utiliser comme
  un mécanisme structuré pour déterminer le chemin de communication optimal
  entre deux homologues.
  Les extensions SIP (Session Initiation Protocol ) sont définies pour permettre
- l'utilisation d'ICE lors de l'établissement d'un appel entre deux hôtes.
+ l'utilisation d'ICE lors de l'établissement d'un appel entre deux hôtes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
