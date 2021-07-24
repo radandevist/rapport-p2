@@ -727,9 +727,10 @@ literal "false"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -893,6 +894,98 @@ s ou d'autres situations où STUN ne peut pas être utilisé
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+
+\emph on
+ICE
+\end_layout
+
+\begin_layout Standard
+L'établissement de connectivité interactive (ICE) est utilisé dans les problèmes
+ où deux nœuds sur Internet doivent communiquer aussi directement que possible,
+ mais la présence de NAT et de pare-feu rend difficile la communication
+ entre les nœuds.
+ Il s'agit d'une technique de mise en réseau qui utilise STUN (Session Traversal
+ Utilities for NAT) et TURN (Traversal Using Relays Around NAT) pour établir
+ une connexion aussi directe que possible entre deux nœuds
+\begin_inset CommandInset citation
+LatexCommand cite
+key "geeksforgeeks-2019"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ICE est la technique qui utilise les protocoles STUN et TURN pour établir
+ une connexion.
+ Au début, les points d'extrémité ne sont pas conscients de leurs propres
+ topologies de réseau, qu'ils soient sous un seul NAT ou plusieurs niveaux
+ de NAT et le type de NAT, ICE laisse les points d'extrémité le découvrir
+ à l'aide d'un serveur STUN à travers lequel ils peuvent trouver un chemin
+ établir un connexion directe.
+ Si oui, la connexion est établie, sinon un serveur TURN est utilisé comme
+ relais pour échanger des informations entre les points de terminaison
+\begin_inset CommandInset citation
+LatexCommand cite
+key "geeksforgeeks-2019"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+L'algorithme du framework ICE recherche le chemin à la plus faible latence
+ pour connecter les deux pairs, en essayant ces options dans l'ordre 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mozilla-org-2021D"
+literal "false"
+
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Itemize
+Connexion UDP directe (dans ce cas, et uniquement dans ce cas, un serveur
+ STUN est utilisé pour trouver l'adresse réseau d'un pair)
+\end_layout
+
+\begin_layout Itemize
+Connexion TCP directe, via le port HTTP
+\end_layout
+
+\begin_layout Itemize
+Connexion TCP directe, via le port HTTPS
+\end_layout
+
+\begin_layout Itemize
+Connexion indirecte via un serveur relais/TURN (si une connexion directe
+ échoue, par exemple, si un pair est derrière un pare-feu qui bloque la
+ traversée NAT)
+\end_layout
+
+\begin_layout Standard
+ICE exige que STUN soit utilisé par défaut car une communication TURN nécessite
+ l'utilisation continue d'un serveur TURN, la connexion n'est pas d'égal
+ à égal et davantage de ressources de serveur sont utilisées.
+ ICE a été développé par l'Internet Engineering Task Force sous le nom de
+ RFC 8445
+\begin_inset CommandInset citation
+LatexCommand cite
+key "geeksforgeeks-2019"
 literal "false"
 
 \end_inset

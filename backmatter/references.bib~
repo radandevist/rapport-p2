@@ -119,11 +119,29 @@
 }
 
 @online{wikipedia-contributors-2021B,
-	author = {{{Wikipedia contributors}"}},
+	author = {{{Wikipedia contributors}}},
 	date = {2021-01-20},
 	language = {english},
 	title = {Traversal Using Relays around NAT},
 	url = {https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT},
 	urldate = {2021-07-23}
+}
+
+@online{geeksforgeeks-2019,
+	author = {{GeeksforGeeks}},
+	date = {2019-09-17},
+	language = {english},
+	title = {Interactive Connectivity Establishment (ICE)},
+	url = {https://www.geeksforgeeks.org/interactive-connectivity-establishment-ice/},
+	urldate = {2021-07-24}
+}
+
+@online{mozilla-org-2021D,
+	author = {{Mozilla Org.}"},
+	date = {2021-01-13},
+	language = {english},
+	title = {ICE - MDN Web Docs Glossary: Definitions of Web-related terms},
+	url = {https://developer.mozilla.org/en-US/docs/Glossary/ICE},
+	urldate = {2021-07-24}
 }
 
