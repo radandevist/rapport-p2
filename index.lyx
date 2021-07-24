@@ -622,12 +622,20 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 mtcaddchapter % fix minitoc
 \end_layout

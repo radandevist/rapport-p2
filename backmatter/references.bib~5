@@ -103,7 +103,7 @@
 @online{mozilla-org-2021C,
 	author = {{Mozilla Org.}},
 	date = {2021-06-14},
-	language = {american},
+	language = {english},
 	title = {MediaTrackConstraints - Web APIs},
 	url = {https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints},
 	urldate = {2021-0618}
