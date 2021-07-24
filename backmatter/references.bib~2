@@ -103,9 +103,18 @@
 @online{mozilla-org-2021C,
 	author = {{Mozilla Org.}},
 	date = {2021-06-14},
-	language = {american},
+	language = {english},
 	title = {MediaTrackConstraints - Web APIs},
 	url = {https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints},
 	urldate = {2021-0618}
+}
+
+@online{wikipedia-contributors-2021,
+	author = {{Wikipedia contributors}},
+	date = {2021-04-10},
+	language = {english},
+	title = {STUN},
+	url = {https://en.wikipedia.org/wiki/STUN},
+	urldate = {2021-07-19}
 }
 

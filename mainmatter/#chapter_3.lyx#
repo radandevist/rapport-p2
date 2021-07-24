@@ -553,7 +553,345 @@ STUN
 \end_layout
 
 \begin_layout Standard
+STUN est un outil utilisé par d'autres protocoles, tels que Interactive
+ Connectivity Establishment (ICE), le Session Initiation Protocol (SIP)
+ et WebRTC permettant de détecter et de traverser les traducteurs d'adresses
+ réseau situés sur le chemin entre deux points de terminaison de communication
+ dans les applications de voix, vidéo, messagerie et autres communications
+ interactives en temps réel.
+ IIl est implémenté en tant que protocole client-serveur léger, ne nécessitant
+ que des composants de requête et de réponse simples avec un serveur tiers
+ situé sur le réseau commun et facilement accessible, généralement Internet.
+ Le côté client est mis en œuvre dans l'application de communication de
+ l'utilisateur, telle qu'un téléphone VoIP ou un client de messagerie instantané
+e
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
 
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/P2/book/lyx/esp-layout/images/STUN-protocol.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Requête à un serveur STUN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le protocole de base fonctionne essentiellement comme suit : Le client,
+ opérant généralement à l'intérieur d'un réseau privé , envoie une demande
+ de liaison à un serveur STUN sur l'Internet public.
+ Le serveur STUN répond avec une réponse de succès qui contient l' adresse
+ IP et le numéro port de du client, comme observé du point de vue du serveur.
+ Le résultat est masqué par un mappage «ou exclusif»(XOR) pour éviter la
+ traduction du contenu du paquet par des passerelles de couche d'application
+ (ALG) qui effectuent une inspection approfondie des paquets dans le but
+ d'exécuter d'autres méthodes de traversée NAT
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Les messages STUN sont envoyés dans des paquets UDP.
+ Comme UDP ne fournit pas un transport fiable , la fiabilité est obtenue
+ par des retransmissions contrôlées par l'application des demandes STUN.
+ Les serveurs STUN n'implémentent aucun mécanisme de fiabilité pour leurs
+ réponses.
+ Lorsque la fiabilité est obligatoire, le protocole TCP peut être utilisé,
+ mais induit une surcharge réseau supplémentaire.
+ Dans les applications sensibles à la sécurité, STUN peut être transporté
+ et crypté par TLS.
+ Le numéro de port d'écoute standard pour un serveur STUN est 3478 pour
+ UDP et TCP et 5349 pour TLS
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Lorsqu'un client a évalué son adresse externe, il peut l'utiliser comme
+ candidat pour communiquer avec des pairs en partageant l'adresse NAT externe
+ plutôt que l'adresse privée, qui n'est pas accessible depuis les pairs
+ sur le réseau public.
+ Si les deux pairs en communication sont situés dans des réseaux privés
+ différents, chacun derrière un NAT, les pairs doivent se coordonner pour
+ déterminer le meilleur chemin de communication entre eux.
+ Certains comportements NAT peuvent restreindre la connectivité des homologues
+ même lorsque la liaison publique est connue.
+ Le protocole d' établissement de connectivité interactive (ICE) fournit
+ un mécanisme structuré pour déterminer le chemin de communication optimal
+ entre deux homologues.
+ Les extensions SIP (Session Initiation Protocol ) sont définies pour permettre
+ l'utilisation d'ICE lors de l'établissement d'un appel entre deux hôtes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+TURN
+\end_layout
+
+\begin_layout Standard
+Traversal Using Relays around NAT, TURN, est une extension du protocole
+ STUN qui fournit un relais média pour les situations où le «hole punching
+ » (trou de perforation en anglais) ICE échoue.
+ Dans WebRTC, l'agent utilisateur du navigateur inclura un client TURN,
+ et un serveur Web, un fournisseur de services ou une entreprise fournira
+ un serveur TURN.
+ Le navigateur demande une adresse IP publique et un numéro de port comme
+ adresse de relais de transport au serveur TURN.
+ Cette adresse est ensuite incluse en tant qu'adresse candidate dans la
+ "perforation" ICE.
+ Le numéro de port pour TURN peut être déterminé à l'aide d'une recherche
+ DNS SRV ; le port UDP par défaut pour TURN est 3478
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 132"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+TURN peut être utilisé pour établir des adresses de transport relayées qui
+ utilisent le transport UDP, TCP ou TLS.
+ Cependant, la communication entre le serveur TURN et le client TURN (via
+ le NAT) est toujours UDP
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 132"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Serveur de relai TURN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le processus commence lorsqu'un ordinateur client souhaite contacter un
+ ordinateur peer pour une transaction de données, mais ne peut pas le faire
+ car le client et son homologue se trouvent derrière leur NAT respectifs.
+ Si STUN n'est pas une option car l'un des NAT est un NAT symétrique (un
+ type de NAT connu pour être non compatible STUN), TURN doit être utilisé
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tout d'abord, le client contacte un serveur TURN avec une requête "Allocate".
+ La demande d'allocation demande au serveur TURN d'allouer une partie de
+ ses ressources au client afin qu'il puisse contacter un homologue.
+ Si l'allocation est possible, le serveur alloue une adresse au client à
+ utiliser comme relais et envoie au client une réponse "Allocation réussie",
+ qui contient une "adresse de transport relayée allouée" située au niveau
+ du serveur TURN
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Deuxièmement, le client envoie une demande CreatePermissions au serveur
+ TURN pour créer un système de vérification des autorisations pour les communica
+tions homologue-serveur.
+ En d'autres termes, lorsqu'un pair est finalement contacté et renvoie les
+ informations au serveur TURN pour qu'elles soient relayées au client, le
+ serveur TURN utilise les autorisations pour vérifier que la communication
+ du serveur pair à TURN est valide
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Une fois les autorisations créées, le client a deux choix pour envoyer les
+ données réelles, (1) il peut utiliser le mécanisme d'envoi, ou (2) il peut
+ réserver un canal à l'aide de la requête ChannelBind.
+ Le mécanisme d'envoi est plus simple, mais contient un en-tête plus grand,
+ 36 octets, qui peut augmenter considérablement la bande passante dans une
+ conversation relayée TURN.
+ En revanche, la méthode ChannelBind est plus légère : l'en-tête ne fait
+ que 4 octets, mais elle nécessite la réservation d'un canal qui doit être
+ périodiquement rafraîchi, entre autres considérations
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En utilisant l'une ou l'autre méthode, Send ou channel binding, le serveur
+ TURN reçoit les données du client et les relaie à l'homologue à l'aide
+ de datagrammes UDP, qui contiennent comme adresse source l'"adresse de
+ transport relayée allouée".
+ L'homologue reçoit les données et répond, à nouveau en utilisant un datagramme
+ UDP comme protocole de transport, en envoyant le datagramme UDP à l'adresse
+ de relais au niveau du serveur TURN
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Le serveur TURN reçoit le datagramme UDP pair, vérifie les autorisations
+ et si elles sont valides, le transmet au client
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ce processus contourne même les NAT symétriques car le client et le pair
+ peuvent au moins parler au serveur TURN, qui a alloué une adresse IP de
+ relais pour la communication.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Alors que TURN est plus robuste que STUN en ce sens qu'il aide à traverser
+ plus de types de NAT, une communication TURN relaie l'ensemble de la communicat
+ion via le serveur nécessitant beaucoup plus de bande passante que le protocole
+ STUN, qui ne résout généralement que l'adresse IP et les relais publics.
+ l'information au client et au pair pour qu'ils l'utilisent dans la communicatio
+n directe.
+ Pour cette raison, le protocole ICE impose l'utilisation de STUN en premier
+ recours, et l'utilisation de TURN uniquement lorsqu'il s'agit de NAT symétrique
+s ou d'autres situations où STUN ne peut pas être utilisé
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wikipedia-contributors-2021B"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body

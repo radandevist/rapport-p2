@@ -109,3 +109,21 @@
 	urldate = {2021-0618}
 }
 
+@online{wikipedia-contributors-2021,
+	author = {{Wikipedia contributors}},
+	date = {2021-04-10},
+	language = {english},
+	title = {STUN},
+	url = {https://en.wikipedia.org/wiki/STUN},
+	urldate = {2021-07-19}
+}
+
+@online{wikipedia-contributors-2021B,
+	author = {{{Wikipedia contributors}"}},
+	date = {2021-01-20},
+	language = {english},
+	title = {Traversal Using Relays around NAT},
+	url = {https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT},
+	urldate = {2021-07-23}
+}
+
