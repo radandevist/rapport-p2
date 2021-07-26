@@ -484,7 +484,7 @@ Hyper-Text Transport protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC7230 - RFC7235
+RFC 7230 à 7235
 \end_layout
 
 \end_inset
@@ -522,7 +522,7 @@ Socket entre navigateur web et serveur
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC6455
+RFC 6455
 \end_layout
 
 \end_inset
@@ -560,7 +560,7 @@ Secure Real-Time Transport Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC3711
+RFC 3711
 \end_layout
 
 \end_inset
@@ -598,7 +598,7 @@ Session Description Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC8866
+RFC 8866
 \end_layout
 
 \end_inset
@@ -636,7 +636,7 @@ Session Traversal Utilities for NAT
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC8489
+RFC 8489
 \end_layout
 
 \end_inset
@@ -674,7 +674,7 @@ Traversal Using Relays around NAT
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC8656
+RFC 8656
 \end_layout
 
 \end_inset
@@ -712,7 +712,7 @@ Interactive Connectivity establishment
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC8445, RFC8839
+RFC 8445 et 88
 \end_layout
 
 \end_inset
@@ -826,7 +826,7 @@ Datagram Transport Layer Security
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC6347
+RFC4347
 \end_layout
 
 \end_inset
@@ -902,7 +902,7 @@ Streal Control Transport Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC4960
+RFC2960
 \end_layout
 
 \end_inset
@@ -940,7 +940,7 @@ Internet Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RF791, RFC8200
+RF791, RFC2460
 \end_layout
 
 \end_inset

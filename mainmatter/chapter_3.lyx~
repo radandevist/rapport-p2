@@ -409,6 +409,7 @@ Sur l’aile gauche de la figure précédente, s’illustrent les protocules uit
 
 \begin_layout Standard
 \begin_inset Float table
+placement h
 wide false
 sideways false
 status open
@@ -483,7 +484,7 @@ Hyper-Text Transport protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC2616
+RFC 7230 à 7235
 \end_layout
 
 \end_inset
@@ -521,7 +522,7 @@ Socket entre navigateur web et serveur
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC6455
+RFC 6455
 \end_layout
 
 \end_inset
@@ -559,7 +560,7 @@ Secure Real-Time Transport Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC3711
+RFC 3711
 \end_layout
 
 \end_inset
@@ -597,7 +598,7 @@ Session Description Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC4566
+RFC 8866
 \end_layout
 
 \end_inset
@@ -635,7 +636,7 @@ Session Traversal Utilities for NAT
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC5389
+RFC 8489
 \end_layout
 
 \end_inset
@@ -673,7 +674,7 @@ Traversal Using Relays around NAT
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC5766
+RFC 8656
 \end_layout
 
 \end_inset
@@ -711,7 +712,7 @@ Interactive Connectivity establishment
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC5245
+RFC 8445, RFC 8839
 \end_layout
 
 \end_inset
@@ -749,7 +750,7 @@ Transport Layesr Security
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC5246
+RFC 5246
 \end_layout
 
 \end_inset
@@ -787,7 +788,7 @@ Transmission Control Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC793
+RFC 793
 \end_layout
 
 \end_inset
@@ -825,7 +826,7 @@ Datagram Transport Layer Security
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC4347
+RFC 6347
 \end_layout
 
 \end_inset
@@ -863,7 +864,7 @@ User Datagram Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC768
+RFC 768
 \end_layout
 
 \end_inset
@@ -901,7 +902,7 @@ Streal Control Transport Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC2960
+RFC 4960
 \end_layout
 
 \end_inset
@@ -939,7 +940,7 @@ Internet Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RF791, RFC2460
+RF 791, RFC 8200
 \end_layout
 
 \end_inset
