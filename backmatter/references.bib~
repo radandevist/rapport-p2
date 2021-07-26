@@ -145,3 +145,12 @@
 	urldate = {2021-07-24}
 }
 
+@online{googler77-2021,
+	author = {given-i=S., given=Sangeetha-Prabhu, family=Googler77},
+	date = {2021-02-06},
+	language = {british},
+	title = {WebRTC},
+	url = {https://devopedia.org/webrtc},
+	urldate = {2021-07-15}
+}
+

@@ -940,7 +940,7 @@ Internet Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RF791, RFC8200
+RFC791, RFC8200
 \end_layout
 
 \end_inset
@@ -1010,11 +1010,62 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Protocoles de signalisation
+Protocoles de la couche application
 \end_layout
 
-\begin_layout Section
-Protocoles RTCWeb
+\begin_layout Subsection
+HTTP
+\end_layout
+
+\begin_layout Standard
+Bien sûr, WebRTC utilise HTTP, Hyper-Text Transport Protocol.
+ C'est le protocole du World Wide Web et il est utilisé entre un navigateur
+ Web et un serveur Web.
+ WebRTC utilise HTTP de la même manière que n'importe quelle application
+ Web.
+ En tant que tel, aucune connaissance spécifique de HTTP n'est nécessaire.
+ La version actuelle de HTTP est 1.1.
+ Des travaux sont en cours à l'IETF pour définir la prochaine version de
+ HTTP, connue sous le nom de 2.0.
+ Ce protocole augmentera probablement la vitesse et l'efficacité des téléchargem
+ents et des applications Web.
+ WebRTC pourra utiliser cette version et toute autre version future de HTTP
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 125"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+WebSocket
+\end_layout
+
+\begin_layout Standard
+Le protocole WebSocket permet à un navigateur d'ouvrir des connexions TCP
+ bidirectionnelles supplémentaires à un serveur Web.
+ L'ouverture de la connexion est signalée via HTTP et possède des propriétés
+ de sécurité similaires à celles de la session Web HTTP, et peut réutiliser
+ l'infrastructure HTTP existante.
+ Cela évite les interrogations HTTP et l'ouverture de plusieurs connexions
+ HTTP entre le navigateur et le serveur Web.
+ Le navigateur indique l'application utilisant le WebSocket dans l'ouverture.
+ C'est ce qu'on appelle le sous-protocole WebSocket.
+ Le sous-protocole SIP WebSocket ou le sous-protocole XMPP WebSocket sont
+ des exemples 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 125 - 126"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1478,8 +1529,6 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-
-\emph on
 ICE
 \end_layout
 
@@ -1608,8 +1657,245 @@ Tentatives ICE, options de connectivité directe STUN et TURN
 
 \end_layout
 
+\begin_layout Section
+Protocoles de la couche transport
+\end_layout
+
 \begin_layout Subsection
 TLS
+\end_layout
+
+\begin_layout Standard
+Transport Layer Security, TLS, dont les anciennes versions étaient connues
+ sous le nom de Secure Sockets Layer ou SSL, est une couche intermédiaire
+ entre TCP et l'application qui fournit des services de confidentialité
+ et d'authentification.
+ La confidentialité est assurée par le cryptage des paquets « over the wire
+ ».
+ L'authentification est fournie à l'aide de certificats numériques.
+ La navigation Web sécurisée aujourd'hui (HTTPS) utilise uniquement le transport
+ TLS.
+ WebRTC peut tirer parti de TLS pour la signalisation et la sécurité de
+ l'interface utilisateur.
+ Il existe également une version de TLS qui s'exécute sur UDP, appelée Datagram
+ TLS 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "subsec:DTLS"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, et une version qui peut être utilisée pour générer des clés pour SRTP
+ connue sous le nom de DTLS-SRTP.
+\end_layout
+
+\begin_layout Subsection
+TCP
+\end_layout
+
+\begin_layout Standard
+Transmission Control Protocol, TCP, est n protocole de couche de transport
+ dans la pile de protocoles Internet qui fournit un transport fiable avec
+ contrôle d'encombrement et contrôle de flux.
+ TCP est utilisé pour transporter le trafic Web (HTTP), mais n'est pas adapté
+ pour transporter le trafic de communication en temps réel tel que RTP,
+ car les retransmissions utilisées pour mettre en œuvre la fiabilité introduisen
+t des délais inacceptables.
+ Comme UDP, TCP utilise un concept de ports, un nombre entier de 16 bits,
+ pour séparer les flux et les protocoles.
+ TCP est fourni par le système d'exploitation sous le navigateur.
+\end_layout
+
+\begin_layout Subsection
+DTLS
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:DTLS"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Datagram TLS, est une version de TLS qui s'exécute sur UDP.
+ Les mêmes propriétés de confidentialité et d'authentification sont fournies.
+ UDP est plus facile à passer par NAT et peut être mieux adapté aux applications
+ peer-to-peer.
+\end_layout
+
+\begin_layout Subsection
+UDP
+\end_layout
+
+\begin_layout Standard
+User Datagram Protocol, UDP, est un protocole de couche de transport dans
+ la pile de protocoles Internet qui fournit un service de datagramme non
+ fiable pour les couches supérieures.
+ UDP est couramment utilisé pour transporter de petits échanges de paquets
+ courts (par exemple des paquets DNS, Domain Name Service) ou pour transporter
+ des médias en temps réel tels que RTP.
+ UDP permet un échange d'informations très rapide et efficace ; cependant,
+ les utilisateurs d'UDP doivent faire face à une éventuelle perte de paquets.
+ De plus, UDP n'a pas de contrôle de congestion, les utilisateurs doivent
+ donc être sensibles à la perte de paquets et à la congestion pour éviter
+ de surcharger les connexions Internet.
+ Comme TCP, UDP utilise un concept de ports, un nombre entier de 16 bits,
+ pour séparer les flux et les protocoles
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 138 - 139"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La plupart des applications Internet utilisent un transport fiable, tel
+ que TCP, Transmission Control Protocol, dans lequel les paquets perdus
+ sont automatiquement retransmis.
+ La navigation sur le Web, la messagerie électronique et le streaming audio
+ et vidéo utilisent un transport fiable.
+ Les paquets reçus sont acquittés et l'absence d'accusé de réception après
+ un certain temps déclenche une retransmission des paquets jusqu'à réception
+ d'un accusé de réception.
+ La communication en temps réel ne peut pas tirer parti de ce type de transport
+ fiable en raison du délai impliqué dans la détection de la perte de paquets
+ et la réception des paquets retransmis.
+ Les paquets perdus lors du chargement d'une page Web peuvent entraîner
+ un chargement complet d'une ou deux secondes supplémentaires.
+ Une session de communication en temps réel ne peut pas s'arrêter une seconde
+ ou deux au milieu d'une conversation vocale, ni geler la lecture d'une
+ vidéo pendant une seconde en attendant la retransmission des informations
+ manquantes.
+ Au lieu de cela, les systèmes de communication en temps réel doivent simplement
+ faire de leur mieux lorsque des informations sont perdues.
+ Les techniques pour couvrir la perte ou minimiser les effets sont connues
+ sous le nom de masquage de perte de paquets ou CPL
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 138 - 139"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La perte moyenne de paquets en général sur Internet est extrêmement faible,
+ de l'ordre de quelques fractions de pour cent.
+ Bien qu'elle se produise rarement, la perte de paquets se produit en rafale,
+ ce qui entraîne une perte élevée de paquets sur de courts intervalles.
+ La capacité à gérer ces événements de perte de courte durée a un impact
+ majeur sur la qualité perçue d'un système de communication
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 138 - 139"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Les codecs avancés, en particulier le codec audio Opus, sont conçus pour
+ offrir une bonne expérience utilisateur, même en cas de perte de paquets
+ élevée.
+ De plus, le retour d'information en temps réel du récepteur des médias
+ offre la possibilité de réduire la bande passante ou la résolution pendant
+ le paquet congestion, offrant une meilleure expérience utilisateur et partagean
+t la bande passante équitablement avec les autres internautes
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 138 - 139"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+UDP est fourni par le système d'exploitation sous le navigateur
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 138 - 139"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+SCTP
+\end_layout
+
+\begin_layout Standard
+Stream Control Transport Protocol, SCTP, est une couche de transport qui
+ fournit un transport fiable ou non fiable sur IP ainsi qu'un contrôle d'encombr
+ement et plusieurs flux dans une session.
+ Le contrôle de la congestion est la capacité d'un protocole à détecter
+ le début de la perte et du retard de paquets Internet et à ajuster dynamiquemen
+t son taux d'envoi pour minimiser les effets.
+ Plusieurs sessions permettent à une seule session d'être divisée en plusieurs
+ flux, chacun pouvant partager la bande passante disponible de la session
+ de manière égale
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 139 -140"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+SCTP n'est généralement pas pris en charge dans les systèmes d'exploitation,
+ les navigateurs auront donc leur propre pile de protocole SCTP intégrée
+ pour le canal de données
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 139 -140"
+key "johnston-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+WebRTC utilise UDP au niveau de la couche de transport en raison de ses
+ exigences en temps réel.
+ SRTP et SCTP sont utilisés à une couche supérieure pour multiplexer les
+ flux.
+ Pour des raisons de sécurité, DTLS est utilisé.
+ Parce que les pairs peuvent s'asseoir derrière des pare-feu et des NAT,
+ ICE/STUN/TURN sont nécessaires.
+\end_layout
+
+\begin_layout Standard
+Pour la signalisation, TLS et TCP sont utilisés.
+ Pour échanger des paramètres de session, SDP est utilisé.
 \end_layout
 
 \end_body
