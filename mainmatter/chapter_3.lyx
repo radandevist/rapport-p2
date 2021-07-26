@@ -717,11 +717,11 @@ RFC8445, RFC8839
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Transport
+
 \end_layout
 
 \end_inset
@@ -755,11 +755,11 @@ RFC5246
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Transport
 \end_layout
 
 \end_inset
@@ -940,7 +940,7 @@ Internet Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RF791, RFC8200
+RFC791, RFC8200
 \end_layout
 
 \end_inset
@@ -1606,6 +1606,10 @@ Tentatives ICE, options de connectivité directe STUN et TURN
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+TLS
 \end_layout
 
 \end_body

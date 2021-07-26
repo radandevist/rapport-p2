@@ -484,7 +484,7 @@ Hyper-Text Transport protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 7230 à 7235
+RFC7230 - RFC7235
 \end_layout
 
 \end_inset
@@ -522,7 +522,7 @@ Socket entre navigateur web et serveur
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 6455
+RFC6455
 \end_layout
 
 \end_inset
@@ -560,7 +560,7 @@ Secure Real-Time Transport Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 3711
+RFC3711
 \end_layout
 
 \end_inset
@@ -598,7 +598,7 @@ Session Description Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 8866
+RFC8866
 \end_layout
 
 \end_inset
@@ -636,7 +636,7 @@ Session Traversal Utilities for NAT
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 8489
+RFC8489
 \end_layout
 
 \end_inset
@@ -674,7 +674,7 @@ Traversal Using Relays around NAT
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 8656
+RFC8656
 \end_layout
 
 \end_inset
@@ -712,16 +712,16 @@ Interactive Connectivity establishment
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 8445, RFC 8839
+RFC8445, RFC8839
 \end_layout
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Transport
+
 \end_layout
 
 \end_inset
@@ -750,16 +750,16 @@ Transport Layesr Security
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 5246
+RFC5246
 \end_layout
 
 \end_inset
 </cell>
-<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Transport
 \end_layout
 
 \end_inset
@@ -788,7 +788,7 @@ Transmission Control Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 793
+RFC793
 \end_layout
 
 \end_inset
@@ -826,7 +826,7 @@ Datagram Transport Layer Security
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 6347
+RFC6347
 \end_layout
 
 \end_inset
@@ -864,7 +864,7 @@ User Datagram Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 768
+RFC768
 \end_layout
 
 \end_inset
@@ -902,7 +902,7 @@ Streal Control Transport Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RFC 4960
+RFC4960
 \end_layout
 
 \end_inset
@@ -940,7 +940,7 @@ Internet Protocol
 \begin_inset Text
 
 \begin_layout Plain Layout
-RF 791, RFC 8200
+RF791, RFC8200
 \end_layout
 
 \end_inset
@@ -1606,6 +1606,10 @@ Tentatives ICE, options de connectivité directe STUN et TURN
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+TLS
 \end_layout
 
 \end_body
