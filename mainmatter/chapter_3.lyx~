@@ -372,7 +372,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/book/lyx/esp-layout/images/webrtc-protocols.png
+	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/webrtc-protocols.png
 	scale 40
 
 \end_inset
@@ -1212,7 +1212,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/book/lyx/esp-layout/images/STUN-protocol.png
+	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/STUN-protocol.png
 	scale 40
 
 \end_inset
@@ -1362,7 +1362,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/P2/book/lyx/esp-layout/images/TURN-protocol.png
+	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/TURN-protocol.png
 	scale 40
 
 \end_inset
@@ -1890,12 +1890,28 @@ WebRTC utilise UDP au niveau de la couche de transport en raison de ses
  flux.
  Pour des raisons de sécurité, DTLS est utilisé.
  Parce que les pairs peuvent s'asseoir derrière des pare-feu et des NAT,
- ICE/STUN/TURN sont nécessaires.
+ ICE/STUN/TURN sont nécessaires
+\begin_inset CommandInset citation
+LatexCommand cite
+key "googler77-2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 Pour la signalisation, TLS et TCP sont utilisés.
- Pour échanger des paramètres de session, SDP est utilisé.
+ Pour échanger des paramètres de session, SDP est utilisé
+\begin_inset CommandInset citation
+LatexCommand cite
+key "googler77-2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body

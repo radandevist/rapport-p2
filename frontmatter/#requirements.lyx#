@@ -446,45 +446,6 @@
 
 \begin_layout Standard
 \paragraph_spacing single
-\begin_inset CommandInset include
-LatexCommand input
-filename "info.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/cover.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/title_page.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "frontmatter/requirements.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -492,113 +453,244 @@ status open
 
 
 \backslash
-pagenumbering{roman}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-dominitoc % Génération des mini-toc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/acknowledgement.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Sommaire: moins de détails (chapitres/sections)
+begin {center} Année universitaire: 2018-2019
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-setcounter{tocdepth}{1}
+end{center}
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-mtcaddchapter % fix minitoc
+newpage
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
+  
+\backslash
+pagestyle{empty}
+\end_layout
 
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{minipage}[b]{
+\backslash
+textwidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
 \backslash
 renewcommand{
 \backslash
-listfigurename}{Liste des figures}
+arraystretch}{1.29}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+begin{tabular}{C{0.21
+\backslash
+textwidth}C{0.79
+\backslash
+textwidth}}
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+multirow{5}{*}
+\end_layout
+
+\begin_layout Plain Layout
+
+				{
+\backslash
+includegraphics[width=0.21
+\backslash
+textwidth]{images/canevas/logo_stic.png}}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 		   	&
+\backslash
+textbf{
+\backslash
+textsc{{
+\backslash
+'E}cole Sup{
+\backslash
+'e}rieure Polytechnique d'Antsiranana}}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				&
+\backslash
+textbf{
+\backslash
+textsc{Mention Master STIC}}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				&B.P.
+ O 201 - ANTSIRANANA - MADAGASCAR
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				&
+\backslash
+textbf{T{
+\backslash
+'e}l.
+ : }+261 (0)32 76 395 40 $-$ 
+\backslash
+textbf{Courriel : }mentionsticespa@gmail.com
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+hrule
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{flushright}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+og {
+\backslash
+textit{Ma{
+\backslash
+^i}triser aujourd'hui la technologie de demain}} 
+\backslash
+fg
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{flushright} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{
+\backslash
+normalsize Projet et mémoire de fin d'étude $-$ A.U : 2018/2019}
+\backslash
+
+\backslash
+[1.2em]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{
+\backslash
+Large{Monitoring d'une pisciculture autonome  }}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		{
+\backslash
+large(Candidats:MARTINArmandoAmedéetROVALDO)}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center}
 \end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Standard
-\begin_inset FloatList figure
+\begin_layout Plain Layout
+
+%Contexte%
+\end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -606,302 +698,339 @@ status open
 
 
 \backslash
-mtcaddchapter % fix minitoc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%insert list of tables here
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList table
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter % fix minitoc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-nomname}{Liste des acronymes et symboles}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "auto"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter % fix minitoc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{arabic}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_3.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{roman}
+subsection*{Contexte}
 \end_layout
 
 \begin_layout Plain Layout
 
-%
-\backslash
-setcounter{page}{6}
+Le Service Régional de la Pêche et Aquaculture d’Analanjirofo, dans le Districts
+ de Fénérive-Est, Région Analanjirofo, s’occupe de la politique de développement
+ des productions halieutiques dans le cadre des orientations données par
+ le Gouvernement.
+ La Direction centrale définie la politique globale en matière de pêche
+ et d’aquaculture, ainsi que la stratégie générale à adopter, les objectifs
+ à atteindre et les actions à entreprendre pour les réaliser.
+ Il possède plusieurs champs piscicoles repartis à travers la région.
+ Parfois, la production est confrontée à des maladies causées souvent par
+ des indicateurs de toxicités créés par les propres matières fécales des
+ poissons.
+ Ces indicateurs sont obtenus par la présence des ions ammonium (NH 4),
+ les ions nitrate (NO 3) et les ions nitrite (NO 2).
+ Pour éviter l’abondance de ces indicateurs, il est nécessaire de contrôler
+ de temps en temps l’état et la qualité de l’eau.
+ De tout cà, ce service propose donc de concevoir et réaliser un système
+ de surveillance en temps réel de leurs fermes piscicoles pour réduire le
+ taux des pertes de poisson le long de l’année qui, des fois représentent
+ environ 40 à 50.
+ Cela suppose de collecter entre 38 000 et 40 000 kilos au lieu de 30 000
+ avec le même nombre de poissons juvéniles.
+ Ainsi, pour contrôler la qualité de l’eau et du poisson selon les normes,
+ les paramètres suivants doivent être surveillés en temps réel via une interface
+ qu’on se propose de développer :
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
-
+	
 \backslash
-renewcommand{
-\backslash
-bibname}{Références}
+begin{itemize}
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintAll"
-bibfiles "backmatter/references"
-options "bibtotoc"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
-%
+		
 \backslash
-mtcaddchapter
+item[-] Température,
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
-
+		
 \backslash
-appendix
+item[-] Pression atmosphérique,
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
-
+		
 \backslash
-chapter*{Annexes}
+item[-] L'Humidité du milieu,
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item[-] Conductivité,
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item[-] Oxygène dissous ,
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item[-] Potentiel d’oxydoréduction.
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{itemize}
+\end_layout
+
+\begin_layout Plain Layout
+
+Une plateforme web (Site Web et une base de données) va être utilisée non
+ seulement pour visualiser les données, mais aussi, pour suivre en temps
+ réel le niveau de différents paramètres et d’obtenir des diagrammes montrant
+ leur évolution.
+ Étant donné que Le dispositif sera à installer dans les zones rurales,
+ alors il doit être autonome.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+%Objectif%
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-addstarredchapter{Annexes}
+subsection*{Objectif}
 \end_layout
 
-\end_inset
+\begin_layout Plain Layout
 
-
+L’objectif du travail est la réalisation d’un système de monitoring d’une
+ pisciculture autonome 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
+\begin_layout Plain Layout
+
+%Travaux demandes%
+\end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-renewcommand{
+subsection*{Travaux demand{
 \backslash
-thesection}{
-\backslash
-Alph{section}}
+'e}s}
 \end_layout
 
-\end_inset
+\begin_layout Plain Layout
 
+
+\backslash
+begin{itemize}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+item[-] Études bibliographiques sur les piscicultures ;
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+item[-]
+\backslash
+textbf{Projet 2 :}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{5mm}- Étude de faisabilité du dispositif en passant par l’analyse
+ des systèmes existants ;
+\backslash
+
+\backslash
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "backmatter/appendix_1.lyx"
+\begin_layout Plain Layout
+
+	    
+\backslash
+vspace{2mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+   	 
+\backslash
+hspace{5mm}- Conception et modélisation du système ainsi proposé ;
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	    
+\backslash
+vspace{2mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{5mm}-   Proposition d’un mini-prototypage muni d’un mini-synchronisation
+ web ;
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace{2mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{5mm}-  Test.
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+item[-]
+\backslash
+textbf{Mémoire :} 	
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{5mm}- Étude et conception du système complet de monitoring ;
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	   
+\backslash
+vspace{2mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+   	 
+\backslash
+hspace{5mm}-  Tests, essais et validations.
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Encadreur%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection*{Encadreur(s)}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{itemize}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item[-]  Dr ANDRIAMIHARINJAKA Hasina,
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item[-] M.
+ ANDRINIRINIAIMALAZA Fanambinantsoa Philibert.
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{itemize}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Lieu de travail%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection*{Lieu de travail}
+\end_layout
+
+\begin_layout Plain Layout
+
+Laboratoire d'{
+\backslash
+'E}lectronique Industrielle
+\end_layout
 
 \end_inset
 

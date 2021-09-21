@@ -457,7 +457,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/rtc-component.png
+	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/rtc-component.png
 	scale 40
 
 \end_inset
@@ -694,7 +694,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/webrtc-architecture.png
+	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/webrtc-architecture.png
 	scale 40
 
 \end_inset
@@ -987,7 +987,7 @@ noprefix "false"
  aidera à expliquer ce concept.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Rôle de la signalisation
 \end_layout
 
@@ -1044,7 +1044,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Signalisation et négotiation des médias
 \begin_inset CommandInset label
 LatexCommand label
@@ -1175,7 +1175,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Résolution de l'éclat
 \end_layout
 

@@ -446,9 +446,22 @@
 
 \begin_layout Standard
 \paragraph_spacing single
-\begin_inset CommandInset include
-LatexCommand input
-filename "info.lyx"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage % in order to remove fancyhdr style
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} % remove fancyhdr
+\end_layout
 
 \end_inset
 
@@ -457,9 +470,150 @@ filename "info.lyx"
 
 \begin_layout Standard
 \paragraph_spacing single
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/cover.lyx"
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.29}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/canevas/logo_stic.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+École Supérieure Polytechnique d'Antsiranana
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Mention Sciences et Technologies de l’Information et de la Communication
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+B.P.
+ O 201 - ANTSIRANANA - MADAGASCAR
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Tél.
+ : +261 (0)32 76 395 40 Courriel : mentionsticespa@gmail.com
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -468,20 +622,186 @@ filename "frontmatter/cover.lyx"
 
 \begin_layout Standard
 \paragraph_spacing single
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/title_page.lyx"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flushright}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+og {
+\backslash
+textit{Ma{
+\backslash
+^i}triser aujourd'hui la technologie de demain}} 
+\backslash
+fg
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flushright}
+\end_layout
 
 \end_inset
 
 
-\begin_inset CommandInset include
-LatexCommand include
-filename "frontmatter/requirements.lyx"
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+textbf{
+\backslash
+normalsize Projet de fin de semestre $-$ A.U : 2018/2019}
+\backslash
+
+\backslash
+[1.2em]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+textbf{
+\backslash
+Large{Réalisation d'une application de communication en temps réel (WebRTC)}}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+large(Candidat:ANDRIANARISOA Daniel)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection*
+Contexte
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align block
+A cause de l’épidémie de COVID-19 les mesures barrières comme la distanciation
+ sociale et le confinement sont devenues universelles.
+ Une application de communication en temps réel peut s’avérer utile pour
+ pouvoir rester en contact avec les proches ou les collègues de travail.
+ WebRTC (Web Real-Time Communications) est une technologie qui permet aux
+ applications et sites web de capturer et éventuellement de diffuser des
+ médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires
+ entre les navigateurs sans passer par un intermédiaire.
+ L'ensemble de normes qui comprend WebRTC permet de partager des données
+ et d'effectuer des téléconférences peer-to-peer, sans exiger que l'utilisateur
+ installe des plug-ins ou tout autre logiciel tiers.
+\end_layout
+
+\begin_layout Subsection*
+Objectif
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+Mettre en œuvre une communication Peer to Peer basé sur les navigateurs
+ Web et Java Script.
+\end_layout
+
+\begin_layout Subsection*
+Travaux demandés
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Faire une brève description théorique du WebRTC.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Faire la configuration et la gestion de la connexion en configurant les
+ interfaces suivantes : RTCPeerConnection, RTCDataChannel, RTCDataChannelEvent,
+ etc...
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Configurer les identités des utilisateurs ainsi que les sécurités avec les
+ interfaces suivantes : RTCIdentityProvider, RTCIdentityAssertion, RTCIdentityEv
+ent, etc...
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Configurer la partie téléphonie du système avec : RTCDTMFSender.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Faire un test et relevé les différents canaux et protocoles mis en jeu.
+\end_layout
+
+\begin_layout Subsection*
+Encadreurs
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Mme RAOELIVOLOLONA Tefy
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Mr RAKOTOARIJAONA Raonirivo
 \end_layout
 
 \begin_layout Standard
@@ -492,416 +812,8 @@ status open
 
 
 \backslash
-pagenumbering{roman}
+clearpage % Don't forget for reseting fancyhdr style
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-dominitoc % Génération des mini-toc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "frontmatter/acknowledgement.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Sommaire: moins de détails (chapitres/sections)
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setcounter{tocdepth}{1}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter % fix minitoc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-listfigurename}{Liste des figures}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList figure
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter % fix minitoc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%insert list of tables here
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FloatList table
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter % fix minitoc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-nomname}{Liste des acronymes et symboles}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "auto"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-mtcaddchapter % fix minitoc
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{arabic}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "mainmatter/chapter_3.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{roman}
-\end_layout
-
-\begin_layout Plain Layout
-
-%
-\backslash
-setcounter{page}{6}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-bibname}{Références}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintAll"
-bibfiles "backmatter/references"
-options "bibtotoc"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-mtcaddchapter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-appendix
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-chapter*{Annexes}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-addstarredchapter{Annexes}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-thesection}{
-\backslash
-Alph{section}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "backmatter/appendix_1.lyx"
 
 \end_inset
 
