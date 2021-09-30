@@ -357,6 +357,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+\noindent
 La conception structurelle web classique est basée sur un modèle client-serveur,
  dans lequel les navigateurs envoient une demande de contenu HTTP
 \begin_inset CommandInset nomenclature
@@ -413,6 +414,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\noindent
 De même, en ce qui concerne le modèle de navigateurs, afin de supporter
  WebRTC
 \begin_inset CommandInset nomenclature
@@ -448,6 +450,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset Float figure
 placement h
 wide false
@@ -469,7 +472,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-composant WebRTC
+Le composant WebRTC
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:composant WebRTC"
@@ -490,6 +493,7 @@ name "fig:composant WebRTC"
 \end_layout
 
 \begin_layout Standard
+\noindent
 À partir du diagramme 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -515,6 +519,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\noindent
 Javascript joue un rôle important dans WebRTC
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -563,6 +568,7 @@ Normes WebRTC
 \end_layout
 
 \begin_layout Standard
+\noindent
 Les normes WebRTC sont actuellement développées conjointement par le W3C
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -706,7 +712,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-architecture WebRTC
+Architecture WebRTC
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:architecture WebRTC"
@@ -731,6 +737,7 @@ name "fig:architecture WebRTC"
 \end_layout
 
 \begin_layout Standard
+\noindent
 Le navigateur cache la grande partie de l'implémentation WebRTC, tout le
  travail de capture des médias, de la description de session et des transmission
 s réseau, tout est abstrait de la surface et n'expose que de simples API.
@@ -751,6 +758,7 @@ Le triangle WebRTC
 \end_layout
 
 \begin_layout Standard
+\noindent
 Le scénario le plus répandu est probablement celui où les deux navigateurs
  exécutent la même application web WebRTC, téléchargée à partir de la même
  page web.
@@ -790,7 +798,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /run/media/radan/RADAN/Projects/P2/book/lyx/esp-layout/images/triangle-webrtc.png
+	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/triangle-webrtc.png
 	scale 40
 
 \end_inset
@@ -802,7 +810,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-triangle WebRTC
+Triangle WebRTC
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:triangle WebRTC"
@@ -835,6 +843,7 @@ Flux de médias
 \end_layout
 
 \begin_layout Standard
+\noindent
 Les appareils d'aujourd'hui sont dotés de plusieurs capacités matérielles
  multimédias.
  Dans les appareils mobiles, vous obtenez une caméra avant, une caméra arrière
@@ -853,6 +862,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\noindent
 Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et fournira
  ce flux en tant que variable au langage Javascript pourque puissent les
  développeurs d'applications l'afficher sur une page comme n'importe quel

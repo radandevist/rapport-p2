@@ -308,7 +308,7 @@
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
-\paragraph_indentation default
+\paragraph_indentation 0bp
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style french
@@ -981,7 +981,7 @@ noprefix "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Provisionnement incrémentiel (ruisselement ICE)
 \end_layout
 
@@ -1499,7 +1499,7 @@ navigator.mediaDevices.getUserMedia(constraints);
 \end_layout
 
 \begin_layout Subsection
-Échange des flux miltimédia
+Échange des flux multimédia
 \end_layout
 
 \begin_layout Standard
@@ -1521,7 +1521,7 @@ getUserMedia()
  à RTCPeerConnection.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Ajout des pistes locales
 \end_layout
 
@@ -1590,7 +1590,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Ajout des pistes distantes
 \end_layout
 
@@ -1616,6 +1616,7 @@ track
  du pair distant au fur et à mesure que nous les recevons
 \begin_inset CommandInset citation
 LatexCommand cite
+after ", p. 348"
 key "webrtc-org-2014"
 literal "false"
 
@@ -1665,6 +1666,26 @@ peerConnection.addEventListener('track', async (event) => {
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+RTCDatachannel
+\end_layout
+
+\begin_layout Standard
+DataChannel permet l'échange bidirectionnel de données d'application arbitraires
+ entre homologues — pensez à WebSocket, mais d'égal à égal, et avec des
+ propriétés de livraison personnalisables du transport sous-jacent
+\begin_inset CommandInset citation
+LatexCommand cite
+key "grigorik-2013"
+literal "false"
+
+\end_inset
+
+.
+ Une fois la RTCPeerConnection établie, les pairs connectés peuvent ouvrir
+ un ou plusieurs canaux pour échanger du texte ou des données binaires :
 \end_layout
 
 \end_body

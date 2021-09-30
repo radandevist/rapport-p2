@@ -308,7 +308,7 @@
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
-\paragraph_indentation 0bp
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style french
@@ -1669,23 +1669,6 @@ peerConnection.addEventListener('track', async (event) => {
 
 \begin_layout Section
 RTCDatachannel
-\end_layout
-
-\begin_layout Standard
-DataChannel permet l'échange bidirectionnel de données d'application arbitraires
- entre homologues — pensez à WebSocket, mais d'égal à égal, et avec des
- propriétés de livraison personnalisables du transport sous-jacent
-\begin_inset CommandInset citation
-LatexCommand cite
-after ", p. 348"
-key "grigorik-2013"
-literal "false"
-
-\end_inset
-
-.
- Une fois la RTCPeerConnection établie, les pairs connectés peuvent ouvrir
- un ou plusieurs canaux pour échanger du texte ou des données binaires :
 \end_layout
 
 \end_body

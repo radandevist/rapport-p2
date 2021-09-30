@@ -427,7 +427,7 @@
 \secnumdepth 2
 \tocdepth 1
 \paragraph_separation indent
-\paragraph_indentation default
+\paragraph_indentation 0bp
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style french
@@ -731,6 +731,7 @@ pagenumbering{arabic}
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset CommandInset include
 LatexCommand input
 filename "mainmatter/chapter_1.lyx"
@@ -741,6 +742,7 @@ filename "mainmatter/chapter_1.lyx"
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset CommandInset include
 LatexCommand input
 filename "mainmatter/chapter_2.lyx"
@@ -751,6 +753,7 @@ filename "mainmatter/chapter_2.lyx"
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset CommandInset include
 LatexCommand input
 filename "mainmatter/chapter_3.lyx"
