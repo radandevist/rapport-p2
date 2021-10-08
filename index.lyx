@@ -785,7 +785,7 @@ pagenumbering{roman}
 
 %
 \backslash
-setcounter{page}{6}
+setcounter{page}{6} % dépends de la dernière page du frontmatter
 \end_layout
 
 \end_inset

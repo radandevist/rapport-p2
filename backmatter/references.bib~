@@ -154,3 +154,21 @@
 	urldate = {2021-07-15}
 }
 
+@book{grigorik-2013,
+	author = {given-i=I., given=Ilya, family=Grigorik},
+	date = {2013},
+	edition = {1},
+	language = {american},
+	publisher = {O'Reilly Media},
+	title = {High Performance Browser Networking: What every web developer should know about networking and web performance}
+}
+
+@online{ristic-2014,
+	author = {D. Ristic and S. Dutton},
+	date = {2014-02-04},
+	language = {english},
+	title = {Send data between browsers with WebRTC data channels},
+	url = {https://html5rocks.com/en/tutorials/webrtc/datachannels},
+	urldate = {2021-10-8}
+}
+

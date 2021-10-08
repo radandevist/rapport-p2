@@ -1616,7 +1616,6 @@ track
  du pair distant au fur et à mesure que nous les recevons
 \begin_inset CommandInset citation
 LatexCommand cite
-after ", p. 348"
 key "webrtc-org-2014"
 literal "false"
 
@@ -1673,19 +1672,293 @@ RTCDatachannel
 \end_layout
 
 \begin_layout Standard
-DataChannel permet l'échange bidirectionnel de données d'application arbitraires
- entre homologues — pensez à WebSocket, mais d'égal à égal, et avec des
- propriétés de livraison personnalisables du transport sous-jacent
+La norme WebRTC couvre également une API pour l'envoi de données arbitraires
+ sur une RTCPeerConnection.
+ Les canaux de données prennent en charge les connexions à volume élevé
+ et à faible latence ; un canal de données est un canal non multimédia qui
+ prend uniquement en charge le transfert de données.
+ Il contourne les serveurs et fournit aux développeurs Web des canaux configurab
+les pour transférer des données
 \begin_inset CommandInset citation
 LatexCommand cite
+key "haytham-2018"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+DataChannel permet l'échange bidirectionnel de données d'application arbitraires
+ entre homologues — pensez à WebSocket, mais d'égal à égal, et avec des
+ propriétés de livraison personnalisables du transport sous-jacent.
+ Une fois la RTCPeerConnection établie, les pairs connectés peuvent ouvrir
+ un ou plusieurs canaux pour échanger du texte ou des données binaires
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 348"
+key "grigorik-2013"
+literal "false"
+
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "style=ES6"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function handleChannel(chan: RTCDataChannel) {// Enregistrer des callbacks
+ de type WebSocket sur l'objet DataChannel
+\end_layout
+
+\begin_layout Plain Layout
+
+  chan.onerror = function(error) { /* ...
+ */ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  chan.onclose = function() { /* ...
+ */ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  chan.onopen = function(evt) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    chan.send("Connexion DataChannel établie.
+ Salut camarade!")
+\end_layout
+
+\begin_layout Plain Layout
+
+  };
+\end_layout
+
+\begin_layout Plain Layout
+
+  chan.onmessage = function(msg) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if(msg.data instanceof Blob) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      processBlob(msg.data);
+\end_layout
+
+\begin_layout Plain Layout
+
+    } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+      processText(msg.data);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  };
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+var signalingChannel = new SignalingChannel();
+\end_layout
+
+\begin_layout Plain Layout
+
+var pc = new RTCPeerConnection(iceConfig);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Initialiser le nouveau DataChannel avec une sémantique de livraison
+\end_layout
+
+\begin_layout Plain Layout
+
+// au mieux
+\end_layout
+
+\begin_layout Plain Layout
+
+var dc = pc.createDataChannel("nomDuCanal", {reliable: false});
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Offre/code de réponse RTCPeerConnection standard
+\end_layout
+
+\begin_layout Plain Layout
+
+// ...
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Enregistrer les callbacks sur DataChannel initialisé localement
+\end_layout
+
+\begin_layout Plain Layout
+
+handleChannel(dc);
+\end_layout
+
+\begin_layout Plain Layout
+
+// Enregistrer les callbacks sur DataChannel initiés par le pair distant
+\end_layout
+
+\begin_layout Plain Layout
+
+pc.onDataChannel = handleChannel;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'API DataChannel reflète intentionnellement celle de WebSocket : chaque
+ canal établi déclenche les mêmes rappels onerror, onclose, onopen et onmessage
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 348"
 key "grigorik-2013"
 literal "false"
 
 \end_inset
 
 .
- Une fois la RTCPeerConnection établie, les pairs connectés peuvent ouvrir
- un ou plusieurs canaux pour échanger du texte ou des données binaires :
+\end_layout
+
+\begin_layout Standard
+Cependant, RTCDataChannel adopte une approche différente
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ristic-2014"
+literal "false"
+
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Itemize
+Il fonctionne avec l'API RTCPeerConnection, qui permet la connectivité peer-to-p
+eer. Cela peut entraîner une latence plus faible : pas de serveur intermédiaire
+ et moins de « sauts ».
+\end_layout
+
+\begin_layout Itemize
+Il utilise le protocole de transmission de contrôle de flux (SCTP), permettant
+ une sémantique de livraison configurable - livraison hors service et configurat
+ion de retransmission.
+\end_layout
+
+\begin_layout Standard
+Étant donné que DataChannel est peer-to-peer et s'exécute sur un protocole
+ de transport plus flexible, il offre également un certain nombre de fonctionnal
+ités supplémentaires non disponibles pour WebSocket.
+ L'exemple de code précédent met en évidence certaines des différences les
+ plus importantes :
+\end_layout
+
+\begin_layout Itemize
+Contrairement au constructeur WebSocket, qui attend l'URL du serveur WebSocket,
+ DataChannel est une factory méthode de fabrique sur de l'objet RTCPeerConnectio
+n.
+\end_layout
+
+\begin_layout Itemize
+Contrairement à WebSocket, chaque pair peut initier une nouvelle session
+ DataChannel : le rappel onData Channel est déclenché lorsqu'une nouvelle
+ session DataChannel est établie.
+\end_layout
+
+\begin_layout Itemize
+Contrairement à WebSocket, qui s'exécute sur un transport TCP fiable et
+ ordonné, chaque DataChannel peut être configuré avec une livraison personnalisé
+e et une sémantique de fiabilité.
+\end_layout
+
+\begin_layout Subsection
+Configuration de l'ordre et de la fiabilité des messages
+\end_layout
+
+\begin_layout Standard
+RTCDataChannel peut fonctionner en mode non fiable et non ordonné (analogue
+ au User Datagram Protocol ou UDP), en mode fiable et ordonné (analogue
+ au Transmission Control Protocol ou TCP) et en modes partiellement fiables
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ristic-2014"
+literal "false"
+
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Itemize
+Un mode fiable et ordonné garantit la transmission des messages ainsi que
+ l'ordre dans lequel ils sont délivrés . Cela prend une surcharge supplémentaire,
+ ce qui rend potentiellement ce mode plus lent.
+\end_layout
+
+\begin_layout Itemize
+Un mode peu fiable et non ordonné ne garantit pas que chaque message arrive
+ de l'autre côté ni dans quel ordre ils y arrivent . Cela supprime la surcharge,
+ permettant à ce mode de fonctionner beaucoup plus rapidement.
+\end_layout
+
+\begin_layout Itemize
+Le mode de fiabilité partielle garantit la transmission du message dans
+ une condition spécifique, telle qu'un délai de
 \end_layout
 
 \end_body
