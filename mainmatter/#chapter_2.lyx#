@@ -2555,16 +2555,7 @@ Lors de la configuration d'un canal partiellement fiable, il est important
 t exclusives.
  L'application peut spécifier soit un délai d'attente, soit un nombre de
  retransmissions, mais pas les deux ; cela générera une erreur.
- Sur ce, jetons un coup d'œil à l'API JavaScript pour configurer le canal
-\begin_inset CommandInset citation
-LatexCommand cite
-after ", p. 353"
-key "grigorik-2013"
-literal "false"
-
-\end_inset
-
- :
+ Sur ce, jetons un coup d'œil à l'API JavaScript pour configurer le canal :
 \end_layout
 
 \begin_layout Standard
@@ -2575,42 +2566,37 @@ status open
 
 \begin_layout Plain Layout
 
-/* Options de configuration de l'ordre et de la fiabilité des messages
+/* Confi
 \end_layout
 
 \begin_layout Plain Layout
 
- * conf = {};
+conf = {};
 \end_layout
 
 \begin_layout Plain Layout
 
- * conf = { ordered: false };
+conf = { ordered: false };
 \end_layout
 
 \begin_layout Plain Layout
 
- * conf = { ordered: true, maxRetransmits: customNum };
+conf = { ordered: true, maxRetransmits: customNum };
 \end_layout
 
 \begin_layout Plain Layout
 
- * conf = { ordered: false, maxRetransmits: customNum };
+conf = { ordered: false, maxRetransmits: customNum };
 \end_layout
 
 \begin_layout Plain Layout
 
- * conf = { ordered: true, maxRetransmitTime: customMs };
+conf = { ordered: true, maxRetransmitTime: customMs };
 \end_layout
 
 \begin_layout Plain Layout
 
- * conf = { ordered: false, maxRetransmitTime: customMs };
-\end_layout
-
-\begin_layout Plain Layout
-
-*/
+conf = { ordered: false, maxRetransmitTime: customMs };
 \end_layout
 
 \begin_layout Plain Layout
@@ -2619,7 +2605,7 @@ status open
 
 \begin_layout Plain Layout
 
-const conf = { ordered: false, maxRetransmits: 0 };
+conf = { ordered: false, maxRetransmits: 0 };
 \end_layout
 
 \begin_layout Plain Layout
@@ -2637,37 +2623,17 @@ const conf = { ordered: false, maxRetransmits: 0 };
 
 \begin_layout Plain Layout
 
-const peerConnection = new RTCPeerConnection(iceConfig);
+var pc = new RTCPeerConnection(iceConfig);
 \end_layout
 
 \begin_layout Plain Layout
 
-const dataCahnnel = pc.createDataChannel("nomDuCanal", conf);
+var dc = pc.createDataChannel("namedChannel", conf);
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Chaque DataChannel peut être configuré avec des paramètres d'ordre et de
- fiabilité personnalisés, et les pairs peuvent ouvrir plusieurs canaux,
- qui seront tous multiplexés sur la même association SCTP.
- En conséquence, chaque canal est indépendant des autres, et les pairs peuvent
- utiliser différents canaux pour différents types de données, par exemple,
- une livraison fiable et dans l'ordre pour le chat peer-to-peer et une livraison
- partiellement fiable et dans le désordre pour les mises à jour d'applications
- transitoires ou de faible priorité
-\begin_inset CommandInset citation
-LatexCommand cite
-after ", p. 353"
-key "grigorik-2013"
-literal "false"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Subsection
