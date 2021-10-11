@@ -164,11 +164,28 @@
 }
 
 @online{ristic-2014,
-	author = {family=Ristic given-i=D. and family=Dutton given-i=S.},
+	author = {D. Ristic and S. Dutton},
 	date = {2014-02-04},
 	language = {english},
-	title = {Send data between browsers with WebRTC data channels - HTML5 Rocks},
-	url = {https://html5rocks.com/en/tutorials/webrtc/datachannels/},
-	urldate = {2021-10-8}
+	title = {Send data between browsers with WebRTC data channels},
+	url = {https://html5rocks.com/en/tutorials/webrtc/datachannels},
+	urldate = {2021-10-08}
+}
+
+@online{webrtc-org-2014A,
+	author = {{WebRTC Org.}},
+	date = {2014},
+	language = {english},
+	title = {Getting started with remote streams},
+	url = {https://webrtc.org/getting-started/remote-streams}
+}
+
+@online{webrtc-org-2014B,
+	author = {{WebRTC Org.}},
+	date = {2014},
+	language = {english},
+	title = {Data channels},
+	url = {https://webrtc.org/getting-started/data-channels},
+	urldate = {10-10-2021}
 }
 
