@@ -859,7 +859,7 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 appendix
 \end_layout
@@ -875,14 +875,14 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 chapter*{Annexes}
 \end_layout
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 addstarredchapter{Annexes}
 \end_layout
@@ -898,7 +898,7 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 renewcommand{
 \backslash
@@ -913,13 +913,9 @@ Alph{section}}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%insert (input) bacckmatter/appendix_1.lyx here
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "backmatter/appendix_1.lyx"
 
 \end_inset
 

@@ -812,7 +812,7 @@ status open
 
 
 \backslash
-clearpage
+clearpage % Don't forget for reseting fancyhdr style
 \end_layout
 
 \end_inset
