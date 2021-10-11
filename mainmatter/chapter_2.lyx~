@@ -2637,12 +2637,12 @@ const conf = { ordered: false, maxRetransmits: 0 };
 
 \begin_layout Plain Layout
 
-const pc = new RTCPeerConnection(iceConfig);
+const peerConnection = new RTCPeerConnection(iceConfig);
 \end_layout
 
 \begin_layout Plain Layout
 
-const dc = pc.createDataChannel("namedChannel", conf);
+const dataCahnnel = pc.createDataChannel("nomDuCanal", conf);
 \end_layout
 
 \end_inset

@@ -308,7 +308,7 @@
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
-\paragraph_indentation default
+\paragraph_indentation 0bp
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style french
@@ -882,6 +882,7 @@ Peer to peer
 \end_layout
 
 \begin_layout Standard
+\noindent
 L'un des avantages distinctifs du WebRTC est le fait qu'il s'agit d'une
  communication peer to peer.
  Cela signifie évidemment que la vidéo passera directement de l’ordinateur

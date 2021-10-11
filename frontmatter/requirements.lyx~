@@ -460,7 +460,15 @@ clearpage % in order to remove fancyhdr style
 
 
 \backslash
-thispagestyle{empty} % remove fancyhdr
+pagestyle{empty} % remove fancyhdr but forgets to remove  for the first
+ page
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} % remove fancyhdr for the firs page
 \end_layout
 
 \end_inset
@@ -730,7 +738,6 @@ Contexte
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing single
 \noindent
 \align block
 A cause de l’épidémie de COVID-19 les mesures barrières comme la distanciation

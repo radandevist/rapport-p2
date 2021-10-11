@@ -738,7 +738,6 @@ Contexte
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing single
 \noindent
 \align block
 A cause de l’épidémie de COVID-19 les mesures barrières comme la distanciation
@@ -759,7 +758,6 @@ Objectif
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing single
 \noindent
 Mettre en œuvre une communication Peer to Peer basé sur les navigateurs
  Web et Java Script.
