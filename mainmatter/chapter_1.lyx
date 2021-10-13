@@ -542,7 +542,7 @@ literal "false"
 
 \end_inset
 
- et l'application via un ensemble d'API
+ et l'application via un ensemble exposé d'API
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -552,7 +552,7 @@ literal "false"
 
 \end_inset
 
- exposées
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"

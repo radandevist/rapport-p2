@@ -740,17 +740,17 @@ Contexte
 \begin_layout Standard
 \noindent
 \align block
-A cause de l’épidémie de COVID-19 les mesures barrières comme la distanciation
+À cause de l’épidémie de COVID-19 les mesures barrières comme la distanciation
  sociale et le confinement sont devenues universelles.
  Une application de communication en temps réel peut s’avérer utile pour
  pouvoir rester en contact avec les proches ou les collègues de travail.
- WebRTC (Web Real-Time Communications) est une technologie qui permet aux
+ WebRTC (Web Real-Time Communication) est une technologie qui permet aux
  applications et sites web de capturer et éventuellement de diffuser des
  médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires
  entre les navigateurs sans passer par un intermédiaire.
  L'ensemble de normes qui comprend WebRTC permet de partager des données
  et d'effectuer des téléconférences peer-to-peer, sans exiger que l'utilisateur
- installe des plug-ins ou tout autre logiciel tiers.
+ installe des plugins ou tout autre logiciel tiers.
 \end_layout
 
 \begin_layout Subsection*
@@ -758,10 +758,9 @@ Objectif
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing single
 \noindent
 Mettre en œuvre une communication Peer to Peer basé sur les navigateurs
- Web et Java Script.
+ Web et JavaScript.
 \end_layout
 
 \begin_layout Subsection*
