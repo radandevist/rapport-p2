@@ -760,7 +760,7 @@ Objectif
 \begin_layout Standard
 \noindent
 Mettre en œuvre une communication Peer to Peer basé sur les navigateurs
- Web et JavaScript.
+ Web et Javascript.
 \end_layout
 
 \begin_layout Subsection*
@@ -793,7 +793,7 @@ Configurer la partie téléphonie du système avec : RTCDTMFSender.
 
 \begin_layout Itemize
 \noindent
-Faire un test et relevé les différents canaux et protocoles mis en jeu.
+Faire un test et un relevé les différents canaux et protocoles mis en jeu.
 \end_layout
 
 \begin_layout Subsection*

@@ -776,8 +776,8 @@ noprefix "false"
  Cet arrangement est appelé triangle en raison de la forme de la signalisation
  (côtés du triangle) et des flux médiatiques ou de données (base du triangle)
  entre les trois éléments.
- Une connexion peer établit le transport pour les médias vocaux et vidéo
- et les flux de canaux de données directement entre les navigateurs
+ Une connexion peer-to-peer établit le transport pour les médias vocaux
+ et vidéo et les flux de canaux de données directement entre les navigateurs
 \begin_inset CommandInset citation
 LatexCommand cite
 after "p. 4-5"
@@ -879,7 +879,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Peer-to-peer
+Peer-to-peer ou d'egal à égal
 \end_layout
 
 \begin_layout Standard
@@ -1264,13 +1264,11 @@ Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
  sous le nom de média local.
  Par conséquent, la première étape consiste à obtenir un flux multimédia
  local.
- Cela peut être fait de plusieurs manières.
- Voici un moyen simple de le faire, juste une méthode Javascript que nous
- pouvons appeler 
+ Un moyen simple de le faire consiste à user d'une méthode Javascript, 
 \series bold
 
 \begin_inset listings
-lstparams "style=JavaScript"
+lstparams "style=ES6"
 inline true
 status open
 
@@ -1282,9 +1280,10 @@ getUserMedia()
 
 \end_inset
 
-
+,
 \series default
-
+ que nous pouvons appeler: cette méthode récupère les médias des périphériques
+ de la machine
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"
@@ -1293,7 +1292,6 @@ literal "false"
 \end_inset
 
 .
- Cette méthode récupère les médias des périphériques de la machine.
 \end_layout
 
 \begin_layout Standard
@@ -1317,11 +1315,11 @@ Connexion peer RTC
 \end_layout
 
 \begin_layout Standard
-Il est important de noter que cette connexion est une connexion peer.
+Il est important de noter que cette connexion est une connexion peer-to-peer.
  Cela signifie que cela peut être fait avec n'importe quel ordinateur ou
  appareil sur Internet.
  Et la connexion est directement établie entre les deux machines sans serveur
- impliqué
+ impliqué: les paquets vidéo et audio circuleront d'un navigateur à un autre
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"
@@ -1329,7 +1327,7 @@ literal "false"
 
 \end_inset
 
-: les paquets vidéo et audio circuleront d'un navigateur à un autre.
+.
 \end_layout
 
 \begin_layout Standard
@@ -1345,14 +1343,15 @@ literal "false"
 .
  Disons, par exemple, un appel démarré avec deux utilisateurs, tels que
  l'utilisateur A et l'utilisateur B.
- Cela signifie qu'une connexion peer sera créée entre les navigateurs des
- deux utilisateurs, une connexion de A à B.
+ Cela signifie qu'une connexion peer-to-peer sera créée entre les navigateurs
+ des deux utilisateurs, une connexion de A à B.
  Si un autre utilisateur rejoint l'appel, disons l'utilisateur C, cela modifiera
  les connexions pour chaque utilisateur de l'appel.
- Comme nous l’avons expliqué précédemment, il s’agira d’une connexion peer,
- ce qui signifie que chaque utilisateur doit être connecté à la machine
+ Comme nous l’avons expliqué précédemment, il s’agira d’une connexion peer-to-pe
+er, ce qui signifie que chaque utilisateur doit être connecté à la machine
  de chaque utilisateur lors de l’appel.
- Chaque machine aura 2 connexions peer établies si l'appel a 3 utilisateurs.
+ Chaque machine aura 2 connexions peer-to-peer établies si l'appel a 3 utilisate
+urs.
 \end_layout
 
 \begin_layout Standard
@@ -1392,9 +1391,9 @@ es pour transférer des données.
  De cette façon, il obtient une fonctionnalité en temps réel.
  Des méthodes simples telles que l'envoi sur le gestionnaire de messages
  peuvent être définies pour obtenir les données.
- Le canal de données utilise également la même connexion peer que le média,
- ce qui est une bonne chose, car cela signifie qu'un seul processus de négociati
-on offre/réponse est nécessaire
+ Le canal de données utilise également la même connexion peer-to-peer que
+ le média, ce qui est une bonne chose, car cela signifie qu'un seul processus
+ de négociation offre/réponse est nécessaire
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"
@@ -1407,9 +1406,10 @@ literal "false"
 
 \begin_layout Standard
 Les canaux de données prennent également en charge les deux modes de livraison:
- livraison garantie (fiable) et rapide (non fiable).
+ garantie (fiable) et rapide (non fiable).
  Le premier peut être utilisé pour des événements critiques et le second
  peut être utilisé pour les mises à jour de la position d'un jeu en ligne
+ par exemple
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"
