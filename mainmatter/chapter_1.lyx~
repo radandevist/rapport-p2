@@ -455,7 +455,7 @@ literal "false"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -542,7 +542,7 @@ literal "false"
 
 \end_inset
 
- et l'application via un ensemble d'API
+ et l'application via un ensemble exposé d'API
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -552,7 +552,7 @@ literal "false"
 
 \end_inset
 
- exposées
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"
@@ -701,7 +701,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/webrtc-architecture.png
-	scale 40
+	scale 55
 
 \end_inset
 
@@ -791,9 +791,10 @@ literal "false"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
