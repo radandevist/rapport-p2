@@ -455,7 +455,7 @@ literal "false"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -701,7 +701,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/webrtc-architecture.png
-	scale 55
+	scale 45
 
 \end_inset
 
@@ -794,7 +794,7 @@ literal "false"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -851,7 +851,7 @@ Les appareils d'aujourd'hui sont dotés de plusieurs capacités matérielles
  et un microphone audio.
  Sur les ordinateurs de bureau et les tablettes, vous obtenez le même ensemble
  de sources multimédias.
- Chacune de ces sources multimédia peut générer un flux multimédia
+ Chacune de ces sources multimédias peut générer un flux multimédia
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"
@@ -865,7 +865,7 @@ literal "false"
 \begin_layout Standard
 \noindent
 Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et fournira
- ce flux en tant que variable au langage Javascript pourque puissent les
+ ce flux en tant que variable au langage Javascript pour que puissent les
  développeurs d'applications l'afficher sur une page comme n'importe quel
  flux vidéo normal
 \begin_inset CommandInset citation
@@ -879,13 +879,13 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Peer to peer
+Peer-to-peer
 \end_layout
 
 \begin_layout Standard
 \noindent
 L'un des avantages distinctifs du WebRTC est le fait qu'il s'agit d'une
- communication peer to peer.
+ communication peer-to-peer.
  Cela signifie évidemment que la vidéo passera directement de l’ordinateur
  d’un utilisateur à un autre
 \begin_inset CommandInset citation
@@ -919,7 +919,7 @@ literal "false"
 
 \begin_layout Standard
 C’est la même chose avec WebRTC.
- Il existe un protocole de déscription de session: SDP
+ Il existe un protocole de description de session: SDP
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -963,7 +963,7 @@ Signalisation
 \begin_layout Standard
 Supposons que le navigateur A essaie de communiquer avec le navigateur B.
  Le navigateur A enverra ses données de description de session au serveur
- de signalisation S, et le même processus pour le navigateur B également
+ de signalisations, et le même processus pour le navigateur B également
 \begin_inset CommandInset citation
 LatexCommand cite
 key "haytham-2018"
@@ -1009,7 +1009,7 @@ La signalisation a un rôle important dans les communications en temps réel:
 \end_layout
 
 \begin_layout Itemize
-Négociation des capacités et des paramètres des médias ntre les appareils
+Négociation des capacités et des paramètres des médias entre les appareils
  dans le même appel
 \end_layout
 
@@ -1028,7 +1028,7 @@ Résolution de l'éblouissement, lorsque les deux côtés d'une session essaient
 \end_layout
 
 \begin_layout Subsubsection*
-Pourquoi la signalisation n'a pas été standardisé?
+Pourquoi la signalisation n'a pas été standardisée?
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Pourquoi-la-signalisation"
@@ -1043,7 +1043,7 @@ La signalisation n'est pas normalisée dans WebRTC pour permettre l'interopérab
 ité entre différents navigateurs.
  Son flux se situe entre les navigateurs web et le serveur web, et non entre
  deux navigateurs dans le même appel ou session.
- Dans ce cas, le serveur ou plutôt le developpeur sélectionne le protocole
+ Dans ce cas, le serveur ou plutôt le développeur sélectionne le protocole
  de signalisation et s'assure que les utilisateurs des applications web
  ou du support du site utilisent le même protocole
 \begin_inset CommandInset citation
@@ -1057,7 +1057,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsubsection*
-Signalisation et négotiation des médias
+Signalisation et négociation des médias
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Signalisation-et-négotiation"
