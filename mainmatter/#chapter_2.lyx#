@@ -277,7 +277,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -490,7 +490,7 @@ RTCPeerConnection
 \end_layout
 
 \begin_layout Standard
-L'API RTCPeerConnection est chargé de connecter deux (02) navigateurs ensemble
+L'API RTCPeerConnection est chargée de connecter deux (02) navigateurs ensemble
  afin qu'ils puissent partager des médias en temps réel
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -515,11 +515,11 @@ name "subsec:RTCConfiguration"
 \end_layout
 
 \begin_layout Standard
-Chaque connexion peer est gérée par un objet RTCPeerConnection.
+Chaque connexion peer-to-peer est gérée par un objet RTCPeerConnection.
  Le constructeur de cette classe prend un seul objet RTCConfiguration comme
  paramètre.
- Cet objet définit la configuration de la connexion peer et doit contenir
- des informations sur les serveurs ICE à utiliser
+ Cet objet définit la configuration de la connexion peer-to-peer et doit
+ contenir des informations sur les serveurs ICE à utiliser
 \begin_inset Foot
 status collapsed
 
@@ -584,8 +584,8 @@ Initialisation
 \end_layout
 
 \begin_layout Standard
-Une fois la configuration éffectuée il suffit d'instancier l'interface de
- l'API RTCPeerConnection afin d'initialiser une connection et ce sans oublier
+Une fois la configuration effectuée il suffit d'instancier l'interface de
+ l'API RTCPeerConnection afin d'initialiser une connexion et ce sans oublier
  de fournir l'argument configuration dans la signature du constructeur.
  Le bout de code suivant, tiré de 
 \begin_inset CommandInset citation
@@ -595,7 +595,7 @@ literal "false"
 
 \end_inset
 
- montre comment éffectuer celà.
+ montre comment effectuer celà.
 \end_layout
 
 \begin_layout Standard
@@ -643,14 +643,14 @@ name "subsec:RTCSessionDescription"
 \begin_layout Standard
 RTCPeerConnection coordonne l'échange de métadonnées cruciales entre deux
  navigateurs.
- Ces données définissent le numéro IP et l'adresse de port publiquement
+ Ces données définissent l'adresse IP et le numéro de ports publiquement
  identifiables d'un navigateur afin que les médias en temps réel puissent
  être échangés.
 \end_layout
 
 \begin_layout Standard
 Pour que deux points de terminaison WebRTC commencent à se parler, trois
- types d'informations doivent être relayées:
+ types d'informations doivent être relayés:
 \end_layout
 
 \begin_layout Enumerate
@@ -665,7 +665,7 @@ Les données réseau relayent l'adresse IP et le numéro de port de chaque
 \end_layout
 
 \begin_layout Enumerate
-Les données média concernent les codecs et les types de média que les appelants
+Les données média concernent les codecs et les types de médias que les appelants
  ont en commun.
 \end_layout
 
@@ -2555,7 +2555,16 @@ Lors de la configuration d'un canal partiellement fiable, il est important
 t exclusives.
  L'application peut spécifier soit un délai d'attente, soit un nombre de
  retransmissions, mais pas les deux ; cela générera une erreur.
- Sur ce, jetons un coup d'œil à l'API JavaScript pour configurer le canal :
+ Sur ce, jetons un coup d'œil à l'API JavaScript pour configurer le canal
+\begin_inset CommandInset citation
+LatexCommand cite
+after ", p. 353"
+key "grigorik-2013"
+literal "false"
+
+\end_inset
+
+ :
 \end_layout
 
 \begin_layout Standard
@@ -2566,37 +2575,42 @@ status open
 
 \begin_layout Plain Layout
 
-/* Confi
+/* Options de configuration de l'ordre et de la fiabilité des messages
 \end_layout
 
 \begin_layout Plain Layout
 
-conf = {};
+ * conf = {};
 \end_layout
 
 \begin_layout Plain Layout
 
-conf = { ordered: false };
+ * conf = { ordered: false };
 \end_layout
 
 \begin_layout Plain Layout
 
-conf = { ordered: true, maxRetransmits: customNum };
+ * conf = { ordered: true, maxRetransmits: customNum };
 \end_layout
 
 \begin_layout Plain Layout
 
-conf = { ordered: false, maxRetransmits: customNum };
+ * conf = { ordered: false, maxRetransmits: customNum };
 \end_layout
 
 \begin_layout Plain Layout
 
-conf = { ordered: true, maxRetransmitTime: customMs };
+ * conf = { ordered: true, maxRetransmitTime: customMs };
 \end_layout
 
 \begin_layout Plain Layout
 
-conf = { ordered: false, maxRetransmitTime: customMs };
+ * conf = { ordered: false, maxRetransmitTime: customMs };
+\end_layout
+
+\begin_layout Plain Layout
+
+*/
 \end_layout
 
 \begin_layout Plain Layout
@@ -2605,7 +2619,7 @@ conf = { ordered: false, maxRetransmitTime: customMs };
 
 \begin_layout Plain Layout
 
-conf = { ordered: false, maxRetransmits: 0 };
+const conf = { ordered: false, maxRetransmits: 0 };
 \end_layout
 
 \begin_layout Plain Layout
@@ -2623,17 +2637,37 @@ conf = { ordered: false, maxRetransmits: 0 };
 
 \begin_layout Plain Layout
 
-var pc = new RTCPeerConnection(iceConfig);
+const peerConnection = new RTCPeerConnection(iceConfig);
 \end_layout
 
 \begin_layout Plain Layout
 
-var dc = pc.createDataChannel("namedChannel", conf);
+const dataCahnnel = pc.createDataChannel("nomDuCanal", conf);
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Chaque DataChannel peut être configuré avec des paramètres d'ordre et de
+ fiabilité personnalisés, et les pairs peuvent ouvrir plusieurs canaux,
+ qui seront tous multiplexés sur la même association SCTP.
+ En conséquence, chaque canal est indépendant des autres, et les pairs peuvent
+ utiliser différents canaux pour différents types de données, par exemple,
+ une livraison fiable et dans l'ordre pour le chat peer-to-peer et une livraison
+ partiellement fiable et dans le désordre pour les mises à jour d'applications
+ transitoires ou de faible priorité
+\begin_inset CommandInset citation
+LatexCommand cite
+after ", p. 353"
+key "grigorik-2013"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
