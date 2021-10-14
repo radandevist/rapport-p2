@@ -836,7 +836,7 @@ name "fig:triangle WebRTC"
 \end_layout
 
 \begin_layout Section
-Composants Importants du WebRTC
+Notions Importantes de WebRTC
 \end_layout
 
 \begin_layout Subsection
@@ -879,7 +879,7 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
-Peer-to-peer ou d'egal à égal
+Peer-to-peer ou d'égal à égal
 \end_layout
 
 \begin_layout Standard

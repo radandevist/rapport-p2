@@ -836,7 +836,7 @@ name "fig:triangle WebRTC"
 \end_layout
 
 \begin_layout Section
-Composants Importants du WebRTC
+Notions Importantes de WebRTC
 \end_layout
 
 \begin_layout Subsection
@@ -1406,7 +1406,7 @@ literal "false"
 
 \begin_layout Standard
 Les canaux de données prennent également en charge les deux modes de livraison:
- livraison garantie (fiable) et rapide (non fiable).
+ garantie (fiable) et rapide (non fiable).
  Le premier peut être utilisé pour des événements critiques et le second
  peut être utilisé pour les mises à jour de la position d'un jeu en ligne
  par exemple
