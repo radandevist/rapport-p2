@@ -413,9 +413,17 @@ literal "false"
 
 \end_inset
 
- ou un autre mécanisme RPC) où les applications Web peuvent relayer les
- informations nécessaires avant que la connexion entre homologues ne soit
- lancée
+ ou un autre mécanisme RPC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RPC"
+description "Remote Procedure Call"
+literal "false"
+
+\end_inset
+
+) où les applications Web peuvent relayer les informations nécessaires avant
+ que la connexion entre homologues ne soit lancée
 \begin_inset CommandInset citation
 LatexCommand cite
 key "webrtc-org-2014"
@@ -1082,7 +1090,7 @@ literal "false"
 
 \begin_layout Standard
 Pour rassembler des candidats ICE, il suffit d'ajouter un écouteur pour
- l'évènement 
+ l'événement 
 \begin_inset listings
 lstparams "style=ES6"
 inline true

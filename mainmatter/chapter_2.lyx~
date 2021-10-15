@@ -1082,7 +1082,7 @@ literal "false"
 
 \begin_layout Standard
 Pour rassembler des candidats ICE, il suffit d'ajouter un écouteur pour
- l'évènement 
+ l'événement 
 \begin_inset listings
 lstparams "style=ES6"
 inline true
@@ -1597,7 +1597,7 @@ localStream.getTracks().forEach(track => {
 \end_layout
 
 \begin_layout Standard
-Les pistes peuvent être ajoutées à un RTCPeerConnection avant qu'il ne soit
+Les pistes peuvent être ajoutées à RTCPeerConnection avant qu'il ne soit
  connecté à un pair distant, il est donc logique d'effectuer cette configuration
  le plus tôt possible au lieu d'attendre que la connexion soit terminée
 \begin_inset CommandInset citation
