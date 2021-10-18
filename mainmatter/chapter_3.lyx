@@ -1055,8 +1055,17 @@ Le protocole WebSocket permet à un navigateur d'ouvrir des connexions TCP
  HTTP entre le navigateur et le serveur Web.
  Le navigateur indique l'application utilisant le WebSocket dans l'ouverture.
  C'est ce qu'on appelle le sous-protocole WebSocket.
- Le sous-protocole SIP WebSocket ou le sous-protocole XMPP WebSocket sont
- des exemples 
+ Le sous-protocole SIP WebSocket ou le sous-protocole XMPP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "XMPP"
+description "Extensible Messaging and Presence Protocol"
+literal "false"
+
+\end_inset
+
+ WebSocket sont des exemples 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "p. 125 - 126"
@@ -1074,10 +1083,30 @@ RTP et SRTP
 
 \begin_layout Standard
 Le protocole le plus important utilisé par WebRTC est le Real-time Transport
- Protocol, ou RTP.
+ Protocol, ou RTP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "RTP"
+description "Real-time Transport Protocol"
+literal "false"
+
+\end_inset
+
+.
  WebRTC utilise uniquement le profil sécurisé de RTP ou Secure RTP, SRTP.
- SRTP est le protocole utilisé pour transporter et acheminer les paquets
- multimédias audio et vidéo entre les clients WebRTC.
+ SRTP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SRTP"
+description "Secure Real-time Transport Protocol"
+literal "false"
+
+\end_inset
+
+ est le protocole utilisé pour transporter et acheminer les paquets multimédias
+ audio et vidéo entre les clients WebRTC.
  Les paquets multimédias contiennent les échantillons audio numérisés ou
  les images vidéo numérisées générées par un microphone ou une caméra ou
  une application, et sont rendus à l'aide d'un haut-parleur ou d'un écran.
@@ -1088,9 +1117,19 @@ ons sur les médias.
  SRTP fournit des informations essentielles pour transporter et restituer
  avec succès les informations du média : le codec (codeur/décodeur utilisé
  pour échantillonner et compresser l'audio ou la vidéo, la source du média
- (la source de synchronisation ou SSRC), un horodatage (pour une lecture
- correctement chronométrée ), le numéro de séquence (pour détecter les paquets
- perdus) et d'autres informations nécessaires à la lecture.
+ (la source de synchronisation ou SSRC
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SSRC"
+description "Synchronization Source"
+literal "false"
+
+\end_inset
+
+), un horodatage (pour une lecture correctement chronométrée ), le numéro
+ de séquence (pour détecter les paquets perdus) et d'autres informations
+ nécessaires à la lecture.
  Pour les données non audio ou vidéo, SRTP n'est pas utilisé.
  Au lieu de cela, un appel à l'API RTCDataChannel entraînera l'ouverture
  d'un canal de données entre les navigateurs permettant l'échange de données
@@ -1249,8 +1288,18 @@ Le protocole de base fonctionne essentiellement comme suit : Le client,
  IP et le numéro port de du client, comme observé du point de vue du serveur.
  Le résultat est masqué par un mappage «ou exclusif»(XOR) pour éviter la
  traduction du contenu du paquet par des passerelles de couche d'application
- (ALG) qui effectuent une inspection approfondie des paquets dans le but
- d'exécuter d'autres méthodes de traversée NAT
+ (ALG
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "ALG"
+description "Application Layer Gateway"
+literal "false"
+
+\end_inset
+
+) qui effectuent une inspection approfondie des paquets dans le but d'exécuter
+ d'autres méthodes de traversée NAT
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wikipedia-contributors-2021"
@@ -1270,7 +1319,17 @@ Les messages STUN sont envoyés dans des paquets UDP.
  Lorsque la fiabilité est obligatoire, le protocole TCP peut être utilisé,
  mais induit une surcharge réseau supplémentaire.
  Dans les applications sensibles à la sécurité, STUN peut être transporté
- et crypté par TLS.
+ et crypté par TLS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "TLS"
+description "Transport Layer Security"
+literal "false"
+
+\end_inset
+
+.
  Le numéro de port d'écoute standard pour un serveur STUN est 3478 pour
  UDP et TCP et 5349 pour TLS
 \begin_inset CommandInset citation
@@ -1844,9 +1903,18 @@ SCTP
 \end_layout
 
 \begin_layout Standard
-Stream Control Transport Protocol, SCTP, est une couche de transport qui
- fournit un transport fiable ou non fiable sur IP ainsi qu'un contrôle d'encombr
-ement et plusieurs flux dans une session.
+Stream Control Transport Protocol, SCTP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "SCTP"
+description "Stream Control Transmission Protocol"
+literal "false"
+
+\end_inset
+
+, est une couche de transport qui fournit un transport fiable ou non fiable
+ sur IP ainsi qu'un contrôle d'encombrement et plusieurs flux dans une session.
  Le contrôle de la congestion est la capacité d'un protocole à détecter
  le début de la perte et du retard de paquets Internet et à ajuster dynamiquemen
 t son taux d'envoi pour minimiser les effets.
@@ -1888,7 +1956,17 @@ WebRTC utilise UDP au niveau de la couche de transport en raison de ses
  exigences en temps réel.
  SRTP et SCTP sont utilisés à une couche supérieure pour multiplexer les
  flux.
- Pour des raisons de sécurité, DTLS est utilisé.
+ Pour des raisons de sécurité, DTLS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "DTLS"
+description "Datagram Transport Layer Security"
+literal "false"
+
+\end_inset
+
+ est utilisé.
  Parce que les pairs peuvent s'asseoir derrière des pare-feu et des NAT,
  ICE/STUN/TURN sont nécessaires
 \begin_inset CommandInset citation
@@ -1902,7 +1980,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Pour la signalisation, TLS et TCP sont utilisés.
+Pour la signalisation, TLS et TCP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "TCP"
+description "Transmission Control Protocol"
+literal "false"
+
+\end_inset
+
+ sont utilisés.
  Pour échanger des paramètres de session, SDP est utilisé
 \begin_inset CommandInset citation
 LatexCommand cite
