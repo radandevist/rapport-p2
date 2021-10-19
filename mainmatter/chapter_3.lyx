@@ -358,8 +358,9 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Il existe un certain nombre de protocoles liés à WebRTC.
- Les plus importantes sont répertoriées dans les figure et tableau suivants.
+Des protocoles d'un nombre non négligeable sont activement impliqués pour
+ que WebRTC puisse fonctionner.
+ Les plus importantes sont répertoriées dans la figure et le tableau suivants.
 \end_layout
 
 \begin_layout Standard
@@ -402,9 +403,9 @@ Pile de protocoles WebRTC
 \end_layout
 
 \begin_layout Standard
-Sur l’aile gauche de la figure précédente, s’illustrent les protocules uitlisés
- pour la signalisation tandisque dans l’aile droite, sont montrés ceux utilisés
- par RTCWeb elle même.
+Sur l’aile gauche de la figure précédente, s’illustrent les protocoles utilisés
+ pour la signalisation tandis que dans l’aile droite, sont montrés ceux
+ utilisés par RTCWeb elle-même.
 \end_layout
 
 \begin_layout Standard
@@ -412,7 +413,7 @@ Sur l’aile gauche de la figure précédente, s’illustrent les protocules uit
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -966,7 +967,7 @@ Réseau
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Les normes IETF et couche correspondantes des protocoles webRTC
+Les normes IETF et couches correspondantes des protocoles webRTC
 \end_layout
 
 \end_inset
@@ -1055,7 +1056,7 @@ Le protocole WebSocket permet à un navigateur d'ouvrir des connexions TCP
  HTTP entre le navigateur et le serveur Web.
  Le navigateur indique l'application utilisant le WebSocket dans l'ouverture.
  C'est ce qu'on appelle le sous-protocole WebSocket.
- Le sous-protocole SIP WebSocket ou le sous-protocole XMPP
+ Les sous-protocoles SIP WebSocket et XMPP
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "A"
@@ -1065,7 +1066,7 @@ literal "false"
 
 \end_inset
 
- WebSocket sont des exemples 
+ WebSocket sont des exemples
 \begin_inset CommandInset citation
 LatexCommand cite
 after "p. 125 - 126"
@@ -1107,10 +1108,10 @@ literal "false"
 
  est le protocole utilisé pour transporter et acheminer les paquets multimédias
  audio et vidéo entre les clients WebRTC.
- Les paquets multimédias contiennent les échantillons audio numérisés ou
+ Les paquets multimédias contiennent les échantillons audionumérisés ou
  les images vidéo numérisées générées par un microphone ou une caméra ou
  une application, et sont rendus à l'aide d'un haut-parleur ou d'un écran.
- Une configuration réussie d'une connexion par les peers, ainsi qu'un échange
+ Une configuration réussie d'une connexion par les pairs, ainsi qu'un échange
  offre/réponse complet, entraînera l'établissement d'une connexion SRTP
  entre les navigateurs ou un navigateur et un serveur, et un échange d'informati
 ons sur les médias.
@@ -1152,9 +1153,10 @@ SDP
 \begin_layout Standard
 Les descriptions de session WebRTC sont décrites à l'aide de la Session
  Description Protocol (SDP).
- Une description de session SDP (codé comme un objet RTCSessionDescription)
- est utilisé pour décrire les caractéristiques de support de la connexion
- peer.
+ Une description de session SDP (codée comme un objet RTCSessionDescription)
+ est utilisée pour décrire les caractéristiques de support de la connexion
+ peer\SpecialChar softhyphen
+to-peer.
  Il existe une longue et compliquée liste d'informations qui doivent être
  échangées entre les deux extrémités de la session SRTP pour qu'elles puissent
  communiquer.
@@ -1165,8 +1167,9 @@ Les descriptions de session WebRTC sont décrites à l'aide de la Session
  Une application qui souhaite avoir un contrôle étroit sur le média peut
  apporter des modifications à la description de la session avant de la partager
  avec l'autre navigateur.
- Lorsque des modifications sont apportées à une connexion peer, cela entraînera
- des modifications de la description de session que les deux peers échangeront.
+ Lorsque des modifications sont apportées à une connexion peer-to-peer,
+ cela entraînera des modifications de la description de session que les
+ deux pairs échangeront.
  C'est ce qu'on appelle un échange offre/réponse
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1192,14 +1195,14 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-SRTP et SDP sont des protocoles normalisés par l'IETF et largement utilisé
+SRTP et SDP sont des protocoles normalisés par l'IETF et largement utilisés
  par les appareils et services de communication sur Internet, tels que les
  téléphones, les clients et les passerelles Voix sur IP (VoIP), ainsi que
  les appareils de vidéoconférence et de collaboration.
  En conséquence, la communication entre l'un de ces appareils ou clients
  et un client WebRTC est possible.
  Cependant, peu d'appareils ou de clients VoIP ou vidéo prennent aujourd'hui
- en charge l'ensemble complet des capacités et des protocoles de WebRTC.
+ en charge l'ensemble complet des capacités et des protocoles du WebRTC.
  Ces appareils devront être mis à niveau pour prendre en charge ces nouveaux
  protocoles, ou une fonction de passerelle utilisée entre le client WebRTC
  et le client VoIP ou vidéo pour effectuer la conversion
@@ -1222,7 +1225,7 @@ STUN
 STUN est un outil utilisé par d'autres protocoles, tels que Interactive
  Connectivity Establishment (ICE), le Session Initiation Protocol (SIP)
  et WebRTC permettant de détecter et de traverser les traducteurs d'adresses
- réseau situés sur le chemin entre deux points de terminaison de communication
+ réseau situé sur le chemin entre deux points de terminaison de communication
  dans les applications de voix, vidéo, messagerie et autres communications
  interactives en temps réel.
  IIl est implémenté en tant que protocole client-serveur léger, ne nécessitant
@@ -1284,8 +1287,8 @@ Requête à un serveur STUN
 Le protocole de base fonctionne essentiellement comme suit : Le client,
  opérant généralement à l'intérieur d'un réseau privé , envoie une demande
  de liaison à un serveur STUN sur l'Internet public.
- Le serveur STUN répond avec une réponse de succès qui contient l' adresse
- IP et le numéro port de du client, comme observé du point de vue du serveur.
+ Le serveur STUN répond avec une réponse de succès qui contient l'adresse
+ IP et le numéro port du client, comme observé du point de vue du serveur.
  Le résultat est masqué par un mappage «ou exclusif»(XOR) pour éviter la
  traduction du contenu du paquet par des passerelles de couche d'application
  (ALG
@@ -1298,7 +1301,7 @@ literal "false"
 
 \end_inset
 
-) qui effectuent une inspection approfondie des paquets dans le but d'exécuter
+) qui effectue une inspection approfondie des paquets dans le but d'exécuter
  d'autres méthodes de traversée NAT
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1352,7 +1355,7 @@ Lorsqu'un client a évalué son adresse externe, il peut l'utiliser comme
  déterminer le meilleur chemin de communication entre eux.
  Certains comportements NAT peuvent restreindre la connectivité des homologues
  même lorsque la liaison publique est connue.
- Le protocole d' établissement de connectivité interactive (ICE) fournit
+ Le protocole d'établissement de connectivité interactive (ICE) fournit
  un mécanisme structuré pour déterminer le chemin de communication optimal
  entre deux homologues.
  Les extensions SIP (Session Initiation Protocol ) sont définies pour permettre
@@ -1373,15 +1376,18 @@ TURN
 
 \begin_layout Standard
 Traversal Using Relays around NAT, TURN, est une extension du protocole
- STUN qui fournit un relais média pour les situations où le «hole punching
- » (trou de perforation en anglais) ICE échoue.
+ STUN qui fournit un relais média pour les situations où le «
+\shape italic
+Hole punching
+\shape default
+» (trou de perforation en anglais) ICE échoue.
  Dans WebRTC, l'agent utilisateur du navigateur inclura un client TURN,
  et un serveur Web, un fournisseur de services ou une entreprise fournira
  un serveur TURN.
  Le navigateur demande une adresse IP publique et un numéro de port comme
  adresse de relais de transport au serveur TURN.
  Cette adresse est ensuite incluse en tant qu'adresse candidate dans la
- "perforation" ICE.
+ «perforation» ICE.
  Le numéro de port pour TURN peut être déterminé à l'aide d'une recherche
  DNS SRV ; le port UDP par défaut pour TURN est 3478
 \begin_inset CommandInset citation
@@ -1396,8 +1402,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-TURN peut être utilisé pour établir des adresses de transport relayées qui
- utilisent le transport UDP, TCP ou TLS.
+TURN peut être utilisée pour établir des adresses de transport relayées
+ qui utilisent le transport UDP, TCP ou TLS.
  Cependant, la communication entre le serveur TURN et le client TURN (via
  le NAT) est toujours UDP
 \begin_inset CommandInset citation
@@ -1467,12 +1473,19 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-Tout d'abord, le client contacte un serveur TURN avec une requête "Allocate".
+Tout d'abord, le client contacte un serveur TURN avec une requête «
+\shape italic
+Allocate
+\shape default
+».
  La demande d'allocation demande au serveur TURN d'allouer une partie de
  ses ressources au client afin qu'il puisse contacter un homologue.
  Si l'allocation est possible, le serveur alloue une adresse au client à
- utiliser comme relais et envoie au client une réponse "Allocation réussie",
- qui contient une "adresse de transport relayée allouée" située au niveau
+ utiliser comme relais et envoie au client une réponse «
+\shape italic
+Succesful allocation
+\shape default
+», qui contient une «adresse de transport relayé alloué» située au niveau
  du serveur TURN
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1487,7 +1500,7 @@ literal "false"
 \begin_layout Standard
 Deuxièmement, le client envoie une demande CreatePermissions au serveur
  TURN pour créer un système de vérification des autorisations pour les communica
-tions homologue-serveur.
+tions pair à serveur.
  En d'autres termes, lorsqu'un pair est finalement contacté et renvoie les
  informations au serveur TURN pour qu'elles soient relayées au client, le
  serveur TURN utilise les autorisations pour vérifier que la communication
@@ -1505,13 +1518,21 @@ literal "false"
 \begin_layout Standard
 Une fois les autorisations créées, le client a deux choix pour envoyer les
  données réelles, (1) il peut utiliser le mécanisme d'envoi, ou (2) il peut
- réserver un canal à l'aide de la requête ChannelBind.
+ réserver un canal à l'aide de la requête 
+\shape italic
+ChannelBind
+\shape default
+.
  Le mécanisme d'envoi est plus simple, mais contient un en-tête plus grand,
  36 octets, qui peut augmenter considérablement la bande passante dans une
  conversation relayée TURN.
- En revanche, la méthode ChannelBind est plus légère : l'en-tête ne fait
- que 4 octets, mais elle nécessite la réservation d'un canal qui doit être
- périodiquement rafraîchi, entre autres considérations
+ En revanche, la méthode 
+\shape italic
+ChannelBind
+\shape default
+ est plus légère : l'en-tête ne fait que 4 octets, mais elle nécessite la
+ réservation d'un canal qui doit être périodiquement rafraîchi, entre autres
+ considérations
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wikipedia-contributors-2021B"
@@ -1523,11 +1544,18 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-En utilisant l'une ou l'autre méthode, Send ou channel binding, le serveur
- TURN reçoit les données du client et les relaie à l'homologue à l'aide
- de datagrammes UDP, qui contiennent comme adresse source l'"adresse de
- transport relayée allouée".
- L'homologue reçoit les données et répond, à nouveau en utilisant un datagramme
+En utilisant l'une ou l'autre méthode, 
+\shape italic
+Send
+\shape default
+ ou 
+\shape italic
+Channel Binding
+\shape default
+, le serveur TURN reçoit les données du client et les relaie au pair à l'aide
+ de datagrammes UDP, qui contiennent comme adresse source l'«adresse de
+ transport relayé alloué».
+ Le pair reçoit les données et répond, à nouveau en utilisant un datagramme
  UDP comme protocole de transport, en envoyant le datagramme UDP à l'adresse
  de relais au niveau du serveur TURN
 \begin_inset CommandInset citation
@@ -1556,7 +1584,7 @@ literal "false"
 \begin_layout Standard
 Ce processus contourne même les NAT symétriques car le client et le pair
  peuvent au moins parler au serveur TURN, qui a alloué une adresse IP de
- relais pour la communication.
+ relais pour la communication
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wikipedia-contributors-2021B"
@@ -1564,7 +1592,7 @@ literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -1613,11 +1641,12 @@ literal "false"
 ICE est la technique qui utilise les protocoles STUN et TURN pour établir
  une connexion.
  Au début, les points d'extrémité ne sont pas conscients de leurs propres
- topologies de réseau, qu'ils soient sous un seul NAT ou plusieurs niveaux
- de NAT et le type de NAT, ICE laisse les points d'extrémité le découvrir
- à l'aide d'un serveur STUN à travers lequel ils peuvent trouver un chemin
- établir un connexion directe.
- Si oui, la connexion est établie, sinon un serveur TURN est utilisé comme
+ topologies de réseau, qu'ils soient sous un seul ou plusieurs niveaux de
+ NAT et le type de NAT.
+ ICE laisse les points d'extrémité le découvrir à l'aide d'un serveur STUN
+ à travers lequel ils peuvent trouver un chemin et établir une connexion
+ directe.
+ Si oui, la connexion est établie, si non un serveur TURN est utilisé comme
  relais pour échanger des informations entre les points de terminaison
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1631,7 +1660,7 @@ literal "false"
 
 \begin_layout Standard
 L'algorithme du framework ICE recherche le chemin à la plus faible latence
- pour connecter les deux pairs, en essayant ces options dans l'ordre 
+ pour connecter les deux pairs, en essayant ces options dans l'ordre
 \begin_inset CommandInset citation
 LatexCommand cite
 key "mozilla-org-2021D"
@@ -1639,7 +1668,7 @@ literal "false"
 
 \end_inset
 
-: 
+:
 \end_layout
 
 \begin_layout Itemize
@@ -1729,8 +1758,11 @@ Transport Layer Security, TLS, dont les anciennes versions étaient connues
  sous le nom de Secure Sockets Layer ou SSL, est une couche intermédiaire
  entre TCP et l'application qui fournit des services de confidentialité
  et d'authentification.
- La confidentialité est assurée par le cryptage des paquets « over the wire
- ».
+ La confidentialité est assurée par le cryptage des paquets «
+\shape italic
+Over the wire
+\shape default
+».
  L'authentification est fournie à l'aide de certificats numériques.
  La navigation Web sécurisée aujourd'hui (HTTPS) utilise uniquement le transport
  TLS.
@@ -1763,7 +1795,7 @@ Transmission Control Protocol, TCP, est n protocole de couche de transport
  pour transporter le trafic de communication en temps réel tel que RTP,
  car les retransmissions utilisées pour mettre en œuvre la fiabilité introduisen
 t des délais inacceptables.
- Comme UDP, TCP utilise un concept de ports, un nombre entier de 16 bits,
+ Comme UDP, TCP utilise un concept de ports, un nombre entier de 16 bit,
  pour séparer les flux et les protocoles.
  TCP est fourni par le système d'exploitation sous le navigateur.
 \end_layout
@@ -1794,15 +1826,15 @@ UDP
 User Datagram Protocol, UDP, est un protocole de couche de transport dans
  la pile de protocoles Internet qui fournit un service de datagramme non
  fiable pour les couches supérieures.
- UDP est couramment utilisé pour transporter de petits échanges de paquets
+ UDP est couramment utilisée pour transporter de petits échanges de paquets
  courts (par exemple des paquets DNS, Domain Name Service) ou pour transporter
- des médias en temps réel tels que RTP.
- UDP permet un échange d'informations très rapide et efficace ; cependant,
- les utilisateurs d'UDP doivent faire face à une éventuelle perte de paquets.
+ des médias en temps réel tel que RTP.
+ UDP permet un échange d'informations très rapide et efficace; cependant,
+ les utilisateurs d'UDP doivent faire face à une perte éventuelle de paquets.
  De plus, UDP n'a pas de contrôle de congestion, les utilisateurs doivent
  donc être sensibles à la perte de paquets et à la congestion pour éviter
  de surcharger les connexions Internet.
- Comme TCP, UDP utilise un concept de ports, un nombre entier de 16 bits,
+ Comme TCP, UDP utilise un concept de ports, un nombre entier de 16 bit,
  pour séparer les flux et les protocoles
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1819,8 +1851,8 @@ literal "false"
 La plupart des applications Internet utilisent un transport fiable, tel
  que TCP, Transmission Control Protocol, dans lequel les paquets perdus
  sont automatiquement retransmis.
- La navigation sur le Web, la messagerie électronique et le streaming audio
- et vidéo utilisent un transport fiable.
+ La navigation sur le Web, la messagerie électronique et les streamings
+ audio et vidéo utilisent un transport fiable.
  Les paquets reçus sont acquittés et l'absence d'accusé de réception après
  un certain temps déclenche une retransmission des paquets jusqu'à réception
  d'un accusé de réception.
@@ -1934,7 +1966,7 @@ literal "false"
 
 \begin_layout Standard
 SCTP n'est généralement pas pris en charge dans les systèmes d'exploitation,
- les navigateurs auront donc leur propre pile de protocole SCTP intégrée
+ les navigateurs auront donc leur propre pile de protocoles SCTP intégrée
  pour le canal de données
 \begin_inset CommandInset citation
 LatexCommand cite

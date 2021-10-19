@@ -1644,9 +1644,8 @@ ICE est la technique qui utilise les protocoles STUN et TURN pour établir
  topologies de réseau, qu'ils soient sous un seul ou plusieurs niveaux de
  NAT et le type de NAT.
  ICE laisse les points d'extrémité le découvrir à l'aide d'un serveur STUN
- à travers lequel ils peuvent trouver un chemin et établir une connexion
- directe.
- Si oui, la connexion est établie, si non un serveur TURN est utilisé comme
+ à travers lequel ils peuvent trouver un chemin établir un connexion directe.
+ Si oui, la connexion est établie, sinon un serveur TURN est utilisé comme
  relais pour échanger des informations entre les points de terminaison
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1660,7 +1659,7 @@ literal "false"
 
 \begin_layout Standard
 L'algorithme du framework ICE recherche le chemin à la plus faible latence
- pour connecter les deux pairs, en essayant ces options dans l'ordre
+ pour connecter les deux pairs, en essayant ces options dans l'ordre 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "mozilla-org-2021D"
@@ -1668,7 +1667,7 @@ literal "false"
 
 \end_inset
 
-:
+: 
 \end_layout
 
 \begin_layout Itemize
@@ -1758,11 +1757,8 @@ Transport Layer Security, TLS, dont les anciennes versions étaient connues
  sous le nom de Secure Sockets Layer ou SSL, est une couche intermédiaire
  entre TCP et l'application qui fournit des services de confidentialité
  et d'authentification.
- La confidentialité est assurée par le cryptage des paquets «
-\shape italic
-Over the wire
-\shape default
-».
+ La confidentialité est assurée par le cryptage des paquets « over the wire
+ ».
  L'authentification est fournie à l'aide de certificats numériques.
  La navigation Web sécurisée aujourd'hui (HTTPS) utilise uniquement le transport
  TLS.
@@ -1795,7 +1791,7 @@ Transmission Control Protocol, TCP, est n protocole de couche de transport
  pour transporter le trafic de communication en temps réel tel que RTP,
  car les retransmissions utilisées pour mettre en œuvre la fiabilité introduisen
 t des délais inacceptables.
- Comme UDP, TCP utilise un concept de ports, un nombre entier de 16 bit,
+ Comme UDP, TCP utilise un concept de ports, un nombre entier de 16 bits,
  pour séparer les flux et les protocoles.
  TCP est fourni par le système d'exploitation sous le navigateur.
 \end_layout
@@ -1826,15 +1822,15 @@ UDP
 User Datagram Protocol, UDP, est un protocole de couche de transport dans
  la pile de protocoles Internet qui fournit un service de datagramme non
  fiable pour les couches supérieures.
- UDP est couramment utilisée pour transporter de petits échanges de paquets
+ UDP est couramment utilisé pour transporter de petits échanges de paquets
  courts (par exemple des paquets DNS, Domain Name Service) ou pour transporter
- des médias en temps réel tel que RTP.
- UDP permet un échange d'informations très rapide et efficace; cependant,
- les utilisateurs d'UDP doivent faire face à une perte éventuelle de paquets.
+ des médias en temps réel tels que RTP.
+ UDP permet un échange d'informations très rapide et efficace ; cependant,
+ les utilisateurs d'UDP doivent faire face à une éventuelle perte de paquets.
  De plus, UDP n'a pas de contrôle de congestion, les utilisateurs doivent
  donc être sensibles à la perte de paquets et à la congestion pour éviter
  de surcharger les connexions Internet.
- Comme TCP, UDP utilise un concept de ports, un nombre entier de 16 bit,
+ Comme TCP, UDP utilise un concept de ports, un nombre entier de 16 bits,
  pour séparer les flux et les protocoles
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1851,8 +1847,8 @@ literal "false"
 La plupart des applications Internet utilisent un transport fiable, tel
  que TCP, Transmission Control Protocol, dans lequel les paquets perdus
  sont automatiquement retransmis.
- La navigation sur le Web, la messagerie électronique et les streamings
- audio et vidéo utilisent un transport fiable.
+ La navigation sur le Web, la messagerie électronique et le streaming audio
+ et vidéo utilisent un transport fiable.
  Les paquets reçus sont acquittés et l'absence d'accusé de réception après
  un certain temps déclenche une retransmission des paquets jusqu'à réception
  d'un accusé de réception.
