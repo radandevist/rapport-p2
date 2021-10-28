@@ -368,12 +368,12 @@ Des protocoles d'un nombre non négligeable sont activement impliqués pour
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/webrtc-protocols.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/webrtc-protocols.png
 	scale 40
 
 \end_inset
@@ -1249,12 +1249,12 @@ literal "false"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/STUN-protocol.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/STUN-protocol.png
 	scale 40
 
 \end_inset
@@ -1422,12 +1422,12 @@ literal "false"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/TURN-protocol.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/TURN-protocol.png
 	scale 40
 
 \end_inset
@@ -1711,12 +1711,12 @@ literal "false"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/ICE-protocol.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/ICE-protocol.png
 	scale 40
 
 \end_inset

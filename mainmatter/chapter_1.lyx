@@ -460,7 +460,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/rtc-component.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/rtc-component.png
 	scale 40
 
 \end_inset
@@ -695,12 +695,12 @@ Architecture WebRTC
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/webrtc-architecture.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/webrtc-architecture.png
 	scale 45
 
 \end_inset
@@ -794,12 +794,12 @@ literal "false"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/triangle-webrtc.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/triangle-webrtc.png
 	scale 40
 
 \end_inset

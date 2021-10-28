@@ -494,7 +494,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -526,7 +526,7 @@ arraystretch}{1.29}%
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/book/lyx/esp-layout/images/canevas/logo_stic.png
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/canevas/logo_stic.png
 	scale 75
 
 \end_inset
