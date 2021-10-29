@@ -1019,31 +1019,71 @@ Rôle de la signalisation
 \end_layout
 
 \begin_layout Standard
-\paragraph_spacing single
-\noindent
+\paragraph_spacing other 1.5
 La signalisation a un rôle important dans les communications en temps réel:
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Négociation des capacités et des paramètres des médias entre les appareils
  dans le même appel
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Identification et authentification des participants à une session
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Contrôler la session multimédia, indiquer la progression, modifier et terminer
  la session
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Résolution de l'éblouissement, lorsque les deux côtés d'une session essaient
  d'établir ou de modifier une session en même temps
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
+\noindent
 Pourquoi la signalisation n'a pas été standardisée?
 \begin_inset CommandInset label
 LatexCommand label
@@ -1285,6 +1325,22 @@ Communication de données arbitraires
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing other 1.5
 Et il existe trois API Javascript 
 \backslash
@@ -1325,7 +1381,24 @@ Connexion Peer RTC (RTCPeerConnection)
 Canal de données RTC (RTCDataChannel)
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
+\noindent
 Flux multimédia
 \end_layout
 

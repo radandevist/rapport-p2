@@ -789,6 +789,7 @@ Initialisation, transmission et négotiation
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Voici comment une description de session sera initiée en tant qu'une offre
  puis envoyée de la part du client local vers un client distant, sans oublier
  comment ce même client négociera une potentielle réponse de son correspondant
@@ -883,6 +884,7 @@ signalingChannel.send({'offer': offer});
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Et ci-après, comment du côté d'un client distant auquel sera demandée une
  communication, la négociation d'une offre qui lui aboutit sera faite
 \begin_inset CommandInset citation
@@ -985,6 +987,7 @@ Candidats ICE
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Avant que deux pairs puissent communiquer en utilisant WebRTC, ils doivent
  échanger des informations de connectivité.
  Étant donné que les conditions du réseau peuvent varier en fonction d'un
@@ -1022,6 +1025,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 TURN (Traversal Using Relay NAT) est la solution la plus avancée qui intègre
  les protocoles STUN et la plupart des services commerciaux basés sur WebRTC
  utilsent un serveur TURN pour établir des liens entre pairs.
@@ -1054,6 +1058,7 @@ Provisionnement incrémentiel (ruisselement ICE)
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Une fois qu'un objet RTCPeerConnection est créé, le framework sous-jacent
  utilise les serveurs ICE pour rassembler les candidats à L'établissement
  de la connectivité (candidats ICE).
@@ -1122,6 +1127,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Bien qu'il soit possible pour un pair d'attendre la fin de la collecte ICE,
  il est généralement beaucoup plus efficace d'utiliser une technique de
  «ruissellement» et de transmettre chaque candidat ICE au pair distant au
@@ -1140,6 +1146,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Pour rassembler des candidats ICE, il suffit d'ajouter un écouteur pour
  l'événement 
 \begin_inset listings
@@ -1281,6 +1288,7 @@ signalingChannel.addEventListener('message', async message => {
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Une fois que les candidats ICE sont reçus, nous devons nous attendre à ce
  que l'état de notre connexion pair passe éventuellement à un état connecté.
  Pour détecter cela, nous ajoutons un écouteur à notre RTCPeerConnection
@@ -1313,6 +1321,7 @@ getUserMedia
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'API getUserMedia permet d'accéder aux flux multimédias (vidéo, audio ou
  les deux) à partir des périphériques locaux.
  À elle seule, cette API est capable d'acquérir de l'audio et de la vidéo,
@@ -1322,6 +1331,7 @@ L'API getUserMedia permet d'accéder aux flux multimédias (vidéo, audio ou
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 À elle seule, cette API est uniquement capable d'acquérir de l'audio et
  de la vidéo, sans envoyer les données ni les stocker dans un fichier.
  Pour avoir un chat fonctionnel, nous devons envoyer ces données en utilisant
@@ -1341,6 +1351,7 @@ Mediadevices
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'interface Navigator représente l'état et l'identité de l'agent utilisateur.
  Il permet aux scripts de l'interroger et de s'enregistrer pour effectuer
  certaines activités.
@@ -1369,6 +1380,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'interface Navigator dans le navigateur fournit des fonctions et des propriétés
  pour accéder à l'état et aux fonctionnalités du navigateur grâce auxquelles
  nous pouvons obtenir l'état du navigateur ou accéder à un large éventail
@@ -1398,6 +1410,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'interface MediaDevices comprise dans Navigator, permet d'accéder aux périphéri
 ques d'entrée multimédia connectés tels que les caméras et les microphones,
  ainsi que le partage d'écran.
@@ -1414,6 +1427,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les fonctions de l'objet mediaDevices fournissent des fonctionnalités telles
  que le partage d'écran, l'obtention de flux depuis la caméra et les microphones.
  La fonction getUserMedia est celle dont nous avons besoin pour récupérer
@@ -1433,6 +1447,7 @@ Capture des médias et contraintes
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La méthode 
 \begin_inset listings
 lstparams "style=ES6"
@@ -1515,6 +1530,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le dictionnaire MediaStreamConstraints est utilisé lors de l'appel à getUsermedi
 a pour spécifier les types de pistes à inclure dans le MediaStream renvoyé
  et, éventuellement, pour établir des contraintes pour les paramètres de
@@ -1530,6 +1546,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L’implémentation minimale requise par l’interface MediaStreamConstraints
  est la suivante: 
 \begin_inset listings
@@ -1551,6 +1568,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Capturer les médias à partir des périphériques médias, dans le navigateur,
  en utilisant ces configurations de contraintes et de paramètres consiste
  à écrire les lignes de code suivantes.
@@ -1582,6 +1600,7 @@ navigator.mediaDevices.getUserMedia(constraints);
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Une fois qu'un objet RTCPeerConnection est connecté à un peer distant, il
  est possible de diffuser de l'audio et de la vidéo entre eux.
  C'est le point où nous connectons le flux que nous recevons de 
@@ -1605,6 +1624,7 @@ Ajout des pistes locales
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Un flux multimédia se compose d'au moins une piste multimédia, et celles-ci
  sont ajoutées individuellement à la RTCPeerConnection lorsque nous voulons
  transmettre le média à l'homologue distant
@@ -1656,6 +1676,7 @@ localStream.getTracks().forEach(track => {
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les pistes peuvent être ajoutées à RTCPeerConnection avant qu'il ne soit
  connecté à un pair distant, il est donc logique d'effectuer cette configuration
  le plus tôt possible au lieu d'attendre que la connexion soit terminée
@@ -1674,6 +1695,7 @@ Ajout des pistes distantes
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Pour recevoir les pistes distantes qui ont été ajoutées par l'autre pair,
  nous enregistrons un écouteur sur l'objet RTCPeerConnection local écoutant
  l'événement 
@@ -1755,6 +1777,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La norme WebRTC couvre également une API pour l'envoi de données arbitraires
  sur une RTCPeerConnection.
  Les canaux de données prennent en charge les connexions à volume élevé
@@ -1773,6 +1796,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 DataChannel permet l'échange bidirectionnel de données d'application arbitraires
  entre homologues — pensez à WebSocket, mais d'égal à égal, et avec des
  propriétés de livraison personnalisables du transport sous-jacent.
@@ -1790,6 +1814,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Cela se fait en appelant 
 \begin_inset listings
 lstparams "style=ES6"
@@ -1828,6 +1853,7 @@ const dataChannel = peerConnection.createDataChannel();
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le pair distant peut recevoir des canaux de données en écoutant l'événement data
 channel sur l'objet RTCPeerConnection .
  L'événement reçu est du type RTCDataChannelEvent et contient une propriété
@@ -1891,6 +1917,7 @@ Ouvrir et fermer des événements
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Avant qu'un canal de données puisse être utilisé pour envoyer des données,
  le client doit attendre qu'il soit ouvert.
  Cela se fait en écoutant l'événement 
@@ -2049,6 +2076,7 @@ messages
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'envoi d'un message sur un RTCDataChannel se fait en appelant la fonction 
 \begin_inset listings
 lstparams "style=ES6"
@@ -2126,6 +2154,7 @@ sendButton.addEventListener('click', event => {
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le pair distant recevra les messages envoyés sur un RTCDataChannel en écoutant
  l'événement 
 \begin_inset listings
@@ -2209,6 +2238,7 @@ Configuration de l'ordre et de la fiabilité des messages
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 RTCDataChannel peut fonctionner en mode non fiable et non ordonné (analogue
  au User Datagram Protocol ou UDP), en mode fiable et ordonné (analogue
  au Transmission Control Protocol ou TCP) et en modes partiellement fiables
@@ -2222,25 +2252,64 @@ literal "false"
  :
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Un mode fiable et ordonné garantit la transmission des messages ainsi que
  l'ordre dans lequel ils sont délivrés . Cela prend une surcharge supplémentaire,
  ce qui rend potentiellement ce mode plus lent.
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Un mode peu fiable et non ordonné ne garantit pas que chaque message arrive
  de l'autre côté ni dans quel ordre ils y arrivent . Cela supprime la surcharge,
  permettant à ce mode de fonctionner beaucoup plus rapidement.
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Le mode de fiabilité partielle garantit la transmission du message dans
  une condition spécifique, telle qu'un délai de retransmission ou un nombre
  maximal de retransmissions . L'ordre des messages est également configurable.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
 Les performances des deux premiers modes sont à peu près les mêmes lorsqu'il
  n'y a pas de pertes de paquets. Cependant, en mode fiable et ordonné, un
  paquet perdu provoque le blocage d'autres paquets derrière lui, et le paquet
@@ -2720,6 +2789,7 @@ Fiabilité de DataChannel et configurations de livraison
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Lors de la configuration d'un canal partiellement fiable, il est important
  de garder à l'esprit que les deux stratégies de retransmission sont mutuellemen
 t exclusives.
@@ -2821,6 +2891,7 @@ const dataCahnnel = pc.createDataChannel('nomDuCanal', conf);
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Chaque DataChannel peut être configuré avec des paramètres d'ordre et de
  fiabilité personnalisés, et les pairs peuvent ouvrir plusieurs canaux,
  qui seront tous multiplexés sur la même association SCTP.
@@ -2841,10 +2912,12 @@ literal "false"
 \end_layout
 
 \begin_layout Subsection
+\noindent
 Comparaison avec WebSocket
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'API DataChannel reflète intentionnellement celle de WebSocket : chaque
  canal établi déclenche les mêmes rappels 
 \begin_inset listings
@@ -2911,6 +2984,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Cependant, RTCDataChannel adopte une approche différente
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2922,19 +2996,56 @@ literal "false"
  :
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Il fonctionne avec l'API RTCPeerConnection, qui permet la connectivité peer-to-p
 eer. Cela peut entraîner une latence plus faible : pas de serveur intermédiaire
  et moins de « sauts ».
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Il utilise le protocole de transmission de contrôle de flux (SCTP), permettant
  une sémantique de livraison configurable - livraison hors-service et configurat
 ion de retransmission.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
 Étant donné que DataChannel est peer-to-peer et s'exécute sur un protocole
  de transport plus flexible, il offre également un certain nombre de fonctionnal
 ités supplémentaires non disponibles pour WebSocket.
@@ -2951,7 +3062,25 @@ literal "false"
  :
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Contrairement au constructeur WebSocket, qui attend l'URL du serveur WebSocket,
  DataChannel est une méthode 
 \begin_inset Quotes fld
@@ -2965,6 +3094,8 @@ factory
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Contrairement à WebSocket, chaque pair peut initier une nouvelle session
  DataChannel: le rappel 
 \begin_inset listings
@@ -2983,6 +3114,8 @@ status open
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Contrairement à WebSocket, qui s'exécute sur un transport TCP fiable et
  ordonné, chaque DataChannel peut être configuré avec une livraison personnalisé
 e et une sémantique de fiabilité.
