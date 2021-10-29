@@ -2,3 +2,5 @@
 *.lyx#
 *.bib~*
 *.pdf
+*.tex
+*.eps
