@@ -358,6 +358,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Des protocoles d'un nombre non négligeable sont activement impliqués pour
  que WebRTC puisse fonctionner.
  Les plus importantes sont répertoriées dans la figure et le tableau suivants.
@@ -403,6 +404,7 @@ Pile de protocoles WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Sur l’aile gauche de la figure précédente, s’illustrent les protocoles utilisés
  pour la signalisation tandis que dans l’aile droite, sont montrés ceux
  utilisés par RTCWeb elle-même.
@@ -985,6 +987,7 @@ Les normes IETF et couches correspondantes des protocoles webRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Un développeur Web en général n'interagira jamais directement avec les protocole
 s, car les paramètres et configurations par défaut des protocoles répondront
  généralement à leurs besoins.
@@ -1019,6 +1022,7 @@ HTTP
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Bien sûr, WebRTC utilise HTTP, Hyper-Text Transport Protocol.
  C'est le protocole du World Wide Web et il est utilisé entre un navigateur
  Web et un serveur Web.
@@ -1047,6 +1051,7 @@ WebSocket
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le protocole WebSocket permet à un navigateur d'ouvrir des connexions TCP
  bidirectionnelles supplémentaires à un serveur Web.
  L'ouverture de la connexion est signalée via HTTP et possède des propriétés
@@ -1083,6 +1088,7 @@ RTP et SRTP
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le protocole le plus important utilisé par WebRTC est le Real-time Transport
  Protocol, ou RTP
 \begin_inset CommandInset nomenclature
@@ -1151,6 +1157,7 @@ SDP
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les descriptions de session WebRTC sont décrites à l'aide de la Session
  Description Protocol (SDP).
  Une description de session SDP (codée comme un objet RTCSessionDescription)
@@ -1195,6 +1202,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 SRTP et SDP sont des protocoles normalisés par l'IETF et largement utilisés
  par les appareils et services de communication sur Internet, tels que les
  téléphones, les clients et les passerelles Voix sur IP (VoIP), ainsi que
@@ -1222,6 +1230,7 @@ STUN
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 STUN est un outil utilisé par d'autres protocoles, tels que Interactive
  Connectivity Establishment (ICE), le Session Initiation Protocol (SIP)
  et WebRTC permettant de détecter et de traverser les traducteurs d'adresses
@@ -1284,6 +1293,7 @@ Requête à un serveur STUN
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le protocole de base fonctionne essentiellement comme suit : Le client,
  opérant généralement à l'intérieur d'un réseau privé , envoie une demande
  de liaison à un serveur STUN sur l'Internet public.
@@ -1314,6 +1324,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les messages STUN sont envoyés dans des paquets UDP.
  Comme UDP ne fournit pas un transport fiable , la fiabilité est obtenue
  par des retransmissions contrôlées par l'application des demandes STUN.
@@ -1346,6 +1357,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Lorsqu'un client a évalué son adresse externe, il peut l'utiliser comme
  candidat pour communiquer avec des pairs en partageant l'adresse NAT externe
  plutôt que l'adresse privée, qui n'est pas accessible depuis les pairs
@@ -1375,6 +1387,7 @@ TURN
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Traversal Using Relays around NAT, TURN, est une extension du protocole
  STUN qui fournit un relais média pour les situations où le «
 \shape italic
@@ -1402,6 +1415,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 TURN peut être utilisée pour établir des adresses de transport relayées
  qui utilisent le transport UDP, TCP ou TLS.
  Cependant, la communication entre le serveur TURN et le client TURN (via
@@ -1457,6 +1471,7 @@ Serveur de relai TURN
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le processus commence lorsqu'un ordinateur client souhaite contacter un
  ordinateur peer pour une transaction de données, mais ne peut pas le faire
  car le client et son homologue se trouvent derrière leur NAT respectifs.
@@ -1473,6 +1488,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Tout d'abord, le client contacte un serveur TURN avec une requête «
 \shape italic
 Allocate
@@ -1498,6 +1514,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Deuxièmement, le client envoie une demande CreatePermissions au serveur
  TURN pour créer un système de vérification des autorisations pour les communica
 tions pair à serveur.
@@ -1516,6 +1533,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Une fois les autorisations créées, le client a deux choix pour envoyer les
  données réelles, (1) il peut utiliser le mécanisme d'envoi, ou (2) il peut
  réserver un canal à l'aide de la requête 
@@ -1544,6 +1562,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 En utilisant l'une ou l'autre méthode, 
 \shape italic
 Send
@@ -1569,6 +1588,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le serveur TURN reçoit le datagramme UDP pair, vérifie les autorisations
  et si elles sont valides, le transmet au client
 \begin_inset CommandInset citation
@@ -1582,6 +1602,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Ce processus contourne même les NAT symétriques car le client et le pair
  peuvent au moins parler au serveur TURN, qui a alloué une adresse IP de
  relais pour la communication
@@ -1596,6 +1617,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Alors que TURN est plus robuste que STUN en ce sens qu'il aide à traverser
  plus de types de NAT, une communication TURN relaie l'ensemble de la communicat
 ion via le serveur nécessitant beaucoup plus de bande passante que le protocole
@@ -1620,6 +1642,7 @@ ICE
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'établissement de connectivité interactive (ICE) est utilisé dans les problèmes
  où deux nœuds sur Internet doivent communiquer aussi directement que possible,
  mais la présence de NAT et de pare-feu rend difficile la communication
@@ -1638,6 +1661,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 ICE est la technique qui utilise les protocoles STUN et TURN pour établir
  une connexion.
  Au début, les points d'extrémité ne sont pas conscients de leurs propres
@@ -1659,6 +1683,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'algorithme du framework ICE recherche le chemin à la plus faible latence
  pour connecter les deux pairs, en essayant ces options dans l'ordre
 \begin_inset CommandInset citation
@@ -1671,26 +1696,67 @@ literal "false"
 :
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Connexion UDP directe (dans ce cas, et uniquement dans ce cas, un serveur
  STUN est utilisé pour trouver l'adresse réseau d'un pair)
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Connexion TCP directe, via le port HTTP
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Connexion TCP directe, via le port HTTPS
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Connexion indirecte via un serveur relais/TURN (si une connexion directe
  échoue, par exemple, si un pair est derrière un pare-feu qui bloque la
  traversée NAT)
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
 ICE exige que STUN soit utilisé par défaut car une communication TURN nécessite
  l'utilisation continue d'un serveur TURN, la connexion n'est pas d'égal
  à égal et davantage de ressources de serveur sont utilisées.
@@ -1754,6 +1820,7 @@ TLS
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Transport Layer Security, TLS, dont les anciennes versions étaient connues
  sous le nom de Secure Sockets Layer ou SSL, est une couche intermédiaire
  entre TCP et l'application qui fournit des services de confidentialité
@@ -1788,6 +1855,7 @@ TCP
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Transmission Control Protocol, TCP, est n protocole de couche de transport
  dans la pile de protocoles Internet qui fournit un transport fiable avec
  contrôle d'encombrement et contrôle de flux.
@@ -1812,6 +1880,7 @@ name "subsec:DTLS"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Datagram TLS, est une version de TLS qui s'exécute sur UDP.
  Les mêmes propriétés de confidentialité et d'authentification sont fournies.
  UDP est plus facile à passer par NAT et peut être mieux adapté aux applications
@@ -1823,6 +1892,7 @@ UDP
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 User Datagram Protocol, UDP, est un protocole de couche de transport dans
  la pile de protocoles Internet qui fournit un service de datagramme non
  fiable pour les couches supérieures.
@@ -1848,6 +1918,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La plupart des applications Internet utilisent un transport fiable, tel
  que TCP, Transmission Control Protocol, dans lequel les paquets perdus
  sont automatiquement retransmis.
@@ -1881,6 +1952,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La perte moyenne de paquets en général sur Internet est extrêmement faible,
  de l'ordre de quelques fractions de pour cent.
  Bien qu'elle se produise rarement, la perte de paquets se produit en rafale,
@@ -1899,6 +1971,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les codecs avancés, en particulier le codec audio Opus, sont conçus pour
  offrir une bonne expérience utilisateur, même en cas de perte de paquets
  élevée.
@@ -1935,6 +2008,7 @@ SCTP
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Stream Control Transport Protocol, SCTP
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
@@ -1965,6 +2039,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 SCTP n'est généralement pas pris en charge dans les systèmes d'exploitation,
  les navigateurs auront donc leur propre pile de protocoles SCTP intégrée
  pour le canal de données
@@ -1984,6 +2059,7 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 WebRTC utilise UDP au niveau de la couche de transport en raison de ses
  exigences en temps réel.
  SRTP et SCTP sont utilisés à une couche supérieure pour multiplexer les
@@ -2012,6 +2088,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Pour la signalisation, TLS et TCP
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
