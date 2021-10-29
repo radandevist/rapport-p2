@@ -357,11 +357,13 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 WebRTC offre des opportunités sans précédent aux développeurs qui souhaitent
  intégrer des communications en temps réel dans leurs applications.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les API WebRTC getUserMedia, RTCPeerConnection et RTCDataChannel jouent
  chacune leur propre rôle dans la capture, la transmission et la diffusion
  de données en temps réel (depuis la webcam et le microphone d'un ordinateur)
@@ -389,6 +391,7 @@ name "sec:Signalisation"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La spécification WebRTC inclut des API pour communiquer avec un serveur
  ICE , mais le composant de signalisation n'en fait pas partie
 \begin_inset CommandInset ref
@@ -435,6 +438,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'extrait de code provenant de 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -507,6 +511,7 @@ RTCPeerConnection
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'API RTCPeerConnection est chargée de connecter deux (02) navigateurs ensemble
  afin qu'ils puissent partager des médias en temps réel
 \begin_inset CommandInset citation
@@ -532,6 +537,7 @@ name "subsec:RTCConfiguration"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Chaque connexion peer-to-peer est gérée par un objet RTCPeerConnection.
  Le constructeur de cette classe prend un seul objet RTCConfiguration comme
  paramètre.
@@ -559,6 +565,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L’établissement de connectivité interactive (ICE) est une technique utilisée
  dans les réseaux informatiques pour trouver des moyens pour que deux ordinateur
 s communiquent aussi directement que possible dans les réseaux peer-to-peer.
@@ -601,6 +608,7 @@ Initialisation
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Une fois la configuration effectuée il suffit d'instancier l'interface de
  l'API RTCPeerConnection afin d'initialiser une connexion et ce sans oublier
  de fournir l'argument configuration dans la signature du constructeur.
@@ -658,6 +666,7 @@ name "subsec:RTCSessionDescription"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 RTCPeerConnection coordonne l'échange de métadonnées cruciales entre deux
  navigateurs.
  Ces données définissent l'adresse IP et le numéro de ports publiquement
@@ -666,31 +675,72 @@ RTCPeerConnection coordonne l'échange de métadonnées cruciales entre deux
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Pour que deux points de terminaison WebRTC commencent à se parler, trois
  types d'informations doivent être relayés:
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Les informations de contrôle de session déterminent quand initialiser, fermer
  et modifier les sessions de communication.
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Les données réseau relayent l'adresse IP et le numéro de port de chaque
  point de terminaison afin que les appelants puissent trouver les personnes
  appelées.
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Les données média concernent les codecs et les types de médias que les appelants
  ont en commun.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
 Ces informations seront encapsulées dans un objet RTCSessionDescription.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'interface RTCSessionDescription décrit une extrémité d'une connexion (ou
  connexion potentielle) et comment elle est configurée.
  Chaque objet RTCSessionDescription consiste en un type de description indiquant
@@ -707,6 +757,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le processus de négociation d'une connexion entre deux pairs implique l'échange
  d'objets RTCSessionDescription dans les deux sens, par le biais du canal
  de signalisation

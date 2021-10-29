@@ -357,6 +357,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 La conception structurelle web classique est basée sur un modèle client-serveur,
  dans lequel les navigateurs envoient une demande de contenu HTTP
@@ -414,6 +415,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 De même, en ce qui concerne le modèle de navigateurs, afin de supporter
  WebRTC
@@ -493,6 +495,7 @@ name "fig:composant WebRTC"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 À partir du diagramme 
 \begin_inset CommandInset ref
@@ -519,6 +522,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 Javascript joue un rôle important dans WebRTC
 \begin_inset CommandInset nomenclature
@@ -568,6 +572,7 @@ Normes WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 Les normes WebRTC sont actuellement développées conjointement par le W3C
 \begin_inset CommandInset nomenclature
@@ -737,6 +742,7 @@ name "fig:architecture WebRTC"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 Le navigateur cache la grande partie de l'implémentation WebRTC, tout le
  travail de capture des médias, de la description de session et des transmission
@@ -758,6 +764,7 @@ Le triangle WebRTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 Le scénario le plus répandu est probablement celui où les deux navigateurs
  exécutent la même application web WebRTC, téléchargée à partir de la même
@@ -844,6 +851,7 @@ Flux de médias
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 Les appareils d'aujourd'hui sont dotés de plusieurs capacités matérielles
  multimédias.
@@ -863,6 +871,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 Ce flux multimédia peut être capturé par l'API du navigateur WebRTC et fournira
  ce flux en tant que variable au langage Javascript pour que puissent les
@@ -883,6 +892,7 @@ Peer-to-peer ou d'égal à égal
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 L'un des avantages distinctifs du WebRTC est le fait qu'il s'agit d'une
  communication peer-to-peer.
@@ -903,6 +913,7 @@ Description de la session
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 En général, pour qu'une communication ait lieu entre deux périphériques
  quelconques, il existe un mécanisme de prise de contact qui doit être effectué
  en premier, pour établir la session entre les deux périphériques, puis
@@ -918,6 +929,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 C’est la même chose avec WebRTC.
  Il existe un protocole de description de session: SDP
 \begin_inset CommandInset nomenclature
@@ -943,6 +955,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Pour échanger les données de description de session, nous avons besoin d'une
  machine intermédiaire.
  C'est là que le concept de signalisation entre en jeu
@@ -961,6 +974,7 @@ Signalisation
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Supposons que le navigateur A essaie de communiquer avec le navigateur B.
  Le navigateur A enverra ses données de description de session au serveur
  de signalisations, et le même processus pour le navigateur B également
@@ -975,6 +989,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Une fois ce processus terminé, chaque navigateur a maintenant à sa disposition
  tout le nécessaire pour établir une connexion et envoyer le flux multimédia
  à l'autre navigateur
@@ -1004,6 +1019,7 @@ Rôle de la signalisation
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \noindent
 La signalisation a un rôle important dans les communications en temps réel:
 \end_layout
@@ -1039,6 +1055,7 @@ name "subsec:Pourquoi-la-signalisation"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La signalisation n'est pas normalisée dans WebRTC pour permettre l'interopérabil
 ité entre différents navigateurs.
  Son flux se situe entre les navigateurs web et le serveur web, et non entre
@@ -1068,6 +1085,7 @@ name "subsec:Signalisation-et-négotiation"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La fonction la plus importante de la signalisation est l'échange d'informations
  contenues dans l'objet de protocole de description de session (SDP) entre
  les navigateurs.
@@ -1085,6 +1103,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Un autre rôle de la signalisation est l'établissement de connectivité interactiv
 e (ICE
 \begin_inset CommandInset nomenclature
@@ -1135,6 +1154,7 @@ Identification et authentification
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le canal de signalisation peut également fournir l'identité des participants
  à un appel.
  Par exemple, dans une application web, l'application se chargera d'abord
@@ -1152,6 +1172,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 WebRTC a d'autres moyens d'authentifier les utilisateurs sans s'appuyer
  sur des applications externes.
  En utilisant le canal multimédia, qui ne repose pas sur des applications
@@ -1173,6 +1194,7 @@ Contrôle de la session de médias
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La signalisation est nécessaire pour lancer l'appel; cependant, il n'est
  pas nécessaire d'indiquer l'état ou de mettre fin à une session.
  Il y a une machine d'état ICE dans le navigateur qui peut fournir ces informati
@@ -1192,6 +1214,7 @@ Résolution de l'éclat
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La résolution de l'éblouissement intervient lorsque les deux côtés de la
  communication essaient de changer de session en même temps.
  C'est une condition de concurrence qui pourrait entraîner un état non déterminé
@@ -1218,40 +1241,87 @@ literal "false"
 \end_layout
 
 \begin_layout Section
+\noindent
 Les API WebRTC
 \end_layout
 
 \begin_layout Standard
-\noindent
-WebRTC a trois fonctionnalités principales: 
+\paragraph_spacing other 1.5
+WebRTC a trois fonctionnalités principales:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Acquérir l'audio et la vidéo
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Communication audio et vidéo
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Communication de données arbitraires
 \end_layout
 
 \begin_layout Standard
-Et il existe trois API Javascript majeures exposées pour appeler ces fonctionnal
-ités:
+\paragraph_spacing other 1.5
+Et il existe trois API Javascript 
+\backslash
+majeures exposées pour appeler ces fonctionnalités:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Flux multimédia (getUserMedia)
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Connexion Peer RTC (RTCPeerConnection)
 \end_layout
 
 \begin_layout Enumerate
+\paragraph_spacing other 1.5
+\noindent
 Canal de données RTC (RTCDataChannel)
 \end_layout
 
@@ -1260,6 +1330,7 @@ Flux multimédia
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Nous désignons les caméras et les microphones des ordinateurs des utilisateurs
  sous le nom de média local.
  Par conséquent, la première étape consiste à obtenir un flux multimédia
@@ -1295,6 +1366,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Pour les problèmes de confidentialité, le navigateur doit obtenir l'autorisation
  de l'utilisateur pour accéder à la caméra et au microphone de l'utilisateur.
  Le navigateur demandera à l'utilisateur d'autoriser l'accès.
@@ -1315,6 +1387,7 @@ Connexion peer RTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Il est important de noter que cette connexion est une connexion peer-to-peer.
  Cela signifie que cela peut être fait avec n'importe quel ordinateur ou
  appareil sur Internet.
@@ -1331,6 +1404,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Un fait très important qui mérite d'être mentionné est le nombre de connexions
  qui seront créées pour chaque utilisateur ajouté à une conférence téléphonique
 \begin_inset CommandInset citation
@@ -1355,6 +1429,22 @@ urs.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-1 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
 Connexions\:par\:machine & =nombre\:d'utilisateurs\:en\:appel-1\\
@@ -1371,6 +1461,7 @@ Canal de données RTC
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les canaux de données prennent en charge les connexions à haut volume et
  à faible latence; un canal de données est un canal non multimédia qui prend
  uniquement en charge le transfert de données
@@ -1385,6 +1476,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Il contourne les serveurs et fournit aux développeurs web des canaux configurabl
 es pour transférer des données.
  Les canaux de données dans WebRTC sont construits sur des WebSockets.
@@ -1405,6 +1497,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les canaux de données prennent également en charge les deux modes de livraison:
  garantie (fiable) et rapide (non fiable).
  Le premier peut être utilisé pour des événements critiques et le second

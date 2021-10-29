@@ -495,7 +495,7 @@ begin{center}
 
 				
 \backslash
-vspace*{4 mm}
+vspace*{0.4 cm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -549,6 +549,13 @@ begin{center}
 
 				
 \backslash
+vspace*{0.7 cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
 large
 \backslash
 textbf{
@@ -570,6 +577,13 @@ end{center}
 
 \backslash
 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace*{0.7 cm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -645,7 +659,7 @@ end{center}
 
 		
 \backslash
-vspace*{-0.7 cm}
+vspace*{-0.1 cm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -716,7 +730,7 @@ end{center}
 
 		
 \backslash
-vspace*{-0.7 cm}
+vspace*{-0.2 cm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -739,7 +753,7 @@ begin{center}
 
 \begin_layout Plain Layout
 
-			
+				
 \backslash
 color{black}
 \backslash
@@ -754,7 +768,7 @@ textwidth}{0.5pt}
 
 \begin_layout Plain Layout
 
-			
+				
 \backslash
 vspace*{-0.38 cm}
 \end_layout
@@ -786,6 +800,13 @@ end{center}
 
 \backslash
 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace*{0.5 cm}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1045,6 +1066,13 @@ end{center}
 parbox{
 \backslash
 textwidth}{
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+vspace{0.9 cm}
 \end_layout
 
 \begin_layout Plain Layout
