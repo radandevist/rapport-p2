@@ -458,7 +458,7 @@ clearpage % in order to remove fancyhdr style
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 pagestyle{empty} % remove fancyhdr but forgets to remove  for the first
  page
@@ -494,7 +494,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -738,6 +738,7 @@ Contexte
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 \align block
 À cause de l’épidémie de COVID-19 les mesures barrières comme la distanciation
@@ -758,6 +759,7 @@ Objectif
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 \noindent
 Mettre en œuvre une communication Peer to Peer basé sur les navigateurs
  Web et Javascript.
@@ -798,6 +800,29 @@ Faire un test et un relevé les différents canaux et protocoles mis en jeu.
 
 \begin_layout Subsection*
 Encadreurs
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{empty}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
