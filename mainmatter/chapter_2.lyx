@@ -512,17 +512,133 @@ RTCPeerConnection
 
 \begin_layout Standard
 \paragraph_spacing other 1.5
-L'API RTCPeerConnection est chargée de connecter deux (02) navigateurs ensemble
- afin qu'ils puissent partager des médias en temps réel
+Malgré les nombreux protocoles impliqués dans la configuration et le maintien
+ d'une connexion peer-to-peer, l'API exposée par le navigateur est relativement
+ simple.
+ L'interface RTCPeerConnection (illustrée sur la figure suivante) est responsabl
+e de la gestion du cycle de vie complet de chaque connexion peer-to-peer
 \begin_inset CommandInset citation
 LatexCommand cite
-key "onsip-2021"
+after " page 317"
+key "grigorik-2013"
 literal "false"
 
 \end_inset
 
 .
- Elle est au cœur de la connexion peer-to-peer entre chacun des navigateurs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/projet2-espa/Book/rapport-p2/images/RTCPEERConnection API.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+API RTCPeerConnection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+RTCPeerConnection gère le flux de travail ICE complet pour la traversée
+ NAT.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+RTCPeerConnection envoie des keepalives automatiques (STUN) entre pairs.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+RTCPeerConnection assure le suivi des flux locaux.
+ 
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+RTCPeerConnection assure le suivi des flux distants.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+RTCPeerConnection déclenche la renégociation automatique du flux si nécessaire.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+RTCPeerConnection fournit les API nécessaires pour générer l'offre de connexion,
+ accepter la réponse, nous permet d'interroger la connexion pour son état
+ actuel, et plus encore
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+En bref, RTCPeerConnection encapsule toute la configuration, la gestion
+ et l'état de la connexion dans une seule interface.
 \end_layout
 
 \begin_layout Subsection
