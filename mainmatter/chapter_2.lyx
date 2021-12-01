@@ -392,44 +392,114 @@ name "sec:Signalisation"
 
 \begin_layout Standard
 \paragraph_spacing other 1.5
-La spécification WebRTC inclut des API pour communiquer avec un serveur
- ICE , mais le composant de signalisation n'en fait pas partie
+Avant toute vérification de connectivité ou négociation de session, nous
+ devons savoir si l'autre pair est joignable et s'il est prêt à établir
+ la connexion.
+ Nous devons envoyer une offre, et le pair doit retourner une réponse (figure
+ 
 \begin_inset CommandInset ref
-LatexCommand eqref
-reference "subsec:Pourquoi-la-signalisation"
+LatexCommand ref
+reference "fig:Canal-de-signalisation"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-.
- La signalisation est nécessaire pour que deux pairs partagent la façon
- dont ils doivent se connecter.
- Habituellement, cela est résolu via une API Web standard basée sur HTTP
- (c'est-à-dire un service REST
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "REST"
-description "Representational State Transfert"
-literal "false"
-
-\end_inset
-
- ou un autre mécanisme RPC
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "RPC"
-description "Remote Procedure Call"
-literal "false"
-
-\end_inset
-
-) où les applications Web peuvent relayer les informations nécessaires avant
- que la connexion entre homologues ne soit lancée
+).
+ Cependant, nous avons maintenant un dilemme: si l'autre pair n'écoute pas
+ les paquets entrants, comment le notifier de notre intention? Au minimum,
+ nous avons besoin d'un canal de signalisation partagé
 \begin_inset CommandInset citation
 LatexCommand cite
-key "webrtc-org-2014"
+after "p. 320"
+key "grigorik-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Canal de signalisation partagé
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Canal-de-signalisation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+WebRTC reporte le choix du transport et du protocole de signalisation à
+ l'application; la norme ne fournit intentionnellement aucune recommandation
+ ou mise en œuvre pour la pile de signalisation.
+ Pourquoi? Cela permet l'interopérabilité avec une variété d'autres protocoles
+ de signalisation alimentant l'infrastructure de communications existantes
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 320"
+key "grigorik-2013"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Le serveur de signalisation peut jouer le rôle de passerelle vers un réseau
+ de communication existant, auquel cas il appartient au réseau de notifier
+ au pair cible une offre de connexion puis de renvoyer la réponse au client
+ WebRTC initiant l'échange.
+ Alternativement, l'application peut également utiliser son propre canal
+ de signalisation personnalisé, qui peut consister en un ou plusieurs serveurs
+ et un protocole personnalisé pour communiquer les messages: si les deux
+ pairs sont connectés au même service de signalisation, alors le service
+ peut transférer les messages entre eux
+\begin_inset CommandInset citation
+LatexCommand cite
+after "p. 321"
+key "grigorik-2013"
 literal "false"
 
 \end_inset
@@ -515,11 +585,21 @@ RTCPeerConnection
 Malgré les nombreux protocoles impliqués dans la configuration et le maintien
  d'une connexion peer-to-peer, l'API exposée par le navigateur est relativement
  simple.
- L'interface RTCPeerConnection (illustrée sur la figure suivante) est responsabl
-e de la gestion du cycle de vie complet de chaque connexion peer-to-peer
+ L'interface RTCPeerConnection (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:API-RTCPeerConnection"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) est responsable de la gestion du cycle de vie complet de chaque connexion
+ peer-to-peer
 \begin_inset CommandInset citation
 LatexCommand cite
-after " page 317"
+after " p. 317"
 key "grigorik-2013"
 literal "false"
 
@@ -551,6 +631,13 @@ status open
 
 \begin_layout Plain Layout
 API RTCPeerConnection
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:API-RTCPeerConnection"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -900,7 +987,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Initialisation, transmission et négotiation
 \end_layout
 
@@ -1970,8 +2057,20 @@ const dataChannel = peerConnection.createDataChannel();
 
 \begin_layout Standard
 \paragraph_spacing other 1.5
-Le pair distant peut recevoir des canaux de données en écoutant l'événement data
-channel sur l'objet RTCPeerConnection .
+Le pair distant peut recevoir des canaux de données en écoutant l'événement 
+\begin_inset listings
+lstparams "style=ES6"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+'datachannel'
+\end_layout
+
+\end_inset
+
+ sur l'objet RTCPeerConnection .
  L'événement reçu est du type RTCDataChannelEvent et contient une propriété
  
 \begin_inset listings

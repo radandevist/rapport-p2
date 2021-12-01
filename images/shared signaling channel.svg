@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99998 285.75001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="shared signaling channel.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="TriangleOutM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path1923" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path1805" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1778" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#9b9b9b"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="721.42857"
+     inkscape:cy="574.28571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:pagecheckerboard="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-11.249975)"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff;stroke-width:1.00883865"
+       id="rect812"
+       width="508"
+       height="285.75"
+       x="-5.5555591e-07"
+       y="11.249974" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="layer 1">
+    <g
+       id="g906"
+       transform="matrix(0.13000394,0,0,0.1292854,215.76309,86.044634)"
+       style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934">
+      <g
+         id="g851"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+	<path
+   d="m 391.016,135.059 c -5.829,-49.336 -47.791,-87.605 -98.695,-87.605 -33.184,0 -62.556,16.272 -80.607,41.262 2.108,-0.081 4.223,-0.127 6.349,-0.127 74.519,0 138.462,50.218 157.487,120.164 21.304,4.704 40.866,15.374 56.667,31.173 1.403,1.403 2.764,2.836 4.085,4.297 C 447.852,232.648 455,216.682 455,199.04 c 0,-35.336 -28.648,-63.981 -63.984,-63.981 z"
+   id="path847"
+   style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+
+	<path
+   d="M 350.359,236.02 C 342.545,169.887 286.297,118.589 218.063,118.589 149.829,118.589 93.581,169.887 85.767,236.02 38.402,236.02 0,274.417 0,321.783 c 0,47.366 38.397,85.763 85.763,85.763 h 264.601 c 47.366,0 85.763,-38.397 85.763,-85.763 0,-47.366 -38.402,-85.763 -85.768,-85.763 z"
+   id="path849"
+   style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+
+</g>
+      <g
+         id="g853"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g855"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g857"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g859"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g861"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g863"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g865"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g867"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g869"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g871"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g873"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g875"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g877"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g879"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+      <g
+         id="g881"
+         style="fill:none;stroke:#010001;stroke-width:12.245;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+</g>
+    </g>
+    <path
+       class="cls-1"
+       d="m 119.89052,116.27123 a 8.5504602,8.5504602 0 1 0 -10.70232,0 15.675843,15.675843 0 0 0 -10.317574,14.721 v 1.42513 h 31.351714 v -1.42513 a 15.675843,15.675843 0 0 0 -10.33182,-14.721 z m -11.04433,-6.65514 a 5.7003064,5.7003064 0 1 1 5.7003,5.70034 5.7003064,5.7003064 0 0 1 -5.7003,-5.70034 z m -7.0399,19.95108 a 12.82569,12.82569 0 0 1 25.49461,0 z"
+       id="path23308"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934" />
+    <path
+       class="cls-1"
+       d="m 381.47553,116.27123 a 8.5504602,8.5504602 0 1 0 -10.70232,0 15.675843,15.675843 0 0 0 -10.31753,14.721 v 1.42513 h 31.35167 v -1.42513 a 15.675843,15.675843 0 0 0 -10.33182,-14.721 z m -11.04433,-6.65514 a 5.7003064,5.7003064 0 1 1 5.7003,5.70034 5.7003064,5.7003064 0 0 1 -5.7003,-5.70034 z m -7.03988,19.95108 a 12.82569,12.82569 0 0 1 25.49459,0 z"
+       id="path1661"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934" />
+    <g
+       id="g2218"
+       transform="translate(-1.2952156,-1.9172041)"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+         d="m 138.25611,109.43676 h 76.16624"
+         id="path1696" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+         d="M 217.42892,125.31177 H 141.26268"
+         id="path2134" />
+    </g>
+    <g
+       id="g2224"
+       transform="translate(136.28814,-1.9172041)"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+         d="m 138.25611,109.43676 h 76.16624"
+         id="path2220" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+         d="M 217.42892,125.31177 H 141.26268"
+         id="path2222" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';white-space:pre;inline-size:54.0118;stroke-width:0.264583"
+       x="283.07199"
+       y="80.404846"
+       id="text6654"
+       transform="translate(-65.675516,43.496447)"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934"><tspan
+         x="283.07199"
+         y="80.404846"
+         id="tspan23072"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan23070">Canal de </tspan></tspan><tspan
+         x="283.07199"
+         y="90.988183"
+         id="tspan23076"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan23074">Signalisation</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="163.61049"
+       y="133.15837"
+       id="text13950"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934"><tspan
+         sodipodi:role="line"
+         id="tspan13948"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="163.61049"
+         y="133.15837">Réponse</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="166.82002"
+       y="105.1445"
+       id="text13954"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934"><tspan
+         sodipodi:role="line"
+         id="tspan13952"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="166.82002"
+         y="105.1445">Offre</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="301.19382"
+       y="133.15837"
+       id="text22876"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934"><tspan
+         sodipodi:role="line"
+         id="tspan22874"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="301.19382"
+         y="133.15837">Réponse</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="304.40335"
+       y="105.1445"
+       id="text22880"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/shared signaling channel.png"
+       inkscape:export-xdpi="95.869934"
+       inkscape:export-ydpi="95.869934"><tspan
+         sodipodi:role="line"
+         id="tspan22878"
+         style="font-size:8.46667px;stroke-width:0.264583"
+         x="304.40335"
+         y="105.1445">Offre</tspan></text>
+  </g>
+</svg>
