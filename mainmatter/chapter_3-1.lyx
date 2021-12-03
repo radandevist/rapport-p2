@@ -369,9 +369,6 @@ En termes simples,  TypeScript est un langage de programmation open source
 \begin_layout Standard
 En fait, TypeScript est un sur-ensemble  de JavaScript, ce qui signifie
  que tout code JavaScript valide est également un code TypeScript valide.
- Tout ce qui peut être écrit en JavaScript peut également être écrit en
- TypeScript (frontend dans n'importe quel framework, backend dans Node.js
- ou deno, applications mobiles multiplateformes dans React Native).
 \end_layout
 
 \begin_layout Standard
@@ -386,7 +383,7 @@ L'augmentation clé que TypeScript apporte à JavaScript est un système de
 
 \begin_layout Standard
 Typescript améliore l’experience de development et réduit les chances d’occurenc
-e de disfonctionnement du programme lors de son éxecution.
+e de bugs du programme lors de son éxecution.
 \end_layout
 
 \begin_layout Subsection
@@ -423,12 +420,21 @@ Node.js
 \end_layout
 
 \begin_layout Standard
-Autant pour le serveur, Typescript a aussi été choisi, dans le souci d'une
- uniformité des langages utilisés au sein de l'application.
- De plus node.js (le runtime sur lequel javascript s'éxecute en dehors des
- navigateurs) s'avère être une des meilleures options grâce a sa capacité
- à gérer plusieurs demandes à la fois.
- En effet pour les besoins de.a
+Pour les fins de la signalistion nous avons besoin de développer un serveur:
+ c'est ici qu'entre en jeu Node.js.
+ Il s'agît d'un runtime (environnement d'éxecution) pour le langage Javascript.
+ Par souci d'uniformité du langage utilisé et du coût d'apprentissage, nous
+ avons opté pour node.js car du côté du client Javascript est utilisé.
+\end_layout
+
+\begin_layout Standard
+D'autre part, Node.js s'avère être le choix optimal pour le besoin de ce
+ projet: en raison de sa boucle d'événements à thread unique axée sur les
+ événements et de son modèle d'E/S (Entrée-Sortie) asynchrone non bloquant,
+ Node.js fonctionne mieux sur les applications d'E/S intenses nécessitant
+ vitesse et évolutivité avec de nombreuses connexions simultanées, comme
+ le streaming vidéo et audio, applications de temps réel, chats en direct,
+ applications de jeux, outils de collaboration ou logiciels de bourse.
 \end_layout
 
 \begin_layout Subsection
@@ -437,6 +443,10 @@ Socket.IO
 
 \begin_layout Section
 Structure du projet
+\end_layout
+
+\begin_layout Section
+Apercu de l'application
 \end_layout
 
 \begin_layout Section
