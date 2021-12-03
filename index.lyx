@@ -756,6 +756,16 @@ filename "mainmatter/chapter_2.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "mainmatter/chapter_3-1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 \begin_inset CommandInset include
 LatexCommand input
