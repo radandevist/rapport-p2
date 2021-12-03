@@ -370,19 +370,8 @@ En termes simples,  TypeScript est un langage de programmation open source
 En fait, TypeScript est un sur-ensemble  de JavaScript, ce qui signifie
  que tout code JavaScript valide est également un code TypeScript valide.
  Tout ce qui peut être écrit en JavaScript peut également être écrit en
- TypeScript :
-\end_layout
-
-\begin_layout Itemize
-frontend dans n'importe quel framework,
-\end_layout
-
-\begin_layout Itemize
-backend dans Node.js ou deno,
-\end_layout
-
-\begin_layout Itemize
-applications mobiles multiplateformes dans React Native.
+ TypeScript (frontend dans n'importe quel framework, backend dans Node.js
+ ou deno, applications mobiles multiplateformes dans React Native).
 \end_layout
 
 \begin_layout Standard
@@ -405,15 +394,28 @@ React.js
 \end_layout
 
 \begin_layout Standard
-L'objectif est de mettre en œuvre une communication peer-to-peer basé sur
- les navigateurs web et Javascript.
- Ce dernier est le langage de facto universel pour tout les navigateurs.
+Il s’agît d’une libraire javascript servant à confectionner des interfaces
+ utilisateurs.
+ Les principales raisons de son choix dans ce projet sont énumérées ci-après:
 \end_layout
 
-\begin_layout Standard
-Cependant au lieu d'écrire directement dans ce langage une meilleure option
- a été choisie en l'occurence Typescript qui est en fait une version superchargé
-e de Javascript lui même.
+\begin_layout Itemize
+React adopte un approche basée sur des composants: Ce sont des blocs de
+ construction de base qui représentent des éléments de la vue de l’application.
+ Celà favorise la réutilisabilité des composants d’une part et la maintenabilité
+ de l’application d’autre part.
+\end_layout
+
+\begin_layout Itemize
+La syntaxe Jsx facilite le processus global d'écriture des composants: JSX
+ est une extension de syntaxe facultative à JavaScript qui accepte les guillemet
+s HTML d’où la facilité évoquée.
+\end_layout
+
+\begin_layout Itemize
+Le système de rendu reliées aux variables «state» qui permet facilement
+ de mettre à jour une interface utilisateur sans pour autant rafraîchir
+ une page.
 \end_layout
 
 \begin_layout Subsection
