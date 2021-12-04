@@ -954,6 +954,7 @@ Le problème qui se pose avec le code précedent: à chaque nouveau cycle de
  en même temps.
  Et au moment où l'évenement 
 \begin_inset listings
+lstparams "style=ES6"
 inline true
 status open
 
