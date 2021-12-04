@@ -1099,11 +1099,79 @@ name "alg:Écoute-d'évenement-Socket.IO"
 \end_layout
 
 \begin_layout Subsection
-CORS Policy of Socket.IO
+Politique CORS de Socket.IO
+\end_layout
+
+\begin_layout Subsection
+Où initialiser RTCPeerConnection?
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Une erreur avec laquelle nous nous sommes confrontés est la manière ou plutôt
+ le lieu où l'objet, instance de RTCPeerConnection a été initialisée.
+ RTCPeerConection était initialisée dans la page
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Rappelons nous que React est basé sur des composants ce qui implique chaque
+ élément à tout les niveaux sont des composants, y compris lesdite pages
+ ici.
+\end_layout
+
+\end_inset
+
+ contenant le formulaire d'appel (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Formulaire-nom-d'utilisateur"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) avant d'être redirigé vers la page de discussion (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:La-page-de-discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Cette approche a l'effet suivant: la variable contenant l'objet RTCPeeerconnecti
+on n'est pas transportée vers la page de discussion.
+ Puisque cette variable n'est pas définie dans la page de discussion aucune
+ connexion ou communication WebRTC n'est possible or que c'est dans cette
+ page que la connexion RTCPeerConnction est la plus nécéssaire.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Une tentative de résolution de ce problème a consisté a utiliser le mécanisme
+ de contexte apporté par React pour rendre une variable accessible depuis
+ n'importe quel autre composant descendant dans l'arborescence de notre
+ application.
+ Malheureusement celà n'a pas eu l'effet escompté.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+En fait, au lieu de l'avoir initialiser ailleurs, RTCPeerconnection aurait
+ du voir le jour dans la page de discussion, là ou elle est plus qu'indispensabl
+e.
 \end_layout
 
 \begin_layout Section
-Amélioration à apporter
+Améliorations à apporter
 \end_layout
 
 \begin_layout Subsection
