@@ -687,7 +687,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 mtcaddchapter % fix minitoc
 \end_layout

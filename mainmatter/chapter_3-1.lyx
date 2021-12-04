@@ -885,12 +885,14 @@ Difficultés rencontrées
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Les composants react ont un cycle de vie et chaque fois qu'une «state» (variable
  d'état) d'un composant change de valeur, alors le composant est démantelé
  pour être aussitôt rerendu avec la nouvelle valeur en question.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 D'autre part, Socket.IO fonctionne en se basant sur les évenements.
  C'est à dire que dans nos composants React nous avons besoin d'écouter
  les messages envoyés par le serveur et mettre en place les réactions correspond
@@ -949,6 +951,7 @@ socket.on('message', handler);
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Le problème qui se pose avec le code précedent: à chaque nouveau cycle de
  vie de notre composant, un nouvel écouteur d'évenement est enregistrer
  en même temps.
@@ -971,6 +974,7 @@ status open
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 La solution consiste à enregistrer les écouteurs d'évenenments et aussi
  les désactiver à l'intérieur de la méthode de cycle de vie React 
 \begin_inset listings
@@ -1032,12 +1036,32 @@ React.useEffect(() => {
 
 \begin_layout Plain Layout
 
-  socket.on('message', handler);
+  // écouter les évenements messages quand le composant est monté
 \end_layout
 
 \begin_layout Plain Layout
 
-  return () => socket.on('message', handler);
+  socket.on('message', handler); 
+\end_layout
+
+\begin_layout Plain Layout
+
+  return () => {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // désactiver l'écouteur quand le composant est démonté
+\end_layout
+
+\begin_layout Plain Layout
+
+    socket.off('message', handler);
+\end_layout
+
+\begin_layout Plain Layout
+
+  };
 \end_layout
 
 \begin_layout Plain Layout
@@ -1087,6 +1111,7 @@ Messagerie et transfert de données
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Faire en sorte que les participants, en plus de communiquer audio-visuellement,
  puissent s'envoyer des messages sous forme de texte et des donnée sous
  forme de fichiers entre eux.
@@ -1109,6 +1134,7 @@ Discussion groupée
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Parmi les possibilités d'extension de l'applpication, l'implémentation de
  groupe de discussion.
  Pour l'instant, l'application permet uniquement deux pairs de communiquer
