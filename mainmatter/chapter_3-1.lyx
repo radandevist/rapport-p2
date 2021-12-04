@@ -881,7 +881,196 @@ Difficultés rencontrées
 \end_layout
 
 \begin_layout Subsection
-Event listeners sous react
+Écouteurs d'évenements sous React
+\end_layout
+
+\begin_layout Standard
+Les composants react ont un cycle de vie et chaque fois qu'une «state» (variable
+ d'état) d'un composant change de valeur, alors le composant est démantelé
+ pour être aussitôt rerendu avec la nouvelle valeur en question.
+\end_layout
+
+\begin_layout Standard
+D'autre part, Socket.IO fonctionne en se basant sur les évenements.
+ C'est à dire que dans nos composants React nous avons besoin d'écouter
+ les messages envoyés par le serveur et mettre en place les réactions correspond
+antes à chaque type de message reçu.
+ Ce qui nous amène a écrire le code suivant dans nos composants React:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "style=ES6"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// écouter un message émit par le serveur Socket.IO dans un composant React
+\end_layout
+
+\begin_layout Plain Layout
+
+const handler = () => {/* la réaction en cas d'évenement 'message' */};
+\end_layout
+
+\begin_layout Plain Layout
+
+socket.on('message', handler);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Écoute d'évenement Socket.IO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le problème qui se pose avec le code précedent: à chaque nouveau cycle de
+ vie de notre composant, un nouvel écouteur d'évenement est enregistrer
+ en même temps.
+ Et au moment où l'évenement 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+'message'
+\end_layout
+
+\end_inset
+
+ aura lieu, la réaction mise en place pour gérer cet évenement sera éxécuté
+ par le nombre de fois que notre composant a été rendu.
+ Ce qui pose un sérieux soucis de performance pour notre application.
+\end_layout
+
+\begin_layout Standard
+La solution consiste à enregistrer les écouteurs d'évenenments et aussi
+ les désactiver à l'intérieur de la méthode de cycle de vie React 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+React.useEffect()
+\end_layout
+
+\end_inset
+
+ comme montré dans le listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Écoute-d'évenement-Socket.IO"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Ainsi la performance de l'application est restorée.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "style=ES6"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// écouter un message émit par le serveur Socket.IO dans un composant React
+\end_layout
+
+\begin_layout Plain Layout
+
+const handler = () => {/* la réaction en cas d'évenement 'message' */};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+React.useEffect(() => {
+\end_layout
+
+\begin_layout Plain Layout
+
+  socket.on('message', handler);
+\end_layout
+
+\begin_layout Plain Layout
+
+  return () => socket.on('message', handler);
+\end_layout
+
+\begin_layout Plain Layout
+
+}, []);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Écoute d'évenement Socket.IO correcte sous React
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Écoute-d'évenement-Socket.IO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
