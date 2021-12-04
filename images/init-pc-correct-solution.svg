@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99998 285.75001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="init-pc-problem.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path16396" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path16369" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#9b9b9b"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="841.42857"
+     inkscape:cy="560"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:pagecheckerboard="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:lockguides="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-11.249975)"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff;stroke-width:1.00883865"
+       id="rect812"
+       width="508"
+       height="285.75"
+       x="-5.5555591e-07"
+       y="11.249974" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="layer 1">
+    <rect
+       style="fill:#fefefe;stroke:#000000;stroke-width:1.5875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       id="rect15093"
+       width="145.6382"
+       height="99.018646"
+       x="231.47601"
+       y="104.98339"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904" />
+    <rect
+       style="fill:#fefefe;stroke:#000000;stroke-width:1.5875;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       id="rect1094"
+       width="145.6382"
+       height="99.018646"
+       x="70.852707"
+       y="33.883049"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';white-space:pre;inline-size:125.944;stroke-width:0.264583"
+       x="302.10403"
+       y="167.59773"
+       id="text9123"
+       transform="translate(-56.83926,6.1626148)"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904"><tspan
+         x="302.10403"
+         y="167.59773"
+         id="tspan20048"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan20046">la connexion WebRTC est </tspan></tspan><tspan
+         x="302.10403"
+         y="178.18107"
+         id="tspan20052"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan20050">initilaisée dans la Room</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       d="m 217.3304,81.197756 c 22.15966,-8.530458 28.32238,5.457051 25.87913,21.407734"
+       id="path15926"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="83.929626"
+       y="29.507521"
+       id="text17440"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904"><tspan
+         id="tspan17438"
+         style="stroke-width:0.264583"
+         x="83.929626"
+         y="29.507521"
+         sodipodi:role="line">page du formulaire d'appel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="236.13861"
+       y="78.906555"
+       id="text18352"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904"><tspan
+         id="tspan18350"
+         style="stroke-width:0.264583"
+         x="236.13861"
+         y="78.906555"
+         sodipodi:role="line">naviguer vers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="260.13785"
+       y="99.581612"
+       id="text859"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904"><tspan
+         id="tspan857"
+         style="stroke-width:0.264583"
+         x="260.13785"
+         y="99.581612"
+         sodipodi:role="line">page de discussion (room)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="237.37254"
+       y="152.33566"
+       id="text5795"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904"><tspan
+         id="tspan5793"
+         style="stroke-width:0.264583"
+         x="237.37254"
+         y="152.33566"
+         sodipodi:role="line">var pc = new RTCPeerConnection()</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';white-space:pre;inline-size:112.633;stroke-width:0.264583"
+       x="129.26833"
+       y="82.046211"
+       id="text11127"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904"
+       transform="translate(-44.568235,-6.2284404)"><tspan
+         x="129.26833"
+         y="82.046211"
+         id="tspan20056"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan20054">Appeler un utilisateur, </tspan></tspan><tspan
+         x="129.26833"
+         y="92.629548"
+         id="tspan20060"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan20058">annuler, joindre ou refuser </tspan></tspan><tspan
+         x="129.26833"
+         y="103.21288"
+         id="tspan20064"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan20062">un appel</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583"
+       x="236.06837"
+       y="69.860497"
+       id="text18216"
+       inkscape:export-filename="/home/radan/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png"
+       inkscape:export-xdpi="95.869904"
+       inkscape:export-ydpi="95.869904"><tspan
+         id="tspan18214"
+         style="stroke-width:0.264583"
+         x="236.06837"
+         y="69.860497"
+         sodipodi:role="line">une fois un appel accepté,</tspan></text>
+  </g>
+</svg>

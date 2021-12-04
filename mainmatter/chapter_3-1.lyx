@@ -1116,7 +1116,7 @@ status open
 
 \begin_layout Plain Layout
 Rappelons nous que React est basé sur des composants ce qui implique chaque
- élément à tout les niveaux sont des composants, y compris lesdite pages
+ élément à tout les niveaux sont des composants, y compris lesdites pages
  ici.
 \end_layout
 
@@ -1146,6 +1146,45 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/init-pc-problem.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+RTCpeerConnection initialisée dans la page du formulaire d'appel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing other 1.5
 Cette approche a l'effet suivant: la variable contenant l'objet RTCPeeerconnecti
 on n'est pas transportée vers la page de discussion.
@@ -1155,19 +1194,121 @@ on n'est pas transportée vers la page de discussion.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/react-context-solution.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Usage de React context
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Usage-de-React"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \paragraph_spacing other 1.5
 Une tentative de résolution de ce problème a consisté a utiliser le mécanisme
- de contexte apporté par React pour rendre une variable accessible depuis
- n'importe quel autre composant descendant dans l'arborescence de notre
- application.
+ de contexte (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Usage-de-React"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) apporté par React pour rendre une variable accessible depuis n'importe
+ quel autre composant descendant dans l'arborescence de notre application.
  Malheureusement celà n'a pas eu l'effet escompté.
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing other 1.5
 En fait, au lieu de l'avoir initialiser ailleurs, RTCPeerconnection aurait
- du voir le jour dans la page de discussion, là ou elle est plus qu'indispensabl
-e.
+ du voir le jour dans la page de discussion (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:La-manière-correcte"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), là ou elle est plus qu'indispensable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /run/media/radan/RADAN/Projects/projet2-espa/Book/rapport-p2/images/init-pc-solution.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+La manière correcte d'inintialiser RTCpeerConnection
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:La-manière-correcte"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
