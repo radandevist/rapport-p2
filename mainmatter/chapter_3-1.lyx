@@ -362,16 +362,15 @@ Typescript
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 En termes simples,  TypeScript est un langage de programmation open source
  développé par Microsoft qui compile en JavaScript.
-\end_layout
-
-\begin_layout Standard
-En fait, TypeScript est un sur-ensemble  de JavaScript, ce qui signifie
+ En fait, TypeScript est un sur-ensemble  de JavaScript, ce qui signifie
  que tout code JavaScript valide est également un code TypeScript valide.
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 L'augmentation clé que TypeScript apporte à JavaScript est un système de
  types  (d'où le nom "TypeScript").
  Traditionnellement, JavaScript est  dynamiquement  typé (un peu comme Python
@@ -382,8 +381,9 @@ L'augmentation clé que TypeScript apporte à JavaScript est un système de
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Typescript améliore l’experience de development et réduit les chances d’occurenc
-e de bugs du programme lors de son éxecution.
+e de bugs du programme lors de son éxecution et déployement.
 \end_layout
 
 \begin_layout Subsection
@@ -391,12 +391,31 @@ React.js
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Il s’agît d’une libraire javascript servant à confectionner des interfaces
  utilisateurs.
  Les principales raisons de son choix dans ce projet sont énumérées ci-après:
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 React adopte un approche basée sur des composants: Ce sont des blocs de
  construction de base qui représentent des éléments de la vue de l’application.
  Celà favorise la réutilisabilité des composants d’une part et la maintenabilité
@@ -404,15 +423,35 @@ React adopte un approche basée sur des composants: Ce sont des blocs de
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 La syntaxe Jsx facilite le processus global d'écriture des composants: JSX
  est une extension de syntaxe facultative à JavaScript qui accepte les guillemet
 s HTML d’où la facilité évoquée.
 \end_layout
 
 \begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
 Le système de rendu reliées aux variables «state» qui permet facilement
  de mettre à jour une interface utilisateur sans pour autant rafraîchir
  une page.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -420,6 +459,7 @@ Node.js
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 Pour les fins de la signalistion nous avons besoin de développer un serveur:
  c'est ici qu'entre en jeu Node.js.
  Il s'agît d'un runtime (environnement d'éxecution) pour le langage Javascript.
@@ -428,17 +468,66 @@ Pour les fins de la signalistion nous avons besoin de développer un serveur:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing other 1.5
 D'autre part, Node.js s'avère être le choix optimal pour le besoin de ce
  projet: en raison de sa boucle d'événements à thread unique axée sur les
  événements et de son modèle d'E/S (Entrée-Sortie) asynchrone non bloquant,
  Node.js fonctionne mieux sur les applications d'E/S intenses nécessitant
  vitesse et évolutivité avec de nombreuses connexions simultanées, comme
  le streaming vidéo et audio, applications de temps réel, chats en direct,
- applications de jeux, outils de collaboration ou logiciels de bourse.
+ applications de jeux, outils de collaboration ou logiciels de bourse
+\begin_inset CommandInset citation
+LatexCommand cite
+key "freecodecamporg-2019"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
 Socket.IO
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Socket.IO permet une communication bidirectionnelle entre le client et le
+ serveur: nous nous en sommes servi pour l'échange de données lors de la
+ signalisation.
+ Les communications bidirectionnelles sont activées lorsqu'un client a Socket.IO
+ dans le navigateur et qu'un serveur a également intégré le package Socket.IO.
+ Bien que les données puissent être envoyées sous plusieurs formes, JSON
+ est la plus simple
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lewington-2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Socket.IO fait penser aux WebSockets.
+ Les WebSockets sont également une implémentation de navigateur permettant
+ une communication bidirectionnelle, cependant, Socket.IO ne l'utilise pas
+ en standard.
+ Tout d'abord, Socket.IO crée une connexion à interrogation longue en utilisant
+ l'interrogation xhr.
+ Ensuite, une fois cela établi, il passe à la meilleure méthode de connexion
+ disponible.
+ Dans la plupart des cas, cela se traduira par une connexion WebSocket
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lewington-2021"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -450,13 +539,7 @@ Apercu de l'application
 \end_layout
 
 \begin_layout Subsection
-Wireframing selon l'utilisation
-\end_layout
-
-\begin_layout Standard
-Le flux d'utilisation de notre application est simple: une personne arrivant
- sur la page initiale de celle-ci devra d'abord ernregistrer un nom d'utilisateu
-r si elle souhaite pouvoir communiquer avec d'autre utilisateurs.
+Diagramme du flux d'utilisation
 \end_layout
 
 \begin_layout Standard
@@ -464,7 +547,71 @@ r si elle souhaite pouvoir communiquer avec d'autre utilisateurs.
 placement h
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/radan/Projects/projet2-espa/Book/rapport-p2/images/user-flow-diagram.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagramme du flux d'utilisation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Wireframing
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Le wireframing est un moyen de concevoir un service de site Web au niveau
+ structurel.
+ Un wireframe est couramment utilisé pour mettre en page le contenu et les
+ fonctionnalités d'une page en tenant compte des besoins et des parcours
+ des utilisateurs.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Une personne arrivant sur la page initiale de notre application devra d'abord
+ ernregistrer un nom d'utilisateur (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Formulaire-de-submission"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) si elle souhaite pouvoir communiquer avec d'autre utilisateur.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -482,6 +629,13 @@ status collapsed
 
 \begin_layout Plain Layout
 Formulaire de submission d'un nom d'utilisateur
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Formulaire-de-submission"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -499,8 +653,19 @@ Formulaire de submission d'un nom d'utilisateur
 \end_layout
 
 \begin_layout Standard
-Aussitôt la tâche précédente effectuée, un autre formulaire apparaît: pour
- entrer le nom d'utilisateur de notre futur locuteur.
+\paragraph_spacing other 1.5
+Aussitôt la tâche précédente effectuée, un autre formulaire apparaît (figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Formulaire-nom-d'utilisateur"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+): pour entrer le nom d'utilisateur de notre futur locuteur.
  Ici, nous avons le choix entre remplir ce formulaire et perpétrer un appel
  ou attendre que quelqu'un nous appele.
 \end_layout
@@ -510,7 +675,7 @@ Aussitôt la tâche précédente effectuée, un autre formulaire apparaît: pour
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -528,6 +693,13 @@ status collapsed
 
 \begin_layout Plain Layout
 Formulaire nom d'utilisateur du futur interlocuteur
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Formulaire-nom-d'utilisateur"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -541,7 +713,79 @@ Formulaire nom d'utilisateur du futur interlocuteur
 \end_layout
 
 \begin_layout Standard
-A parti
+\paragraph_spacing other 1.5
+Du moment qu'une offre d'appel est en cours, les deux parties (l'appelant
+ et l'appelé) verront un dialogue d'alerte (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Boîtes-de-dialogues"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) leur étant spécifique:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.5 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+La personne qui appelle à le choix d'annuler son appel
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing other 1.5
+\noindent
+Celle qui reçoit l'appel peut soit l'acceppter soit le refuser.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{-0.8 cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+Enfin, une fois qu'un appel a été accepté, les utilisateurs sont dirigés
+ vers la page de discussion (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:La-page-de-discussion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) d'où ils pouront directement se voir et s'entendre.
 \end_layout
 
 \begin_layout Standard
@@ -567,6 +811,13 @@ status open
 
 \begin_layout Plain Layout
 Boîtes de dialogues d'appel sortant et entrant
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Boîtes-de-dialogues"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -601,46 +852,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-La chat room
-\end_layout
+La page de discussion
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:La-page-de-discussion"
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Diagramme du flux d'utilisation
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /home/radan/Projects/projet2-espa/Book/rapport-p2/images/user-flow-diagram.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Diagramme du flux d'utilisation
 \end_layout
 
 \end_inset
@@ -657,8 +876,55 @@ Diagramme du flux d'utilisation
 Déployement et Tests
 \end_layout
 
-\begin_layout Subsubsection*
-Socket.IO
+\begin_layout Section
+Difficultés rencontrées
+\end_layout
+
+\begin_layout Subsection
+Event listeners sous react
+\end_layout
+
+\begin_layout Subsection
+CORS Policy of Socket.IO
+\end_layout
+
+\begin_layout Section
+Amélioration à apporter
+\end_layout
+
+\begin_layout Subsection
+Messagerie et transfert de données
+\end_layout
+
+\begin_layout Standard
+Faire en sorte que les participants, en plus de communiquer audio-visuellement,
+ puissent s'envoyer des messages sous forme de texte et des donnée sous
+ forme de fichiers entre eux.
+ Le chemin à prendre pour celà consiste à exploiter l'API WebRTC RTCDatachannel
+ discutée dans la section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:RTCDatachannel"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ car elle pourvoit à cette fin (le transport de données).
+\end_layout
+
+\begin_layout Subsection
+Discussion groupée
+\end_layout
+
+\begin_layout Standard
+Parmi les possibilités d'extension de l'applpication, l'implémentation de
+ groupe de discussion.
+ Pour l'instant, l'application permet uniquement deux pairs de communiquer
+ entre eux.
+ L'objectif est d'augmenter ce nombre et permettre à plus de deux pairs
+ de se connecter simultanément et ce de manière dynamique.
 \end_layout
 
 \end_body
