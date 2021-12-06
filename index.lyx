@@ -28,9 +28,7 @@
 %\PassOptionsToPackage{intoc}{nomencl}
 \def\nompreamble{\addcontentsline{toc}{chapter}{\nomname}\markboth{\nomname}{\nomname}}
 
-% change les noms 
-%\renewcommand\lstlistlistingname{Liste des listings} % renomme Liste de algorithmes en Liste des listings
-%\renewcommand{\algorithmname}{Listing}% renomme Algorithme en Listing
+% packages névéssaires pour changer Les titres "Algorithme" et "Liste des Algorithmes"
 \usepackage{algorithm}
 \usepackage{float}
 
@@ -669,6 +667,13 @@ mtcaddchapter % fix minitoc
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -690,7 +695,8 @@ status open
 
 
 \backslash
-floatname{algorithm}{Listing}
+floatname{algorithm}{Listing}% important pour renommer les floats de type
+ Algorithme en Listing
 \end_layout
 
 \begin_layout Plain Layout
@@ -708,7 +714,8 @@ algorithmname}{Listing}% renomme Algorithme en Listing
 \backslash
 renewcommand{
 \backslash
-listalgorithmname}{Liste des listings}
+listalgorithmname}{Liste des listings}% renomme Liste des algorithmes en
+ Liste des listings
 \end_layout
 
 \end_inset
@@ -719,6 +726,15 @@ listalgorithmname}{Liste des listings}
 \begin_layout Standard
 \begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+listalgorithmname}% insère Liste des listings dans la table des matières
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -738,7 +754,7 @@ status open
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 mtcaddchapter % fix minitoc
 \end_layout
@@ -887,7 +903,7 @@ pagenumbering{roman}
 
 
 \backslash
-setcounter{page}{7} % dépends de la dernière page du frontmatter
+setcounter{page}{9} % dépends de la dernière page du frontmatter
 \end_layout
 
 \end_inset

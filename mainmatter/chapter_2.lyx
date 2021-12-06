@@ -2363,7 +2363,7 @@ peerConnection.addEventListener('datachannel', event => {
 \end_layout
 
 \begin_layout Subsection
-Ouvrir et fermer des événements
+Ouvrir et fermer des évenements
 \end_layout
 
 \begin_layout Standard
