@@ -2239,6 +2239,13 @@ createDataChannel()
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset listings
 lstparams "style=ES6"
 inline false
@@ -2252,6 +2259,23 @@ const peerConnection = new RTCPeerConnection(configuration);
 \begin_layout Plain Layout
 
 const dataChannel = peerConnection.createDataChannel();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Créer un canal de donnée RTCDataChannel
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2301,6 +2325,13 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset listings
 lstparams "style=ES6"
 inline false
@@ -2324,6 +2355,23 @@ peerConnection.addEventListener('datachannel', event => {
 \begin_layout Plain Layout
 
 });
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+écoute d'une création de canal par le pair distant
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2378,6 +2426,13 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset listings
 lstparams "style=ES6"
 inline false
@@ -2490,6 +2545,23 @@ dataChannel.addEventListener('close', event => {
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ouvrir et ferner des événements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 messages
 \end_layout
@@ -2523,6 +2595,13 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset listings
 lstparams "style=ES6"
 inline false
@@ -2572,6 +2651,23 @@ sendButton.addEventListener('click', event => {
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Envoi de message via DataChannel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \paragraph_spacing other 1.5
 Le pair distant recevra les messages envoyés sur un RTCDataChannel en écoutant
@@ -2592,6 +2688,13 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset listings
 lstparams "style=ES6"
 inline false
@@ -2645,6 +2748,23 @@ n';
 \begin_layout Plain Layout
 
 });
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Réception d'un message sur DataChannel
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3227,6 +3347,13 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset listings
 lstparams "style=ES6"
 inline false
@@ -3302,6 +3429,27 @@ const peerConnection = new RTCPeerConnection(iceConfig);
 \begin_layout Plain Layout
 
 const dataCahnnel = pc.createDataChannel('nomDuCanal', conf);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuration de l'ordre et de la fiabilité des messages d'un canal de données
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset

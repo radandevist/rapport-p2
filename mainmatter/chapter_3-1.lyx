@@ -373,8 +373,7 @@ En termes simples,  TypeScript est un langage de programmation open source
 \paragraph_spacing other 1.5
 L'augmentation clé que TypeScript apporte à JavaScript est un système de
  types  (d'où le nom "TypeScript").
- Traditionnellement, JavaScript est  dynamiquement  typé (un peu comme Python
- ).
+ Traditionnellement, JavaScript est  dynamiquement  typé (un peu comme Python).
  Cela signifie qu'une seule variable peut contenir du texte, un nombre ou
  même une entité de base de données entière, selon l'occasion.
   TypeScript définit strictement ce qu'une variable donnée peut contenir.
