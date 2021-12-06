@@ -28,6 +28,12 @@
 %\PassOptionsToPackage{intoc}{nomencl}
 \def\nompreamble{\addcontentsline{toc}{chapter}{\nomname}\markboth{\nomname}{\nomname}}
 
+% change les noms 
+%\renewcommand\lstlistlistingname{Liste des listings} % renomme Liste de algorithmes en Liste des listings
+%\renewcommand{\algorithmname}{Listing}% renomme Algorithme en Listing
+\usepackage{algorithm}
+\usepackage{float}
+
 %Creating Nomenclature with Sections
 %This assumes that you prefix all your sort as keys with appropriate letters (e.g. A for alphabetical i.e Roman; G for Greek etc). Personally I use an underscore too (a_ or G_)because this makes the key clearer to me. If you do this be consistent and use underscores throughout otherwise your sort order may not be as expected. (See documentation on nomencl for sort orders).
 %Use the following code in your LaTeX preamble (Documents>Settings>Latex Preamble). Comment out lines as appropriate if those sections are not required along with line containing corresponding terminating '}'. Similarly add a new line in the same format if required not forgetting to add the terminating bracket.
@@ -375,6 +381,9 @@
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
+\begin_local_layout
+
+\end_local_layout
 \language french
 \language_package babel
 \inputencoding utf8
@@ -674,7 +683,49 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset FloatList algorithm
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+floatname{algorithm}{Listing}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+algorithmname}{Listing}% renomme Algorithme en Listing
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+listalgorithmname}{Liste des listings}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+listofalgorithms % insert a list of listings
+\end_layout
 
 \end_inset
 
