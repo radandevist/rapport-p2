@@ -425,9 +425,19 @@ React adopte un approche basée sur des composants: Ce sont des blocs de
 \begin_layout Itemize
 \paragraph_spacing other 1.5
 \noindent
-La syntaxe Jsx facilite le processus global d'écriture des composants: JSX
- est une extension de syntaxe facultative à JavaScript qui accepte les guillemet
-s HTML d’où la facilité évoquée.
+La syntaxe JSX
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "JSX"
+description "JavaScript XML"
+literal "false"
+
+\end_inset
+
+ facilite le processus global d'écriture des composants: JSX est une extension
+ de syntaxe facultative à JavaScript qui accepte les guillemets HTML d’où
+ la facilité évoquée.
 \end_layout
 
 \begin_layout Itemize
@@ -498,6 +508,15 @@ Socket.IO permet une communication bidirectionnelle entre le client et le
  Les communications bidirectionnelles sont activées lorsqu'un client a Socket.IO
  dans le navigateur et qu'un serveur a également intégré le package Socket.IO.
  Bien que les données puissent être envoyées sous plusieurs formes, JSON
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "JSON"
+description "JavaScript Object Notation"
+literal "false"
+
+\end_inset
+
  est la plus simple
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -534,12 +553,37 @@ literal "false"
 Structure du projet
 \end_layout
 
+\begin_layout Standard
+Vu l'éventail de technologies impliquées dans la section précédente, ce
+ projet s'apparente ni plus ni moins à projet MERN
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "MERN"
+description "MongoDB Express React Node.js"
+literal "false"
+
+\end_inset
+
+ stack.
+ Commposé par deux dossiers-projets différents, l'un contient le code qui
+ sera éxécuté dans le navigateur et l'autre celui du serveur de signalisation.
+ Ces deux dossiers sont totalements indépendants l'un de l'autre.
+\end_layout
+
 \begin_layout Section
 Apercu de l'application
 \end_layout
 
 \begin_layout Subsection
 Diagramme du flux d'utilisation
+\end_layout
+
+\begin_layout Standard
+Le flux d'utilisateurs est le chemin emprunté par un utilisateur prototype
+ sur un site Web ou une application pour effectuer une tâche.
+ Le flux d'utilisateurs les emmène de leur point d'entrée à travers un ensemble
+ d'étapes vers un résultat réussi et une action finale.
 \end_layout
 
 \begin_layout Standard
@@ -640,10 +684,6 @@ name "fig:Formulaire-de-submission"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -873,10 +913,6 @@ name "fig:La-page-de-discussion"
 \end_layout
 
 \begin_layout Section
-Déployement et Tests
-\end_layout
-
-\begin_layout Section
 Difficultés rencontrées
 \end_layout
 
@@ -1100,6 +1136,178 @@ name "alg:Écoute-d'évenement-Socket.IO"
 
 \begin_layout Subsection
 Politique CORS de Socket.IO
+\end_layout
+
+\begin_layout Standard
+Cross-origin Ressouce sharing (CORS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "A"
+symbol "CORS"
+description "Cross-Origin Ressource Sharing"
+literal "false"
+
+\end_inset
+
+) est un mécanisme qui permet de demander des ressources restreintes sur
+ une page Web à un autre domaine en dehors du domaine à partir duquel la
+ première ressource a été servie.
+\end_layout
+
+\begin_layout Standard
+LA librairie Socket.IO requiers son activation explicitement dans sa configuratio
+n initiale (listing 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Configuration-CORS-Socket.IO"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "style=ES6"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// côté serveur
+\end_layout
+
+\begin_layout Plain Layout
+
+const io = require("socket.io")(httpServer, {
+\end_layout
+
+\begin_layout Plain Layout
+
+  cors: {
+\end_layout
+
+\begin_layout Plain Layout
+
+    origin: "https://example.com",
+\end_layout
+
+\begin_layout Plain Layout
+
+    methods: ["GET", "POST"],
+\end_layout
+
+\begin_layout Plain Layout
+
+    allowedHeaders: ["my-custom-header"],
+\end_layout
+
+\begin_layout Plain Layout
+
+   credentials: true
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// client-side
+\end_layout
+
+\begin_layout Plain Layout
+
+const io = require("socket.io-client");
+\end_layout
+
+\begin_layout Plain Layout
+
+const socket = io("https://api.example.com", {
+\end_layout
+
+\begin_layout Plain Layout
+
+  withCredentials: true,
+\end_layout
+
+\begin_layout Plain Layout
+
+  extraHeaders: {
+\end_layout
+
+\begin_layout Plain Layout
+
+    "my-custom-header": "abcd"
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuration CORS Socket.IO
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Configuration-CORS-Socket.IO"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La manière de contourner cette situation consiste à servir les fichiers
+ résultants de la construction ou du «build» du projet client en tant que
+ fichiers statiques du projet serveur une fois en prodution.
 \end_layout
 
 \begin_layout Subsection
