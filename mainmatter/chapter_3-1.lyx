@@ -881,7 +881,7 @@ Difficultés rencontrées
 \end_layout
 
 \begin_layout Subsection
-Écouteurs d'évenements sous React
+Écouteurs d'évenéments sous React
 \end_layout
 
 \begin_layout Standard
@@ -893,7 +893,7 @@ Les composants react ont un cycle de vie et chaque fois qu'une «state» (variab
 
 \begin_layout Standard
 \paragraph_spacing other 1.5
-D'autre part, Socket.IO fonctionne en se basant sur les évenements.
+D'autre part, Socket.IO fonctionne en se basant sur les évenéments.
  C'est à dire que dans nos composants React nous avons besoin d'écouter
  les messages envoyés par le serveur et mettre en place les réactions correspond
 antes à chaque type de message reçu.
@@ -920,7 +920,7 @@ status open
 
 \begin_layout Plain Layout
 
-const handler = () => {/* la réaction en cas d'évenement 'message' */};
+const handler = () => {/* la réaction en cas d'évenément 'message' */};
 \end_layout
 
 \begin_layout Plain Layout
@@ -937,7 +937,7 @@ socket.on('message', handler);
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Écoute d'évenement Socket.IO
+Écoute d'évenément Socket.IO
 \end_layout
 
 \end_inset
@@ -953,9 +953,9 @@ socket.on('message', handler);
 \begin_layout Standard
 \paragraph_spacing other 1.5
 Le problème qui se pose avec le code précedent: à chaque nouveau cycle de
- vie de notre composant, un nouvel écouteur d'évenement est enregistrer
+ vie de notre composant, un nouvel écouteur d'évenément est enregistrer
  en même temps.
- Et au moment où l'évenement 
+ Et au moment où l'évenément 
 \begin_inset listings
 lstparams "style=ES6"
 inline true
@@ -968,7 +968,7 @@ status open
 
 \end_inset
 
- aura lieu, la réaction mise en place pour gérer cet évenement sera éxécuté
+ aura lieu, la réaction mise en place pour gérer cet évenément sera éxécuté
  par le nombre de fois que notre composant a été rendu.
  Ce qui pose un sérieux soucis de performance pour notre application.
 \end_layout
@@ -1022,7 +1022,7 @@ status open
 
 \begin_layout Plain Layout
 
-const handler = () => {/* la réaction en cas d'évenement 'message' */};
+const handler = () => {/* la réaction en cas d'évenément 'message' */};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1036,7 +1036,7 @@ React.useEffect(() => {
 
 \begin_layout Plain Layout
 
-  // écouter les évenements messages quand le composant est monté
+  // écouter les évenéments messages quand le composant est monté
 \end_layout
 
 \begin_layout Plain Layout
@@ -1078,7 +1078,7 @@ React.useEffect(() => {
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Écoute d'évenement Socket.IO correcte sous React
+Écoute d'évenément Socket.IO correcte sous React
 \begin_inset CommandInset label
 LatexCommand label
 name "alg:Écoute-d'évenement-Socket.IO"
