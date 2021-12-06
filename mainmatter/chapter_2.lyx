@@ -353,34 +353,7 @@ minitoc
 \end_layout
 
 \begin_layout Section
-Introduction
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing other 1.5
-WebRTC offre des opportunités sans précédent aux développeurs qui souhaitent
- intégrer des communications en temps réel dans leurs applications.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing other 1.5
-Les API WebRTC getUserMedia, RTCPeerConnection et RTCDataChannel jouent
- chacune leur propre rôle dans la capture, la transmission et la diffusion
- de données en temps réel (depuis la webcam et le microphone d'un ordinateur)
- vers un autre navigateur, sans qu'un utilisateur ait à télécharger des
- plug-ins ou des modules complémentaires
-\begin_inset CommandInset citation
-LatexCommand cite
-key "onsip-2021"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Signalisation
+Mise en place de la signalisation
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Signalisation"
