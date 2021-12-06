@@ -2183,10 +2183,6 @@ name "sec:RTCDatachannel"
 
 \end_layout
 
-\begin_layout Subsection
-Introduction
-\end_layout
-
 \begin_layout Standard
 \paragraph_spacing other 1.5
 La norme WebRTC couvre également une API pour l'envoi de données arbitraires
@@ -2336,7 +2332,7 @@ peerConnection.addEventListener('datachannel', event => {
 \end_layout
 
 \begin_layout Subsection
-Ouvrir et fermer des évenements
+Ouvrir et fermer des événements
 \end_layout
 
 \begin_layout Standard
