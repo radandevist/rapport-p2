@@ -387,6 +387,13 @@ status open
 
 \begin_layout Plain Layout
 Pile de protocoles WebRTC
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pile-de-protocoles"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -394,20 +401,9 @@ Pile de protocoles WebRTC
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing other 1.5
-Sur l’aile gauche de la figure précédente, s’illustrent les protocoles utilisés
- pour la signalisation tandis que dans l’aile droite, sont montrés ceux
- utilisés par RTCWeb elle-même.
 \end_layout
 
 \begin_layout Standard
@@ -415,7 +411,7 @@ Sur l’aile gauche de la figure précédente, s’illustrent les protocoles uti
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2060,50 +2056,45 @@ Conclusion
 
 \begin_layout Standard
 \paragraph_spacing other 1.5
-WebRTC utilise UDP au niveau de la couche de transport en raison de ses
- exigences en temps réel.
- SRTP et SCTP sont utilisés à une couche supérieure pour multiplexer les
- flux.
- Pour des raisons de sécurité, DTLS
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "A"
-symbol "DTLS"
-description "Datagram Transport Layer Security"
-literal "false"
-
-\end_inset
-
- est utilisé.
- Parce que les pairs peuvent s'asseoir derrière des pare-feu et des NAT,
- ICE/STUN/TURN sont nécessaires
-\begin_inset CommandInset citation
-LatexCommand cite
-key "googler77-2021"
-literal "false"
-
-\end_inset
-
-.
+WebRTC utilise UDP au niveau de la couche de transport: la latence et la
+ rapidité sont essentielles.
+ Nous avons également besoin de mécanismes pour traverser les nombreuses
+ couches de NAT et de pare-feu, négocier les paramètres de chaque flux,
+ fournir le cryptage des données utilisateur, implémenter la congestion
+ et le contrôle de flux, et plus encore!
 \end_layout
 
 \begin_layout Standard
 \paragraph_spacing other 1.5
-Pour la signalisation, TLS et TCP
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "A"
-symbol "TCP"
-description "Transmission Control Protocol"
-literal "false"
+UDP est la base de la communication en temps réel dans le navigateur, mais
+ pour répondre à toutes les exigences de WebRTC, le navigateur a également
+ besoin d'un large éventail de protocoles et de services (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pile-de-protocoles"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
- sont utilisés.
- Pour échanger des paramètres de session, SDP est utilisé
+) au-dessus de lui.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing other 1.5
+ICE, STUN et TURN sont nécessaires pour établir et maintenir une connexion
+ d'égal à égal sur UDP.
+ DTLS est utilisé pour sécuriser tous les transferts de données entre pairs;
+ le cryptage est une fonctionnalité obligatoire de WebRTC.
+ Enfin, SCTP et SRTP sont les protocoles d'application utilisés pour multiplexer
+ les différents flux, assurer la congestion et le contrôle de flux, et fournir
+ une livraison partiellement fiable et d'autres services supplémentaires
+ en plus de l'UDP
 \begin_inset CommandInset citation
 LatexCommand cite
-key "googler77-2021"
+after "p. 317"
+key "grigorik-2013"
 literal "false"
 
 \end_inset
