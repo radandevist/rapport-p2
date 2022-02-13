@@ -436,32 +436,40 @@ status open
 
 
 \backslash
-jurya{Pr./Dr./Mme/Mr.
- NOM Prénoms} {Grade}{Titre}
+jurya{Mme.
+ ANDRIAMIHARINJAKA Hasina} {Président du jury}{}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-juryb{Pr./Dr./Mme/Mr.
- NOM Prénoms} {Grade}{Titre}
+juryb{Mme.
+ RAOELIVOLOLONA Tefy} {Encadreur}{}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-juryc{Pr./Dr./Mme/Mr.
- NOM Prénoms} {Grade}{Titre}
+juryc{Mr.
+ RAKOTOARIJAONA Raonirivo} {Encadreur}{}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-juryd{Pr./Dr./Mme/Mr.
- NOM Prénoms} {Grade}{Titre}
+juryd{Mr.
+ ANDRIANAJAINA Todizara} {Examinateur}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+jurye{Mr.
+ RAMANAN'HAJA Hery Tiana} {Examinateur}{}
 \end_layout
 
 \end_inset
